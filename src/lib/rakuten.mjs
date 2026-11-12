@@ -1,5 +1,5 @@
 // 楽天の画像とリンク。画像はダウンロードせず楽天の画像URLをそのまま表示し、商品ページへリンクする（規約順守）。
-import { esc } from "./site.mjs";
+import { esc, fullName } from "./site.mjs";
 
 export const AFF = {
   rakutenId: process.env.RAKUTEN_AFFILIATE_ID || "",
@@ -19,7 +19,7 @@ const afl = pcUrl => AFF.rakutenId
   : pcUrl;
 
 export function searchQuery(p) {
-  return [p.brand, p.name, p.size].filter(Boolean).join(" ");
+  return [fullName(p), p.size].filter(Boolean).join(" ");
 }
 
 /**
@@ -58,5 +58,5 @@ export function buyLinksHtml(p, rk) {
 export function productImage(p, rk, size = 400) {
   const u = rkImage(rk && rk.imageUrl, size);
   if (!u) return null;
-  return { src: u, alt: `${p.brand} ${p.name}`.trim(), href: (rk && rk.affiliateUrl) || null };
+  return { src: u, alt: fullName(p), href: (rk && rk.affiliateUrl) || null };
 }

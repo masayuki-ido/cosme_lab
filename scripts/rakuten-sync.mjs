@@ -59,37 +59,59 @@ function sizeTokens(size) {
   return m ? [norm(m[1] + (/[gG]/.test(m[2]) ? "g" : "ml"))] : [];
 }
 
+// 商品名を語に切る。「Ⅱしっとり」は NFKC で "iiしっとり" になるので、英数字とかなの境目でも切る。
+function tokenize(name) {
+  return String(name).normalize("NFKC").toLowerCase()
+    .split(/[\s\u3000・（）()\[\]【】,、。\/\\+＋]+/)
+    .flatMap(w => w.match(/[a-z]+|[0-9]+(?:\.[0-9]+)?|[^\sa-z0-9]+/g) || [])
+    .filter(Boolean);
+}
+
+// 商品名の語が、楽天の商品名に入っているか。
+// 「Ⅰ」と「Ⅱ」のように1〜2文字の英数字は、部分一致だと取り違えるので語として一致するか見る。
+function tokenHit(tok, itemText, itemTokens) {
+  if (/^[a-z0-9.]+$/.test(tok) && tok.length <= 2) return itemTokens.includes(tok);
+  return itemText.includes(tok);
+}
+
 function scoreItem(p, item) {
-  const name = norm(item.itemName);
-  let score = 0;
-  // 商品名の語がどれだけ入っているか
-  const words = String(p.name).normalize("NFKC").split(/[\s　・（）()]+/).filter(w => w.length >= 2);
-  const hit = words.filter(w => name.includes(norm(w))).length;
-  score += words.length ? Math.round((hit / words.length) * 50) : 0;
-  // ブランド名
-  if (norm(p.brand) && name.includes(norm(p.brand))) score += 20;
-  // 容量
+  const itemText = norm(item.itemName);
+  const itemTokens = tokenize(item.itemName);
+  const brand = norm(p.brand);
+
+  // 商品名の語（ブランド名は別で見るので除く）
+  const toks = tokenize(p.name).filter(t => t.length >= 1 && !(brand && brand.includes(t) && t.length >= 2));
+  let hit = 0, miss = 0;
+  for (const t of toks) (tokenHit(t, itemText, itemTokens) ? hit++ : miss++);
+  let score = toks.length ? Math.round((hit / toks.length) * 60) : 0;
+  score -= miss * 12;                              // 名前の語が欠けているものは大きく下げる
+
+  if (brand && itemText.includes(brand)) score += 20;
+
   const st = sizeTokens(p.size);
-  if (st.length) score += st.some(t => name.includes(t)) ? 25 : -15;
-  // 区分（医薬部外品は「薬用」と書かれることが多い）
-  if (p.kind === "医薬部外品" && /薬用/.test(item.itemName)) score += 5;
-  // セット品・詰め替えなどは下げる
-  if (BAD.test(item.itemName)) score -= 30;
-  if (/詰替|つめかえ|詰め替え|レフィル/.test(item.itemName) && !/詰替|つめかえ|詰め替え|レフィル/.test(p.name)) score -= 25;
-  // 価格が離れすぎていないか
+  if (st.length) score += st.some(t => itemText.includes(t)) ? 25 : -20;
+
+  if (p.kind === "医薬部外品" && /薬用|医薬部外品/.test(item.itemName)) score += 5;
+  if (BAD.test(item.itemName)) score -= 40;
+  const refill = /詰替|つめかえ|詰め替え|レフィル/;
+  if (refill.test(item.itemName) !== refill.test(p.name)) score -= 30;
+
   if (p.price && item.itemPrice) {
     const r = item.itemPrice / p.price;
-    if (r < 0.4 || r > 2.5) score -= 20;
+    if (r < 0.4 || r > 2.5) score -= 25;
     else if (r >= 0.7 && r <= 1.4) score += 10;
   }
   if (!firstImage(item)) score -= 20;
-  return score;
+  // ratio は商品名の語がどれだけ揃ったか。ブランド名や容量の加点だけで
+  // 別のバリエーション（Ⅰ／Ⅱ／Ⅲ、しっとり／さっぱり など）に当たらないよう、確定の条件に使う。
+  return { score, ratio: toks.length ? hit / toks.length : 0, missed: toks.filter(t => !tokenHit(t, itemText, itemTokens)) };
 }
 
 function pickBest(p, items) {
-  const scored = items.map(it => ({ item: it, score: scoreItem(p, it) })).sort((a, b) => b.score - a.score);
-  return scored;
+  return items.map(it => ({ item: it, ...scoreItem(p, it) })).sort((a, b) => b.score - a.score);
 }
+// 自動で商品データに書き込んでよいか。点数だけでなく、商品名の語がほぼ揃っていることを条件にする。
+const isConfident = s => s && s.score >= MATCH_THRESHOLD && s.ratio >= 0.8;
 
 async function searchFor(p) {
   const queries = [
@@ -149,9 +171,9 @@ async function cmdMatch(products) {
     const top = r.scored[0];
     cands.items[p.id] = {
       keyword: r.keyword,
-      candidates: r.scored.slice(0, 5).map(s => ({ score: s.score, itemCode: s.item.itemCode, itemName: s.item.itemName, price: s.item.itemPrice, shopName: s.item.shopName }))
+      candidates: r.scored.slice(0, 5).map(s => ({ score: s.score, nameMatch: Math.round(s.ratio * 100) + "%", missing: s.missed, itemCode: s.item.itemCode, itemName: s.item.itemName, price: s.item.itemPrice, shopName: s.item.shopName }))
     };
-    if (top && top.score >= MATCH_THRESHOLD) {
+    if (isConfident(top)) {
       const f = join(ROOT, "data/products", `${p.id}.json`);
       const raw = JSON.parse(readFileSync(f, "utf8"));
       raw.rakutenItemCode = top.item.itemCode;
@@ -160,7 +182,7 @@ async function cmdMatch(products) {
       console.log(`  ✓ ${p.id} (${top.score}) ${top.item.itemName.slice(0, 40)}`);
     } else {
       review++;
-      console.log(`  ? ${p.id} (${top ? top.score : "候補なし"}) → data/rakuten-candidates.json を確認してください`);
+      console.log(`  ? ${p.id} (${top ? `${top.score}点・名前一致${Math.round(top.ratio * 100)}%・不足[${top.missed.join(",")}]` : "候補なし"}) → data/rakuten-candidates.json を確認してください`);
     }
   }
   cands.updatedAt = new Date().toISOString();
