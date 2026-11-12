@@ -1,0 +1,29 @@
+{
+  "activeIngredients": [],
+  "brand": "SK-II",
+  "category": "化粧水",
+  "checkedAt": "2026-11-02",
+  "claims": [
+    "独自の酵母由来成分「ピテラ」を配合",
+    "うるおいを与え、肌のキメを整える",
+    "シンプルな処方の化粧水（エッセンス）"
+  ],
+  "ingredients": [
+    "ガラクトミセス培養液（ギュウニュウ）",
+    "ＢＧ",
+    "ペンチレングリコール",
+    "水",
+    "安息香酸Ｎａ",
+    "メチルパラベン",
+    "ソルビン酸"
+  ],
+  "kind": "化粧品",
+  "maker": "P＆Gプレステージ",
+  "name": "フェイシャル トリートメント エッセンス",
+  "note": "公式サイト(sk-ii.jp)・高島屋ページでは全成分を取得できず、@cosme商品ページで確認（75mL/230mLページも同一成分）。価格は@cosme編集部調べ。",
+  "popularRank": 11,
+  "price": 23100,
+  "size": "160mL",
+  "sourceUrl": "https://www.cosme.net/variations/624832/",
+  "id": "sk2-facial-treatment-essence"
+}

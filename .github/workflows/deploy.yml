@@ -1,0 +1,49 @@
+name: サイトを公開（GitHub Pages）
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  workflow_call:          # 楽天の更新ワークフローから呼ばれる
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: ビルド
+        run: node scripts/build.mjs
+        env:
+          # アフィリエイトIDはビルド時に購入リンクへ埋め込む（未設定なら通常の検索リンクになる）
+          RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
+          AMAZON_TAG: ${{ secrets.AMAZON_TAG }}
+          YAHOO_VC_SID: ${{ secrets.YAHOO_VC_SID }}
+          YAHOO_VC_PID: ${{ secrets.YAHOO_VC_PID }}
+          SITE_ORIGIN: ${{ vars.SITE_ORIGIN }}
+          SITE_BASE: ${{ vars.SITE_BASE }}
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

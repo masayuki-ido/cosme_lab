@@ -1,0 +1,669 @@
+<title>コスメ研究所</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap">
+<style>
+/* Layout: one mobile-first column (max 560px) with sticky search header and bottom tab bar; screens swap in place. */
+:root{
+  --bg:#FFFFFF; --surface:#FFFFFF; --soft:#F3F4F6; --line:#E5E7EB;
+  --fg:#1F2328; --muted:#626872; --accent:#A35A8E; --accent-ink:#7A3F6C; --accent-soft:#FBF0F7;
+  --warn:#8A3F06; --warn-soft:#FDF0E6; --quasi:#1F4E85; --quasi-soft:#EBF2FB; --star:#B4540A;
+  --grad-soft:linear-gradient(135deg,#FDF2F8 0%,#F4F1FD 100%);
+  --grad-accent:linear-gradient(135deg,#A35A8E 0%,#7D66B8 100%);
+  --ok:#2E7D4F; --ok-soft:#E8F5EC;
+  /* 成分の配合目的ごとの色 */
+  --c-moist:#2F6FB0; --c-moist-s:#EAF2FB; --c-white:#9A6A00; --c-white-s:#FBF4E1;
+  --c-calm:#2E7D4F; --c-calm-s:#E8F5EC; --c-cond:#2B7A78; --c-cond-s:#E6F4F3;
+  --c-emol:#B5562B; --c-emol-s:#FCEEE6; --c-frag:#7D4FA8; --c-frag-s:#F3EDFA;
+  --c-func:#5E6470; --c-func-s:#F0F1F4;
+  --display:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif;
+  --body:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141517; --surface:#1C1D20; --soft:#26282C; --line:#33363B;
+  --fg:#ECEDEF; --muted:#A9ADB4; --accent:#E2A8D2; --accent-ink:#F1C8E4; --accent-soft:#3A2336;
+  --warn:#F2A46B; --warn-soft:#3A2414; --quasi:#93B8E8; --quasi-soft:#1A2A3F; --star:#F0A35C; color-scheme:dark;
+  --grad-soft:linear-gradient(135deg,#2E2029 0%,#24202F 100%); --grad-accent:linear-gradient(135deg,#E2A8D2 0%,#BBA9EE 100%);
+  --ok:#86CFA3; --ok-soft:#16301F;
+  --c-moist:#8DB8E8; --c-moist-s:#1A2838; --c-white:#E5C26A; --c-white-s:#33290F;
+  --c-calm:#86CFA3; --c-calm-s:#16301F; --c-cond:#7FCBC6; --c-cond-s:#14302F;
+  --c-emol:#F0A57E; --c-emol-s:#3A2216; --c-frag:#C6A6EA; --c-frag-s:#2C2238;
+  --c-func:#AEB4C0; --c-func-s:#2A2D33}}
+:root[data-theme="dark"]{
+  --bg:#141517; --surface:#1C1D20; --soft:#26282C; --line:#33363B;
+  --fg:#ECEDEF; --muted:#A9ADB4; --accent:#E2A8D2; --accent-ink:#F1C8E4; --accent-soft:#3A2336;
+  --warn:#F2A46B; --warn-soft:#3A2414; --quasi:#93B8E8; --quasi-soft:#1A2A3F; --star:#F0A35C; color-scheme:dark;
+  --grad-soft:linear-gradient(135deg,#2E2029 0%,#24202F 100%); --grad-accent:linear-gradient(135deg,#E2A8D2 0%,#BBA9EE 100%);
+  --ok:#86CFA3; --ok-soft:#16301F;
+  --c-moist:#8DB8E8; --c-moist-s:#1A2838; --c-white:#E5C26A; --c-white-s:#33290F;
+  --c-calm:#86CFA3; --c-calm-s:#16301F; --c-cond:#7FCBC6; --c-cond-s:#14302F;
+  --c-emol:#F0A57E; --c-emol-s:#3A2216; --c-frag:#C6A6EA; --c-frag-s:#2C2238;
+  --c-func:#AEB4C0; --c-func-s:#2A2D33}
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+button,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.app{max-width:560px;margin:0 auto;min-height:100%;display:flex;flex-direction:column}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line);
+  padding-block:12px 0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:10px}
+.brandrow{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.logo{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:.04em;background:none;border:0;padding:0;color:var(--fg)}
+.logo small{font-family:var(--body);font-weight:400;font-size:11px;color:var(--muted);margin-left:6px;letter-spacing:0}
+.searchbox{display:flex;align-items:center;gap:8px;height:44px;padding:0 14px;border-radius:22px;background:var(--soft);color:var(--muted)}
+.searchbox input{flex:1;min-width:0;border:0;background:transparent;outline:none;font-size:15px;color:var(--fg)}
+.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.tabs button{height:44px;border:0;background:transparent;color:var(--muted);border-bottom:3px solid transparent}
+.tabs button[aria-pressed="true"]{color:var(--fg);font-weight:700;border-bottom-color:var(--accent)}
+.backbar{display:flex;align-items:center;gap:8px;height:44px;margin-bottom:6px}
+.iconbtn{min-width:44px;height:44px;border:0;background:transparent;display:inline-flex;align-items:center;justify-content:center;gap:4px;border-radius:22px}
+.backbar h1{font-family:var(--display);font-size:16px;margin:0;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+main{flex:1;padding-block:14px 96px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:12px}
+.cond{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;align-items:center;gap:12px}
+.cond div{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.cond b{font-size:12px;color:var(--accent-ink)}
+.cond span{font-size:13px}
+.pillbtn{height:44px;padding:0 16px;border-radius:22px;border:1px solid var(--accent);background:var(--surface);color:var(--accent);font-size:13px;font-weight:700;white-space:nowrap}
+.pillbtn.on{background:var(--accent-soft);color:var(--accent-ink)}
+.pillbtn.solid{background:var(--grad-accent);color:var(--surface);border-color:transparent}
+.actionbar{position:fixed;left:0;right:0;bottom:calc(64px + env(safe-area-inset-bottom,0px));z-index:6;padding:16px max(16px,env(safe-area-inset-left,0px)) 12px;background:linear-gradient(to top,var(--bg) 65%,transparent)}
+.actionbar div{max-width:528px;margin:0 auto;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px}
+.pr{font-size:11px;font-weight:700;padding:0 6px;border-radius:4px;border:1px solid var(--muted);color:var(--muted)}
+.buylinks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.buybtn{min-height:52px;display:flex;align-items:center;justify-content:center;gap:4px;padding:6px;border-radius:12px;background:var(--surface);border:1px solid var(--line);color:var(--accent-ink);font-size:13px;font-weight:700;text-decoration:none;text-align:center;line-height:1.3}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px}
+.chip{flex:none;height:40px;padding:0 16px;border-radius:20px;border:1px solid var(--line);background:var(--surface);font-size:13px}
+.chip[aria-pressed="true"]{background:var(--grad-accent);border-color:transparent;color:var(--surface);font-weight:700}
+.meta{font-size:13px;color:var(--muted)}
+.card{background:var(--surface);border-radius:16px;padding:14px;border:1px solid var(--line)}
+.pcard{display:flex;gap:14px}
+.thumb{flex:none;width:76px;height:104px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:0;padding:0}
+.thumb i{display:block;width:16px;height:10px;border-radius:3px 3px 0 0;background:var(--fg)}
+.thumb em{display:block;width:30px;height:58px;border-radius:6px}
+.pbody{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
+.row{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.kind{font-size:11px;padding:2px 7px;border-radius:4px;font-weight:700;background:var(--soft);color:var(--muted)}
+.kind.q{background:var(--quasi-soft);color:var(--quasi)}
+.pname{font-size:15px;font-weight:700;line-height:1.4;background:none;border:0;padding:0;text-align:left;color:var(--fg)}
+.tag{font-size:12px;padding:3px 8px;border-radius:6px;background:var(--soft);color:var(--muted)}
+.tag.ok{background:var(--accent-soft);color:var(--accent-ink);font-weight:700}
+.tag.ng{background:var(--warn-soft);color:var(--warn);font-weight:700}
+.between{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.empty{text-align:center;color:var(--muted);padding:28px 16px}
+.note{font-size:11px;line-height:1.7;color:var(--muted);margin:4px 0 0}
+h2{font-family:var(--display);font-size:16px;margin:0}
+h3{font-size:14px;margin:0}
+.hero{display:flex;flex-direction:column;gap:10px}
+.hero .thumb{width:100%;height:150px}
+.hero .thumb em{width:46px;height:84px}
+.hero .thumb i{width:24px;height:14px}
+.title{font-family:var(--display);font-size:20px;line-height:1.4;margin:0;text-wrap:balance}
+.stars{color:var(--star)}
+.verdict{border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.verdict.ok{background:var(--ok-soft);color:var(--ok)}
+.verdict .vh{display:flex;align-items:center;gap:8px;font-size:15px}
+.verdict .vh svg{flex:none;width:24px;height:24px}
+.verdict.ng{background:var(--warn-soft);color:var(--warn)}
+.verdict p{margin:0;font-size:13px;color:var(--fg)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.stat{background:var(--soft);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column}
+.stat b{font-size:18px;font-variant-numeric:tabular-nums}
+.stat span{font-size:12px;color:var(--muted)}
+ol.inglist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+ol.inglist li{border-top:1px solid var(--line)}
+ol.inglist li:first-child{border-top:0}
+.ingbtn{width:100%;min-height:52px;border:0;background:transparent;display:flex;align-items:center;gap:10px;text-align:left;padding:8px 0}
+.ingbtn.wd{align-items:center;padding:10px 0}
+.ingbtn .no{flex:none;width:26px;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;text-align:right}
+.ingbtn.wd .no{padding-top:2px}
+.ingbtn .nm{flex:1;min-width:0;font-size:14px;overflow-wrap:anywhere}
+.ingbtn .ds{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;font-size:12px;line-height:1.6;color:var(--muted);font-weight:400;margin-top:1px}
+.ingbtn .nmrow{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.ci{flex:none;width:34px;height:34px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;background:var(--cs);color:var(--cc)}
+.ci svg{width:18px;height:18px}
+.ci.sm{width:24px;height:24px;border-radius:7px}
+.ci.sm svg{width:14px;height:14px}
+.ci.lg{width:48px;height:48px;border-radius:14px}
+.ci.lg svg{width:26px;height:26px}
+.catlbl{font-weight:700;color:var(--cc);margin-right:6px}
+.ngpill{flex:none;display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:700;padding:1px 8px;border-radius:10px;background:var(--warn-soft);color:var(--warn)}
+.ngpill svg{width:12px;height:12px}
+.tag{display:inline-flex;align-items:center;gap:4px}
+.tag svg{flex:none;width:13px;height:13px}
+.tag.cat{background:var(--cs);color:var(--cc);font-weight:700}
+.compbar{display:flex;height:12px;border-radius:6px;overflow:hidden;gap:2px}
+.compbar span{background:var(--cc);min-width:4px}
+.leg{display:flex;flex-wrap:wrap;gap:6px}
+.legi{display:inline-flex;align-items:center;gap:6px;padding:4px 10px 4px 4px;border-radius:999px;background:var(--cs);color:var(--cc);font-size:12px;font-weight:700}
+.legi b{font-variant-numeric:tabular-nums}
+.legi.warn{--cs:var(--warn-soft);--cc:var(--warn)}
+.ingbtn .ct{flex:none;font-size:11px;padding:2px 7px;border-radius:4px;background:var(--soft);color:var(--muted)}
+.seg{display:inline-grid;grid-template-columns:repeat(2,minmax(0,1fr));background:var(--soft);border-radius:22px;padding:3px;align-self:flex-start}
+.seg button{height:38px;padding:0 18px;border:0;border-radius:19px;background:transparent;font-size:13px;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--fg);font-weight:700;box-shadow:0 1px 2px rgba(0,0,0,.1)}
+.ggrp{display:flex;flex-direction:column;border-top:1px solid var(--line);padding-top:10px}
+.seg+.ggrp{border-top:0;padding-top:0}
+.ggrp h3{color:var(--accent-ink)}
+.ingbtn.hit .nm{color:var(--warn);font-weight:700}
+.legend{display:flex;gap:6px;flex-wrap:wrap}
+.cmpwrap{overflow-x:auto}
+table.cmp{border-collapse:collapse;width:100%;min-width:360px;font-size:13px}
+table.cmp th,table.cmp td{border-top:1px solid var(--line);padding:10px 8px;vertical-align:top;text-align:left}
+table.cmp th{color:var(--muted);font-weight:500;width:84px;font-size:12px}
+table.cmp td{font-variant-numeric:tabular-nums}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label,.field legend{font-size:13px;font-weight:700}
+fieldset{border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+textarea{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:12px;min-height:120px;resize:vertical}
+.ratepick{display:flex;gap:4px}
+.ratepick button{width:44px;height:44px;border:0;background:transparent;font-size:26px;color:var(--line)}
+.ratepick button.on{color:var(--star)}
+.review{display:flex;flex-direction:column;gap:4px;border-top:1px solid var(--line);padding-top:10px}
+.review:first-child{border-top:0;padding-top:0}
+.review p{margin:0;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+.tabbar nav{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));height:64px}
+.tabbar button{border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:11px;color:var(--muted);position:relative}
+.tabbar button[aria-current="page"]{color:var(--accent);font-weight:700}
+.badge{position:absolute;top:6px;left:calc(50% + 6px);min-width:18px;height:18px;border-radius:9px;background:var(--grad-accent);color:var(--surface);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 4px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(80px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:20px;font-size:13px;z-index:20}
+.skel{height:132px;border-radius:16px;background:var(--soft)}
+@media (prefers-reduced-motion: no-preference){.skel{animation:pulse 1.4s ease-in-out infinite}@keyframes pulse{50%{opacity:.55}}}
+</style>
+
+<div class="app">
+  <header class="top" id="top"></header>
+  <main id="main" aria-live="polite"></main>
+</div>
+<div class="tabbar"><nav aria-label="メインメニュー" id="tabbar"></nav></div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(() => {
+"use strict";
+
+// ---------- NG / caution groups (matched against INCI-style Japanese names) ----------
+const NG_GROUPS = [
+  { key: "ethanol", label: "エタノール", test: n => /^(無水)?エタノール$|^変性アルコール$|^アルコール$/.test(n) },
+  { key: "fragrance", label: "香料", test: n => /^(合成)?香料$/.test(n) },
+  { key: "paraben", label: "パラベン", test: n => /パラベン|パラオキシ安息香酸/.test(n) },
+  { key: "phenoxy", label: "フェノキシエタノール", test: n => n === "フェノキシエタノール" },
+  { key: "color", label: "合成着色料", test: n => /^(赤|黄|青|緑|橙|紫)[0-9０-９]+号?$|^(赤|黄|青|緑|橙|紫)色[0-9０-９]+号$/.test(n) },
+  { key: "mineral", label: "鉱物油", test: n => /^(ミネラルオイル|流動パラフィン)$/.test(n) },
+  { key: "silicone", label: "シリコーン", test: n => /ジメチコン|メチコン|シロキサン|シリコーン/.test(n) },
+  { key: "pg", label: "PG", test: n => /^(PG|プロピレングリコール)$/.test(n) }
+];
+const SKIN_TYPES = ["乾燥肌", "脂性肌", "混合肌", "普通肌", "敏感肌", "ゆらぎ肌"];
+const CAT_ORDER = ["保湿", "美白", "肌荒れ防止", "整肌", "エモリエント"];
+// 配合目的ごとのアイコンと色（色はCSSトークン --c-*）
+const SV = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const SHIELD = '<path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/>';
+const CAT_META = {
+  "保湿": ["moist", SV('<path d="M12 3c3.5 4.2 6 7.6 6 10.5a6 6 0 0 1-12 0C6 10.6 8.5 7.2 12 3z"/>')],
+  "美白": ["white", SV('<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M18 16l.7 1.8 1.8.7-1.8.7L18 21l-.7-1.8-1.8-.7 1.8-.7z"/>')],
+  "肌荒れ防止": ["calm", SV(SHIELD + '<path d="M9.5 12h5M12 9.5v5"/>')],
+  "整肌": ["cond", SV('<path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14"/><path d="M5 19l7-7"/>')],
+  "エモリエント": ["emol", SV('<circle cx="12" cy="13" r="7"/><path d="M8.5 13.5a3.5 3.5 0 0 0 3.5 3"/>')],
+  "ベース": ["func", SV('<path d="M3 9c3-2 6 2 9 0s6-2 9 0M3 15c3-2 6 2 9 0s6-2 9 0"/>')],
+  "乳化・可溶化": ["func", SV('<circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/>')],
+  "増粘・使用感": ["func", SV('<path d="M12 4l9 5-9 5-9-5z"/><path d="M3 14l9 5 9-5"/>')],
+  "pH調整": ["func", SV('<path d="M12 4v16M7 20h10M5 7h14M5 7l-2.5 6h5zM19 7l-2.5 6h5z"/>')],
+  "安定化": ["func", SV('<rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>')],
+  "防腐": ["func", SV(SHIELD + '<path d="M9 12l2 2 4-4"/>')],
+  "香料": ["frag", SV('<circle cx="12" cy="7.5" r="3"/><circle cx="12" cy="16.5" r="3"/><circle cx="7.5" cy="12" r="3"/><circle cx="16.5" cy="12" r="3"/>')],
+  "清涼": ["moist", SV('<path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9"/>')],
+  "紫外線吸収": ["white", SV('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/>')]
+};
+const OTHER_META = ["func", SV('<circle cx="12" cy="12" r="8"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/>')];
+const ICON_WARN = SV('<path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/>');
+const ICON_OK = SV('<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>');
+function catVars(cat) { const k = (CAT_META[cat] || OTHER_META)[0]; return `--cc:var(--c-${k});--cs:var(--c-${k}-s)`; }
+function ci(cat, size) { const m = CAT_META[cat] || OTHER_META; return `<span class="ci${size ? " " + size : ""}" style="${catVars(cat)}">${m[1]}</span>`; }
+// Same normalization as the data pipeline (norm.py): width-folding, symbols, trailing descriptive parentheses.
+const JP = /[぀-ヿ一-鿿]/;
+const normCache = new Map();
+function norm(s) {
+  if (normCache.has(s)) return normCache.get(s);
+  let t = String(s).normalize("NFKC").replace(/−/g, "-").replace(/‐/g, "-").replace(/、/g, ",").replace(/[*※]/g, "").trim();
+  const m = /^(.*\S)\(([^()]*)\)$/.exec(t);
+  if (m && ((JP.test(m[2]) && !m[2].includes("/")) || (m[2].length <= 2 && JP.test(m[1].slice(-1))))) t = m[1].trim();
+  normCache.set(s, t); return t;
+}
+const TINTS = [["#E6F4F1","#7FB8AF"],["#EAF0F9","#8DA9D0"],["#FBEFF3","#D79AB4"],["#F1ECFA","#A796D3"],["#FBF4E6","#D3B675"],["#EDF5E9","#9CC08C"]];
+// 仮のアフィリエイト設定：IDを入れると各リンクに付きます（空のうちは通常の検索リンク）。商品データに affiliate:{amazon,rakuten,yahoo} があればそちらを優先。
+const AFF = { amazonTag: "", rakutenId: "", yahooVcSid: "", yahooVcPid: "" };
+function buyLinks(p) {
+  const o = p.affiliate || {};
+  const q = encodeURIComponent([p.name, p.size].filter(Boolean).join(" "));
+  const amazon = o.amazon || `https://www.amazon.co.jp/s?k=${q}${AFF.amazonTag ? "&tag=" + encodeURIComponent(AFF.amazonTag) : ""}`;
+  const rk = `https://search.rakuten.co.jp/search/mall/${q}/`;
+  const rakuten = o.rakuten || (AFF.rakutenId ? `https://hb.afl.rakuten.co.jp/hgc/${AFF.rakutenId}/?pc=${encodeURIComponent(rk)}` : rk);
+  const yh = `https://shopping.yahoo.co.jp/search?p=${q}`;
+  const yahoo = o.yahoo || (AFF.yahooVcSid && AFF.yahooVcPid ? `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${AFF.yahooVcSid}&pid=${AFF.yahooVcPid}&vc_url=${encodeURIComponent(yh)}` : yh);
+  return [["Amazon", amazon], ["楽天市場", rakuten], ["Yahoo!ショッピング", yahoo]];
+}
+
+// ---------- state ----------
+const store = {
+  products: [], dict: {}, loaded: false, offline: false,
+  reviews: {}, db: null, user: null, uid: null, canPost: false
+};
+const prefs = load("prefs", { skin: ["乾燥肌", "敏感肌"], ng: ["ethanol", "fragrance"] });
+let compare = load("compare", []);
+const view = { name: "search", tab: "products", q: "", filter: "all", id: null, ing: null, from: null, rate: 0 };
+
+function load(k, d) { try { const v = JSON.parse(localStorage.getItem("cl_" + k)); return v ?? d; } catch (e) { return d; } }
+function save(k, v) { try { localStorage.setItem("cl_" + k, JSON.stringify(v)); } catch (e) {} }
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+const yen = n => n == null ? "価格未確認" : "¥" + Number(n).toLocaleString("ja-JP");
+const $ = s => document.querySelector(s);
+
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 2200); }
+
+// ---------- analysis ----------
+function ngHits(p, keys = prefs.ng) {
+  const groups = NG_GROUPS.filter(g => keys.includes(g.key));
+  const all = [...(p.ingredients || []), ...(p.activeIngredients || [])];
+  const hit = new Set();
+  for (const n of all) for (const g of groups) if (g.test(norm(n))) hit.add(g.label);
+  return [...hit];
+}
+function cautionCount(p) {
+  return (p.ingredients || []).filter(n => NG_GROUPS.some(g => g.test(norm(n)))).length;
+}
+function catOf(raw) {
+  const name = norm(raw);
+  const d = store.dict[name];
+  if (d && d.cat) return d.cat;
+  if (NG_GROUPS.find(g => g.key === "fragrance").test(name)) return "香料";
+  if (/パラベン|フェノキシエタノール|安息香酸Na|ソルビン酸/.test(name)) return "防腐";
+  if (/^(水|精製水|BG|DPG|グリセリン|濃グリセリン|ペンチレングリコール)$/.test(name)) return "ベース";
+  return null;
+}
+function catCounts(p) {
+  const c = {};
+  for (const n of p.ingredients || []) { const k = catOf(n); if (k) c[k] = (c[k] || 0) + 1; }
+  return c;
+}
+function feature(p) {
+  const c = catCounts(p);
+  if (p.kind === "医薬部外品" && (p.activeIngredients || []).length) return "有効成分：" + p.activeIngredients[0];
+  if (c["保湿"]) return "保湿成分 " + c["保湿"] + "種";
+  return (p.claims || [])[0] || "";
+}
+function featureTag(p) {
+  const c = catCounts(p);
+  if (p.kind === "医薬部外品" && (p.activeIngredients || []).length) { const k = catOf(p.activeIngredients[0]) || "肌荒れ防止"; return `<span class="tag cat" style="${catVars(k)}">${(CAT_META[k] || OTHER_META)[1]}${esc(p.activeIngredients[0])}</span>`; }
+  if (c["保湿"]) return `<span class="tag cat" style="${catVars("保湿")}">${CAT_META["保湿"][1]}保湿成分 ${c["保湿"]}種</span>`;
+  return "";
+}
+function tintOf(p) { let h = 0; for (const ch of p.id) h = (h * 31 + ch.charCodeAt(0)) >>> 0; return TINTS[h % TINTS.length]; }
+function perMl(p) { const m = /([0-9.]+)\s*m[lL]/.exec(p.size || ""); return (m && p.price) ? Math.round(p.price / parseFloat(m[1]) * 10) / 10 : null; }
+function reviewStats(id) {
+  const rs = store.reviews[id] || [];
+  if (!rs.length) return null;
+  const avg = rs.reduce((a, r) => a + r.rating, 0) / rs.length;
+  const same = rs.filter(r => (r.skin || []).some(s => prefs.skin.includes(s)));
+  const savg = same.length ? same.reduce((a, r) => a + r.rating, 0) / same.length : null;
+  return { n: rs.length, avg: avg.toFixed(1), same: savg == null ? null : savg.toFixed(1) };
+}
+function byId(id) { return store.products.find(p => p.id === id); }
+function matchesQuery(p, q) {
+  if (!q) return true;
+  const hay = [p.brand, p.maker, p.name, ...(p.ingredients || []), ...(p.activeIngredients || [])].join(" ").toLowerCase();
+  return q.toLowerCase().split(/\s+/).every(t => hay.includes(t));
+}
+
+// ---------- icons ----------
+const I = {
+  search: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>',
+  cmp: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="7" height="16" rx="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5"/></svg>',
+  me: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>',
+  back: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
+  ext: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg>'
+};
+
+// ---------- navigation ----------
+function go(name, opts = {}) {
+  Object.assign(view, { name }, opts);
+  if (name === "mypage") view.draft = { skin: prefs.skin.slice(), ng: prefs.ng.slice() };
+  else view.draft = null;
+  if (name === "product") { try { history.replaceState(null, "", "#p-" + opts.id); } catch (e) {} }
+  else if (["search", "compare", "mypage"].includes(name)) { try { history.replaceState(null, "", "#" + name); } catch (e) {} }
+  render(); window.scrollTo(0, 0);
+}
+function fromHash() {
+  const h = location.hash.slice(1);
+  if (h.startsWith("p-")) { view.name = "product"; view.id = h.slice(2); }
+  else if (h === "compare" || h === "mypage") view.name = h;
+  else view.name = "search";
+}
+window.addEventListener("hashchange", () => { fromHash(); render(); });
+
+// ---------- shared pieces ----------
+function thumb(p, big) {
+  const [bg, fg] = tintOf(p);
+  return `<button type="button" class="thumb" style="background:linear-gradient(160deg,${bg} 0%,var(--surface) 100%)" data-go="product" data-id="${esc(p.id)}" aria-label="${esc(p.name)}の詳細"${big ? ' tabindex="-1"' : ""}><i></i><em style="background:${fg}"></em></button>`;
+}
+function kindTag(p) { return `<span class="kind${p.kind === "医薬部外品" ? " q" : ""}">${esc(p.kind)}</span>`; }
+function ngTags(p) {
+  if (!(p.ingredients || []).length) return `<span class="tag">全成分 確認中</span>`;
+  const h = ngHits(p);
+  return h.length ? `<span class="tag ng">${ICON_WARN}NG：${esc(h.join("・"))}</span>` : `<span class="tag ok" style="background:var(--ok-soft);color:var(--ok)">${ICON_OK}NG成分なし</span>`;
+}
+function cmpBtn(p) {
+  const on = compare.includes(p.id);
+  return `<button type="button" class="pillbtn${on ? " on" : ""}" data-cmp="${esc(p.id)}" aria-pressed="${on}">${on ? "✓ 比較中" : "＋ 比較"}</button>`;
+}
+function ratingLine(p) {
+  const s = reviewStats(p.id);
+  if (!s) return `<div class="meta">口コミはまだありません</div>`;
+  return `<div class="row" style="font-size:13px"><span class="stars" aria-hidden="true">★</span><b>${s.avg}</b><span class="meta">（${s.n}件）</span>${s.same ? `<span class="meta">同じ肌質 ${s.same}</span>` : ""}</div>`;
+}
+function productCard(p) {
+  return `<article class="card pcard">${thumb(p)}
+    <div class="pbody">
+      <div class="row">${kindTag(p)}<span class="meta" style="font-size:12px">${esc(p.brand)}</span></div>
+      <button type="button" class="pname" data-go="product" data-id="${esc(p.id)}">${esc(p.name)}</button>
+      ${ratingLine(p)}
+      <div class="row">${ngTags(p)}${featureTag(p)}</div>
+      <div class="between"><span class="meta">${yen(p.price)}／${esc(p.size || "")}</span>${cmpBtn(p)}</div>
+    </div></article>`;
+}
+function condBanner() {
+  const ng = NG_GROUPS.filter(g => prefs.ng.includes(g.key)).map(g => g.label);
+  return `<section class="cond"><div><b>あなたの条件で判定中</b><span>${esc(prefs.skin.join("・") || "肌質未設定")} ／ NG成分：${esc(ng.join("、") || "なし")}</span></div>
+    <button type="button" class="pillbtn" data-go="mypage">条件を変更</button></section>`;
+}
+
+// ---------- header ----------
+function renderTop() {
+  const top = $("#top");
+  if (view.name === "search") {
+    top.innerHTML = `<div class="brandrow"><button type="button" class="logo" data-go="search">コスメ研究所<small>化粧水の成分を見て選ぶ</small></button></div>
+      <label class="searchbox">${I.search}<input id="q" type="search" aria-label="商品・ブランド・成分を検索" placeholder="化粧水、セラミド、トラネキサム酸…" value="${esc(view.q)}"></label>
+      <nav class="tabs" aria-label="検索対象">
+        <button type="button" data-tab="products" aria-pressed="${view.tab === "products"}">商品</button>
+        <button type="button" data-tab="ingredients" aria-pressed="${view.tab === "ingredients"}">成分</button>
+        <button type="button" data-tab="ranking" aria-pressed="${view.tab === "ranking"}">ランキング</button>
+      </nav>`;
+    const q = $("#q");
+    q.addEventListener("input", e => { view.q = e.target.value; renderMain(); });
+    return;
+  }
+  const titles = { product: "商品詳細", ingredients: "全成分表", ingredient: "成分詳細", compare: "比較", review: "口コミを書く", mypage: "マイページ" };
+  const showBack = !["compare", "mypage"].includes(view.name);
+  top.innerHTML = `<div class="backbar">${showBack ? `<button type="button" class="iconbtn" data-back aria-label="戻る">${I.back}</button>` : `<span style="width:8px"></span>`}<h1>${titles[view.name] || ""}</h1></div>`;
+}
+
+// ---------- screens ----------
+function screenSearch() {
+  if (!store.loaded) return `<div class="skel"></div><div class="skel"></div><div class="skel"></div>`;
+  if (view.tab === "ingredients") return screenIngredientIndex();
+  let list = store.products.filter(p => matchesQuery(p, view.q));
+  const f = view.filter;
+  list = list.filter(p => f === "all" || (f === "ok" && p.ingredients?.length && !ngHits(p).length) || (f === "cos" && p.kind === "化粧品") || (f === "quasi" && p.kind === "医薬部外品"));
+  if (view.tab === "ranking") {
+    list = list.slice().sort((a, b) => (reviewStats(b.id)?.avg || 0) - (reviewStats(a.id)?.avg || 0) || (a.popularRank || 999) - (b.popularRank || 999));
+  } else {
+    list = list.slice().sort((a, b) => (a.popularRank || 999) - (b.popularRank || 999));
+  }
+  const chips = [["all","すべて"],["ok","NG成分なし"],["cos","化粧品"],["quasi","医薬部外品"]]
+    .map(([k, l]) => `<button type="button" class="chip" data-filter="${k}" aria-pressed="${f === k}">${l}</button>`).join("");
+  const body = store.products.length === 0
+    ? `<div class="card empty">まだ商品が登録されていません。人気の化粧水から順に、毎日追加していきます。</div>`
+    : list.length ? list.map(productCard).join("") : `<div class="card empty">条件に合う化粧水はありません</div>`;
+  return `${condBanner()}<div class="chips">${chips}</div>
+    <div class="meta">化粧水 ${list.length}件${view.tab === "ranking" ? "（口コミ評価順）" : ""}</div>${body}
+    <p class="note">価格は確認日時点の参考価格です。全成分はメーカー公式などの表示を転記しています。購入前に商品パッケージの表示もご確認ください。</p>`;
+}
+
+function screenIngredientIndex() {
+  const counts = {};
+  for (const p of store.products) for (const n of new Set([...(p.activeIngredients || []), ...(p.ingredients || [])].map(norm))) counts[n] = (counts[n] || 0) + 1;
+  let names = Object.keys(counts);
+  if (view.q) names = names.filter(n => n.toLowerCase().includes(view.q.toLowerCase()));
+  names.sort((a, b) => counts[b] - counts[a] || a.localeCompare(b, "ja"));
+  if (!names.length) return `<div class="card empty">該当する成分はありません</div>`;
+  return `<div class="meta">成分 ${names.length}種（配合商品数の多い順）</div>
+    <section class="card"><ol class="inglist">${names.slice(0, 300).map(n => {
+      const hit = NG_GROUPS.some(g => prefs.ng.includes(g.key) && g.test(norm(n)));
+      return `<li><button type="button" class="ingbtn${hit ? " hit" : ""}" data-ing="${esc(n)}">${ci(catOf(n) || "その他", "sm")}<span class="nm"><span class="nmrow">${esc(n)}${hit ? `<span class="ngpill">${ICON_WARN}NG</span>` : ""}</span>${catOf(n) ? `<span class="ds"><b class="catlbl" style="${catVars(catOf(n))}">${esc(catOf(n))}</b></span>` : ""}</span><span class="meta" style="font-size:12px;flex:none">${counts[n]}商品</span></button></li>`;
+    }).join("")}</ol></section>`;
+}
+
+function screenProduct() {
+  const p = byId(view.id);
+  if (!p) return store.loaded ? `<div class="card empty">この商品は見つかりませんでした</div>` : `<div class="skel"></div>`;
+  const hits = ngHits(p), has = (p.ingredients || []).length;
+  const c = catCounts(p);
+  const cats = CAT_ORDER.filter(k => c[k]).slice(0, 3);
+  const rs = (store.reviews[p.id] || []).slice().sort((a, b) => (b.at || "").localeCompare(a.at || "")).slice(0, 5);
+  return `<section class="hero">${thumb(p, true)}
+      <div class="row">${kindTag(p)}<span class="meta">${esc(p.brand)}${p.maker && p.maker !== p.brand ? "（" + esc(p.maker) + "）" : ""}</span></div>
+      <h2 class="title">${esc(p.name)}</h2>
+      <div class="between"><span>${yen(p.price)} <span class="meta">／ ${esc(p.size || "")}${perMl(p) ? `（1mLあたり約${perMl(p)}円）` : ""}</span></span>${cmpBtn(p)}</div>
+      ${ratingLine(p)}
+    </section>
+    ${has ? `<section class="verdict ${hits.length ? "ng" : "ok"}"><b class="vh">${hits.length ? ICON_WARN + "あなたのNG成分が入っています" : ICON_OK + "あなたのNG成分は入っていません"}</b>
+      <p>${hits.length ? "含まれるNG成分：" + esc(hits.join("、")) : "設定中のNG成分（" + esc(NG_GROUPS.filter(g => prefs.ng.includes(g.key)).map(g => g.label).join("、") || "なし") + "）は全成分に見当たりません。"}</p></section>`
+      : `<section class="card"><b>全成分を確認中です</b><p class="meta" style="margin:4px 0 0">${esc(p.note || "公式の全成分表示を確認でき次第、掲載します。")}</p></section>`}
+    <section class="card" style="display:flex;flex-direction:column;gap:10px"><div class="row"><h3>購入する</h3><span class="pr">PR</span></div>
+      <div class="buylinks">${buyLinks(p).map(([l, u]) => `<a class="buybtn" href="${esc(u)}" target="_blank" rel="noopener sponsored">${esc(l)}</a>`).join("")}</div>
+      <p class="meta" style="margin:0;font-size:11px;line-height:1.6">各ショップの検索結果を開きます。リンク先で購入されると、運営者に紹介料が入ることがあります。価格・在庫はリンク先でご確認ください。</p></section>
+    ${(p.claims || []).length ? `<section class="card" style="display:flex;flex-direction:column;gap:8px"><h3>メーカーが紹介している特徴</h3><div class="row">${p.claims.map(x => `<span class="tag">${esc(x)}</span>`).join("")}</div></section>` : ""}
+    ${has ? `<section class="card" style="display:flex;flex-direction:column;gap:10px">
+      <div class="between"><h3>成分の内訳</h3><span class="meta">全${p.ingredients.length}成分</span></div>
+      ${(p.activeIngredients || []).length ? `<div class="field"><span class="meta" style="font-size:12px">有効成分</span><div class="row">${p.activeIngredients.map(n => { const k = catOf(n) || "肌荒れ防止"; return `<button type="button" class="tag cat" style="border:0;min-height:32px;${catVars(k)}" data-ing="${esc(n)}">${(CAT_META[k] || OTHER_META)[1]}${esc(n)}</button>`; }).join("")}</div></div>` : ""}
+      ${compBreakdown(p)}
+    </section>
+    <section class="card" style="display:flex;flex-direction:column;gap:12px">
+      <div class="between"><h3>${(p.activeIngredients || []).length ? "その他の成分" : "全成分"}（${p.ingredients.length}）</h3></div>
+      ${fullIngList(p)}
+      <p class="meta" style="margin:0;font-size:12px">表示順はパッケージの記載順（おおむね配合量の多い順）。オレンジはあなたのNG成分です。成分名をタップすると、その成分を含む商品も見られます。</p>
+    </section>` : ""}
+    <section class="card" style="display:flex;flex-direction:column;gap:10px">
+      <div class="between"><h3>口コミ</h3>${store.canPost ? `<button type="button" class="pillbtn" data-go="review" data-id="${esc(p.id)}">口コミを書く</button>` : ""}</div>
+      ${rs.length ? rs.map(r => `<div class="review"><div class="row"><span class="stars">${"★".repeat(r.rating)}${"☆".repeat(5 - r.rating)}</span><span class="meta" style="font-size:12px">${esc((r.skin || []).join("・"))}</span></div><p>${esc(r.text)}</p></div>`).join("") : `<p class="meta" style="margin:0">まだ口コミはありません。${store.canPost ? "最初の口コミを書いてみませんか。" : ""}</p>`}
+    </section>
+    <p class="note">出典：${p.sourceUrl ? `<a href="${esc(p.sourceUrl)}" target="_blank" rel="noopener">メーカー等の商品ページ ${I.ext}</a>` : "確認中"}　確認日：${esc(p.checkedAt || "")}<br>全成分は配合量の多い順（1%以下は順不同）に表示されています。成分の解説は一般的な配合目的で、商品の効果を示すものではありません。</p>`;
+}
+
+function screenIngredients() {
+  const p = byId(view.id);
+  if (!p) return `<div class="card empty">商品が見つかりませんでした</div>`;
+  const ngSel = NG_GROUPS.filter(g => prefs.ng.includes(g.key));
+  return `<section class="card" style="display:flex;flex-direction:column;gap:4px"><span class="meta" style="font-size:12px">${esc(p.brand)}</span><b>${esc(p.name)}</b></section>
+    <div class="legend"><span class="tag ng">オレンジ＝あなたのNG成分</span><span class="tag">アイコンの色＝主な配合目的</span></div>
+    ${(p.activeIngredients || []).length ? `<section class="card"><h3 style="margin-bottom:6px">有効成分</h3><ol class="inglist">${p.activeIngredients.map(n => ingRow(n, null, ngSel)).join("")}</ol></section>` : ""}
+    <section class="card"><h3 style="margin-bottom:6px">${(p.activeIngredients || []).length ? "その他の成分" : "全成分"}（${p.ingredients.length}）</h3>
+      <ol class="inglist">${p.ingredients.map((n, i) => ingRow(n, i + 1, ngSel)).join("")}</ol></section>
+    <p class="note">表示順は商品パッケージの記載順です。出典：${p.sourceUrl ? `<a href="${esc(p.sourceUrl)}" target="_blank" rel="noopener">商品ページ ${I.ext}</a>` : "確認中"}（${esc(p.checkedAt || "")}確認）</p>`;
+}
+// 成分の内訳：配合目的ごとの本数を色付きバーと凡例で見せる
+function compBreakdown(p) {
+  const c = {};
+  for (const n of p.ingredients || []) { const k = catOf(n) || "その他"; c[k] = (c[k] || 0) + 1; }
+  const order = [...CAT_ORDER, "ベース", "乳化・可溶化", "増粘・使用感", "pH調整", "安定化", "防腐", "香料", "清涼", "紫外線吸収"];
+  const keys = order.filter(k => c[k]).concat(Object.keys(c).filter(k => !order.includes(k)));
+  const main = keys.filter(k => CAT_ORDER.includes(k) || k === "香料");
+  const func = keys.filter(k => !main.includes(k));
+  const funcN = func.reduce((a, k) => a + c[k], 0);
+  const segs = main.map(k => [k, c[k], catVars(k)]).concat(funcN ? [["基剤・品質保持", funcN, catVars("ベース")]] : []);
+  const legi = (k, n) => `<span class="legi" style="${catVars(k)}">${ci(k, "sm")}${esc(k)} <b>${n}</b></span>`;
+  const caut = cautionCount(p);
+  return `<div class="compbar" role="img" aria-label="${esc(segs.map(s => s[0] + s[1]).join("、"))}">${segs.map(([k, n, v]) => `<span style="flex:${n};${v}"></span>`).join("")}</div>
+    <div class="leg">${main.map(k => legi(k, c[k])).join("")}${caut ? `<span class="legi warn"><span class="ci sm">${ICON_WARN}</span>注意成分 <b>${caut}</b></span>` : ""}</div>
+    ${func.length ? `<div class="leg">${func.map(k => legi(k, c[k])).join("")}</div>` : ""}`;
+}
+function fullIngList(p) {
+  const ngSel = NG_GROUPS.filter(g => prefs.ng.includes(g.key));
+  const mode = view.ingMode === "cat" ? "cat" : "order";
+  const seg = `<div class="seg" role="group" aria-label="並べ方"><button type="button" data-ingmode="order" aria-pressed="${mode === "order"}">表示順</button><button type="button" data-ingmode="cat" aria-pressed="${mode === "cat"}">目的別</button></div>`;
+  if (mode === "order") return seg + `<ol class="inglist">${p.ingredients.map((n, i) => ingRow(n, i + 1, ngSel, false)).join("")}</ol>`;
+  const groups = {};
+  p.ingredients.forEach((n, i) => { const k = catOf(n) || "その他"; (groups[k] = groups[k] || []).push([n, i + 1]); });
+  const order = [...CAT_ORDER, "ベース", "乳化・可溶化", "増粘・使用感", "pH調整", "安定化", "防腐", "香料", "清涼", "紫外線吸収"];
+  const keys = order.filter(k => groups[k]).concat(Object.keys(groups).filter(k => !order.includes(k)));
+  return seg + keys.map(k => `<div class="ggrp"><div class="between"><h3 class="row" style="gap:8px;${catVars(k)};color:var(--cc)">${ci(k, "sm")}${esc(k)}</h3><span class="meta" style="font-size:12px">${groups[k].length}成分</span></div><ol class="inglist">${groups[k].map(([n, i]) => ingRow(n, i, ngSel, true)).join("")}</ol></div>`).join("");
+}
+function ingRow(n, no, ngSel, hideCat) {
+  const hit = ngSel.some(g => g.test(norm(n)));
+  const d = store.dict[norm(n)];
+  const cat = catOf(n);
+  const lbl = !hideCat && cat ? `<b class="catlbl" style="${catVars(cat)}">${esc(cat)}</b>` : "";
+  const desc = (lbl || (d && d.desc)) ? `<span class="ds">${lbl}${d && d.desc ? esc(d.desc) : ""}</span>` : "";
+  return `<li><button type="button" class="ingbtn wd${hit ? " hit" : ""}" data-ing="${esc(n)}"><span class="no">${no ?? "◆"}</span>${ci(cat || "その他")}<span class="nm"><span class="nmrow">${esc(n)}${hit ? `<span class="ngpill">${ICON_WARN}NG</span>` : ""}</span>${desc}</span></button></li>`;
+}
+
+function screenIngredient() {
+  const n = norm(view.ing), d = store.dict[n] || {};
+  const groups = NG_GROUPS.filter(g => g.test(n));
+  const inP = store.products.filter(p => [...(p.ingredients || []), ...(p.activeIngredients || [])].some(x => norm(x) === n));
+  return `<section class="card" style="display:flex;flex-direction:column;gap:8px">
+      <div class="row" style="gap:12px;flex-wrap:nowrap">${ci(catOf(n) || "その他", "lg")}<h2 class="title" style="min-width:0;overflow-wrap:anywhere">${esc(n)}</h2></div>
+      <div class="row">${catOf(n) ? `<span class="tag cat" style="${catVars(catOf(n))}">${esc(catOf(n))}</span>` : ""}${groups.map(g => `<span class="tag ng">${ICON_WARN}${esc(g.label)}に該当</span>`).join("")}${d.alias ? `<span class="tag">別名：${esc(d.alias)}</span>` : ""}</div>
+      <p style="margin:0">${d.desc ? esc(d.desc) : '<span class="meta">この成分の解説は準備中です。</span>'}</p>
+      ${groups.length ? `<p class="meta" style="margin:0;font-size:13px">「${esc(groups.map(g => g.label).join("・"))}」は、肌に合わないと感じる人が避けることのある成分として、NG成分の設定に使えます。</p>` : ""}
+    </section>
+    <h2>この成分を含む商品（${inP.length}）</h2>
+    ${inP.length ? inP.map(productCard).join("") : `<div class="card empty">登録済みの商品にはありません</div>`}
+    <p class="note">成分の解説は一般的な配合目的をまとめたもので、効果・効能を保証するものではありません。</p>`;
+}
+
+function screenCompare() {
+  const ps = compare.map(byId).filter(Boolean);
+  if (!ps.length) return `<div class="card empty">比較する商品がありません。<br>商品の「＋ 比較」を押すと、ここに並びます（最大3つ）。</div><button type="button" class="pillbtn solid" data-go="search">化粧水をさがす</button>`;
+  const sets = ps.map(p => new Set([...(p.activeIngredients || []), ...(p.ingredients || [])].map(norm)));
+  const common = ps.length > 1 ? [...sets[0]].filter(n => sets.every(s => s.has(n))) : [];
+  const cell = f => ps.map(p => `<td>${f(p)}</td>`).join("");
+  return `<div class="cmpwrap"><table class="cmp">
+      <tr><th>商品</th>${cell(p => `<button type="button" class="pname" style="font-size:13px" data-go="product" data-id="${esc(p.id)}">${esc(p.name)}</button><div class="meta" style="font-size:12px">${esc(p.brand)}</div>`)}</tr>
+      <tr><th>区分</th>${cell(kindTag)}</tr>
+      <tr><th>価格</th>${cell(p => `${yen(p.price)}<div class="meta" style="font-size:12px">${esc(p.size || "")}</div>`)}</tr>
+      <tr><th>1mLあたり</th>${cell(p => perMl(p) ? `約${perMl(p)}円` : "—")}</tr>
+      <tr><th>NG判定</th>${cell(ngTags)}</tr>
+      <tr><th>有効成分</th>${cell(p => esc((p.activeIngredients || []).join("、") || "—"))}</tr>
+      <tr><th>保湿成分</th>${cell(p => (catCounts(p)["保湿"] || 0) + "種")}</tr>
+      <tr><th>注意成分</th>${cell(p => cautionCount(p))}</tr>
+      <tr><th>成分数</th>${cell(p => (p.ingredients || []).length)}</tr>
+      <tr><th>口コミ</th>${cell(p => { const s = reviewStats(p.id); return s ? `★${s.avg}（${s.n}）` : "—"; })}</tr>
+      <tr><th></th>${cell(p => `<button type="button" class="pillbtn" data-cmp="${esc(p.id)}">外す</button>`)}</tr>
+    </table></div>
+    ${ps.length > 1 ? `<section class="card" style="display:flex;flex-direction:column;gap:8px"><h3>共通して入っている成分（${common.length}）</h3><div class="row">${common.map(n => `<button type="button" class="tag" style="border:0;min-height:32px" data-ing="${esc(n)}">${esc(n)}</button>`).join("") || '<span class="meta">ありません</span>'}</div></section>
+      ${ps.map((p, i) => { const only = [...sets[i]].filter(n => sets.every((s, j) => j === i || !s.has(n))); return `<section class="card" style="display:flex;flex-direction:column;gap:8px"><h3>${esc(p.name)}だけの成分（${only.length}）</h3><div class="row">${only.map(n => `<button type="button" class="tag" style="border:0;min-height:32px" data-ing="${esc(n)}">${esc(n)}</button>`).join("") || '<span class="meta">ありません</span>'}</div></section>`; }).join("")}` : `<p class="meta">もう1つ追加すると、共通の成分と違う成分を並べて見られます。</p>`}`;
+}
+
+function screenReview() {
+  const p = byId(view.id);
+  if (!p) return `<div class="card empty">商品が見つかりませんでした</div>`;
+  return `<section class="card" style="display:flex;flex-direction:column;gap:4px"><span class="meta" style="font-size:12px">${esc(p.brand)}</span><b>${esc(p.name)}</b></section>
+    <form id="rvform" class="card" style="display:flex;flex-direction:column;gap:16px">
+      <fieldset><legend style="font-size:13px;font-weight:700">評価</legend><div class="ratepick" role="radiogroup" aria-label="評価">${[1,2,3,4,5].map(i => `<button type="button" role="radio" aria-checked="${view.rate === i}" aria-label="${i}点" class="${i <= view.rate ? "on" : ""}" data-rate="${i}">★</button>`).join("")}</div></fieldset>
+      <fieldset><legend style="font-size:13px;font-weight:700">あなたの肌質</legend><div class="chips" style="flex-wrap:wrap">${SKIN_TYPES.map(s => `<button type="button" class="chip" data-skin="${s}" aria-pressed="${prefs.skin.includes(s)}">${s}</button>`).join("")}</div></fieldset>
+      <div class="field"><label for="rvtext">使ってみた感想</label><textarea id="rvtext" maxlength="800" placeholder="使用感、香り、肌になじむまでの時間、使った季節など"></textarea>
+        <span class="meta" style="font-size:12px">「シミが消えた」など、効果を言い切る書き方は避けてください。</span></div>
+      <button type="submit" class="pillbtn solid">投稿する</button>
+    </form>`;
+}
+
+function screenMyPage() {
+  if (!view.draft) view.draft = { skin: prefs.skin.slice(), ng: prefs.ng.slice() };
+  const dr = view.draft;
+  return `<section class="card" style="display:flex;flex-direction:column;gap:10px"><h2>肌質</h2><p class="meta" style="margin:0;font-size:13px">同じ肌質の人の評価を出すのに使います。複数選べます。</p>
+      <div class="chips" style="flex-wrap:wrap">${SKIN_TYPES.map(s => `<button type="button" class="chip" data-dskin="${s}" aria-pressed="${dr.skin.includes(s)}">${s}</button>`).join("")}</div></section>
+    <section class="card" style="display:flex;flex-direction:column;gap:10px"><h2>NG成分</h2><p class="meta" style="margin:0;font-size:13px">選んだ成分が入っている商品に印をつけます。</p>
+      <div class="chips" style="flex-wrap:wrap">${NG_GROUPS.map(g => `<button type="button" class="chip" data-dng="${g.key}" aria-pressed="${dr.ng.includes(g.key)}">${esc(g.label)}</button>`).join("")}</div></section>
+    <section class="card" style="display:flex;flex-direction:column;gap:6px"><h2>登録状況</h2>
+      <div class="grid2"><div class="stat"><b>${store.products.length}</b><span>登録済みの化粧水</span></div><div class="stat"><b>${Object.keys(store.dict).length}</b><span>解説のある成分</span></div></div>
+      <p class="meta" style="margin:0;font-size:13px">人気の商品から順に、毎日追加しています。</p></section>
+    <p class="note">肌質とNG成分の設定は、このブラウザにだけ保存されます。</p>
+    <div style="height:72px" aria-hidden="true"></div>
+    <div class="actionbar"><div><button type="button" class="pillbtn" data-prefs="reset">元に戻す</button><button type="button" class="pillbtn solid" data-prefs="apply">この条件で決定</button></div></div>`;
+}
+
+// ---------- render ----------
+function renderTabs() {
+  const cur = ["compare", "mypage"].includes(view.name) ? view.name : "search";
+  $("#tabbar").innerHTML = [["search", "さがす", I.search], ["compare", "比較", I.cmp], ["mypage", "マイページ", I.me]]
+    .map(([k, l, ic]) => `<button type="button" data-go="${k}"${cur === k ? ' aria-current="page"' : ""}>${ic}${l}${k === "compare" && compare.length ? `<span class="badge">${compare.length}</span>` : ""}</button>`).join("");
+}
+function renderMain() {
+  const m = { search: screenSearch, product: screenProduct, ingredients: screenIngredients, ingredient: screenIngredient, compare: screenCompare, review: screenReview, mypage: screenMyPage }[view.name] || screenSearch;
+  $("#main").innerHTML = m();
+}
+function render() { renderTop(); renderMain(); renderTabs(); }
+
+// ---------- events ----------
+const stack = [];
+document.addEventListener("click", e => {
+  const t = e.target.closest("button,a");
+  if (!t) return;
+  if (t.dataset.back !== undefined) { const prev = stack.pop(); prev ? (Object.assign(view, prev), render()) : go("search"); return; }
+  if (t.dataset.go) { stack.push({ ...view }); const g = t.dataset.go; if (g === "review") view.rate = 0; go(g, t.dataset.id ? { id: t.dataset.id } : {}); return; }
+  if (t.dataset.ing) { stack.push({ ...view }); go("ingredient", { ing: t.dataset.ing }); return; }
+  if (t.dataset.tab) { view.tab = t.dataset.tab; render(); return; }
+  if (t.dataset.filter) { view.filter = t.dataset.filter; renderMain(); return; }
+  if (t.dataset.ingmode) { view.ingMode = t.dataset.ingmode; renderMain(); return; }
+  if (t.dataset.cmp) {
+    const id = t.dataset.cmp;
+    if (compare.includes(id)) compare = compare.filter(x => x !== id);
+    else if (compare.length >= 3) { toast("比較できるのは3つまでです"); return; }
+    else { compare = compare.concat(id); toast("比較リストに追加しました"); }
+    save("compare", compare); renderMain(); renderTabs(); return;
+  }
+  if (t.dataset.dskin || t.dataset.dng) {
+    const dr = view.draft || (view.draft = { skin: prefs.skin.slice(), ng: prefs.ng.slice() });
+    const [k, v] = t.dataset.dskin ? ["skin", t.dataset.dskin] : ["ng", t.dataset.dng];
+    dr[k] = dr[k].includes(v) ? dr[k].filter(x => x !== v) : dr[k].concat(v);
+    t.setAttribute("aria-pressed", dr[k].includes(v)); return;
+  }
+  if (t.dataset.prefs === "reset") { view.draft = { skin: prefs.skin.slice(), ng: prefs.ng.slice() }; renderMain(); toast("変更前の条件に戻しました"); return; }
+  if (t.dataset.prefs === "apply") {
+    prefs.skin = view.draft ? view.draft.skin.slice() : prefs.skin; prefs.ng = view.draft ? view.draft.ng.slice() : prefs.ng; save("prefs", prefs);
+    let prev = stack.pop(); while (prev && prev.name === "mypage") prev = stack.pop();
+    if (prev) { Object.assign(view, prev, { draft: null }); render(); window.scrollTo(0, 0); } else go("search");
+    toast("この条件で判定します"); return;
+  }
+  if (t.dataset.skin) { const s = t.dataset.skin; prefs.skin = prefs.skin.includes(s) ? prefs.skin.filter(x => x !== s) : prefs.skin.concat(s); save("prefs", prefs); t.setAttribute("aria-pressed", prefs.skin.includes(s)); return; }
+  if (t.dataset.ng) { const k = t.dataset.ng; prefs.ng = prefs.ng.includes(k) ? prefs.ng.filter(x => x !== k) : prefs.ng.concat(k); save("prefs", prefs); t.setAttribute("aria-pressed", prefs.ng.includes(k)); return; }
+  if (t.dataset.rate) { view.rate = +t.dataset.rate; document.querySelectorAll("[data-rate]").forEach(b => { const on = +b.dataset.rate <= view.rate; b.classList.toggle("on", on); b.setAttribute("aria-checked", +b.dataset.rate === view.rate); }); return; }
+});
+document.addEventListener("submit", async e => {
+  if (e.target.id !== "rvform") return;
+  e.preventDefault();
+  const text = $("#rvtext").value.trim();
+  if (!view.rate) { toast("評価の星を選んでください"); return; }
+  if (text.length < 10) { toast("感想を10文字以上で書いてください"); return; }
+  if (!store.db) { toast("この表示では投稿できません"); return; }
+  try {
+    await store.db.collection("reviews").add({ productId: view.id, rating: view.rate, skin: prefs.skin.slice(), text, uid: store.uid || null, at: new Date().toISOString() });
+    toast("口コミを投稿しました");
+    stack.pop(); go("product", { id: view.id });
+  } catch (err) { toast(err && err.code === "quota_exceeded" ? "保存できる件数の上限に達しました" : "投稿できませんでした。時間をおいてもう一度お試しください"); }
+});
+
+// ---------- data ----------
+async function boot() {
+  fromHash(); render();
+  const db = await (window.claude?.use?.("db") ?? Promise.resolve(null)).catch(() => null);
+  if (!db) { store.loaded = true; store.offline = true; render(); return; }
+  store.db = db;
+  const user = await (window.claude?.use?.("user") ?? Promise.resolve(null)).catch(() => null);
+  if (user) { try { store.uid = await user.id(); } catch (e) {} }
+  store.canPost = true;
+  db.collection("products").onSnapshot(snap => {
+    store.products = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+    store.loaded = true; if (view.name !== "review") render();
+  }, () => { store.loaded = true; render(); });
+  db.doc("meta/dictionary").onSnapshot(s => { store.dict = (s.exists && s.data().entries) || {}; if (store.loaded && view.name !== "review") render(); }, () => {});
+  db.collection("reviews").onSnapshot(snap => {
+    const r = {};
+    for (const d of snap.docs) { const x = d.data(); if (!x.productId) continue; (r[x.productId] = r[x.productId] || []).push(x); }
+    store.reviews = r; if (store.loaded && view.name !== "review") render();
+  }, () => {});
+}
+boot();
+})();
+</script>

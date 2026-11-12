@@ -1,0 +1,31 @@
+{
+  "activeIngredients": [
+    "イソプロピルメチルフェノール",
+    "グリチルリチン酸二カリウム"
+  ],
+  "brand": "オードムーゲ",
+  "category": "化粧水",
+  "checkedAt": "2026-11-05",
+  "claims": [
+    "コットンで使うふきとりタイプの薬用化粧水",
+    "抗炎症成分・殺菌成分配合",
+    "肌あれ・ニキビを防ぐ"
+  ],
+  "id": "eau-de-muge-medicated-lotion",
+  "ingredients": [
+    "エタノール",
+    "グリセリン",
+    "プロピレングリコール",
+    "マクロゴール4000",
+    "香料",
+    "精製水"
+  ],
+  "kind": "医薬部外品",
+  "maker": "小林製薬",
+  "name": "オードムーゲ 薬用ローション",
+  "note": "小林製薬公式ページは取得できず、マツキヨココカラオンラインで成分を確認。@cosmeでの表記は「オードムーゲ 薬用ふきとり化粧水」（160mL 1,144円／500mL 3,047円）。価格はマツキヨ通販の税込価格。",
+  "popularRank": 40,
+  "price": 1144,
+  "size": "160mL",
+  "sourceUrl": "https://www.matsukiyococokara-online.com/store/catalog/product/view/id/4987072034040"
+}
