@@ -14,8 +14,9 @@ export function rkImage(u, size = 400) {
   return /[?&]_ex=/.test(u) ? u.replace(/_ex=\d+x\d+/, `_ex=${size}x${size}`) : u + (u.includes("?") ? "&" : "?") + `_ex=${size}x${size}`;
 }
 
+// 楽天アフィリエイトのリンク形式。アフィリエイトIDは 8桁hex を4つドットでつないだもの。
 const afl = pcUrl => AFF.rakutenId
-  ? `https://hb.afl.rakuten.co.jp/hgc/${AFF.rakutenId}/?pc=${encodeURIComponent(pcUrl)}&m=${encodeURIComponent(pcUrl)}`
+  ? `https://hb.afl.rakuten.co.jp/ichiba/${AFF.rakutenId}/?pc=${encodeURIComponent(pcUrl)}&m=${encodeURIComponent(pcUrl)}&link_type=text`
   : pcUrl;
 
 export function searchQuery(p) {
@@ -50,7 +51,7 @@ export function buyLinks(p, rk) {
 export function buyLinksHtml(p, rk) {
   const ls = buyLinks(p, rk);
   return ls.map(l =>
-    `<a class="buybtn${l.main ? " main" : ""}" href="${esc(l.url)}" target="_blank" rel="noopener ${l.sponsored ? "sponsored" : "nofollow"}">${esc(l.label)}${l.shop ? `<span class="meta" style="font-size:11px;display:block;font-weight:400">${esc(l.shop)}</span>` : ""}</a>`
+    `<a class="buybtn${l.main ? " main" : ""}" href="${esc(l.url)}" target="_blank" rel="${l.sponsored ? "nofollow sponsored noopener" : "nofollow noopener"}">${esc(l.label)}${l.shop ? `<span class="meta" style="font-size:11px;display:block;font-weight:400">${esc(l.shop)}</span>` : ""}</a>`
   ).join("");
 }
 
