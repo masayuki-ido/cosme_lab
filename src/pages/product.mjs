@@ -46,9 +46,9 @@ ${has ? `<section class="verdict neutral" id="verdict" data-caution="${esc(cg.ma
   : `<section class="card"><b>全成分を確認中です</b><p class="meta" style="margin:4px 0 0">${esc(p.note || "公式の全成分表示を確認でき次第、掲載します。")}</p></section>`}
 
 <section class="card col" style="gap:10px">
-  <div class="row"><h2>購入する</h2><span class="pr">PR</span></div>
+  <h2>購入する</h2>
   <div class="buylinks">${buyLinksHtml(p, rk)}</div>
-  <p class="meta" style="margin:0;font-size:11px;line-height:1.6">リンク先で購入されると、運営者に紹介料が入ることがあります。価格・在庫はリンク先でご確認ください。</p>
+  <p class="adnote">※リンクには広告を含みます</p>
 </section>
 
 ${p.claims.length ? `<section class="card col" style="gap:8px"><h2>メーカーが紹介している特徴</h2>
