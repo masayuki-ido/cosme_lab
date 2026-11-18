@@ -40,6 +40,11 @@ function tabbar(active) {
   ).join("")}</nav></div>`;
 }
 
+// 規約で出すことが決まっている要素（Yahoo!のクレジット表示など）。
+// ビルドの最初に setFooterExtra() で入れて、全ページのフッターに出す。
+let FOOTER_EXTRA = "";
+export const setFooterExtra = html => { FOOTER_EXTRA = html || ""; };
+
 function footer() {
   return `<footer class="site"><div>
     <nav aria-label="フッター">
@@ -51,6 +56,7 @@ function footer() {
     </nav>
     <p>当サイトはアフィリエイトプログラムに参加しており、商品リンクから購入された場合に運営者が紹介料を受け取ることがあります。<a href="${url("about/")}">詳しくはこちら</a>。</p>
     <p>掲載している全成分はメーカー公式サイトなどの表示を転記したものです。成分の解説は一般的な配合目的の説明で、商品の効果・効能を示すものではありません。価格は確認日時点の参考値です。購入前に商品パッケージおよび販売店の表示をご確認ください。</p>
+    ${FOOTER_EXTRA}
     <p>© ${new Date().getFullYear()} ${SITE.name}</p>
   </div></footer>`;
 }

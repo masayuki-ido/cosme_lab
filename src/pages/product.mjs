@@ -2,17 +2,17 @@ import { SITE, esc, yen, page, pageHeader, url, abs, crumbs, fullName, ICONS } f
 import { CAT_ORDER, ICON_WARN, catVars, metaOf } from "../lib/cat.mjs";
 import { norm } from "../lib/norm.mjs";
 import { catCounts, cautionCount, cautionGroups, perMl } from "../lib/data.mjs";
-import { breakdown, cmpBtn, fullIngList, ingHref, kindTag, productCard, thumb } from "../lib/components.mjs";
-import { buyLinksHtml, productImage } from "../lib/rakuten.mjs";
+import { breakdown, cmpBtn, fullIngList, ingHref, kindTag, priceOf, productCard, thumb } from "../lib/components.mjs";
+import { buyLinksHtml, productImage, sourceOf } from "../lib/shops.mjs";
 
 export function productPage(p, ctx) {
-  const { rakuten, catOf, slugOf, dict, products } = ctx;
-  const rk = rakuten[p.id];
+  const { shops, catOf, slugOf, dict, products } = ctx;
+  const src = sourceOf(p, shops);
   const has = p.ingredients.length > 0;
   const cg = cautionGroups(p);
   const counts = catCounts(p, catOf);
-  const price = (rk && rk.price) || p.price;
-  const img = productImage(p, rk, 600);
+  const price = priceOf(p, shops);
+  const img = productImage(p, shops, 600);
 
   const bc = crumbs([["ホーム", ""], [p.brand, null], [`${p.name}の全成分`, null]]);
 
@@ -29,15 +29,15 @@ export function productPage(p, ctx) {
 
   const body = `${bc.html}
 <section class="hero">
-  ${thumb(p, rk, { big: true, link: false })}
+  ${thumb(p, shops, { big: true, link: false })}
   <div class="herobody">
     <div class="row">${kindTag(p)}<span class="meta">${esc(p.brand)}${p.maker && p.maker !== p.brand ? "（" + esc(p.maker) + "）" : ""}</span></div>
     <h1 class="title">${esc(p.name)}</h1>
     <div class="between"><span>${yen(price)} <span class="meta">／ ${esc(p.size || "")}${perMl({ ...p, price }) ? `（1mLあたり約${perMl({ ...p, price })}円）` : ""}</span></span>${cmpBtn(p)}</div>
-    ${rk && rk.price ? `<p class="meta" style="margin:0;font-size:11px">価格は楽天市場（${esc(rk.shopName || "出店ショップ")}）の${esc((rk.fetchedAt || "").slice(0, 10))}時点の表示です。</p>` : ""}
+    ${src && src.price != null ? `<p class="meta" style="margin:0;font-size:11px">価格は${esc(src.label)}（${esc(src.sellerName || "出店ショップ")}）の${esc((src.fetchedAt || "").slice(0, 10))}時点の表示です。</p>` : ""}
   </div>
 </section>
-${img ? `<p class="imgcredit">画像：楽天市場</p>` : ""}
+${img ? `<p class="imgcredit">画像：<a href="${esc(img.href)}" target="_blank" rel="nofollow noopener">${esc(img.credit)}</a></p>` : ""}
 
 ${has ? `<section class="verdict neutral" id="verdict" data-caution="${esc(cg.map(g => g.key).join(" "))}">
   <b class="vh">${cg.length ? ICON_WARN + "注意成分が入っています" : "注意成分は入っていません"}</b>
@@ -47,7 +47,7 @@ ${has ? `<section class="verdict neutral" id="verdict" data-caution="${esc(cg.ma
 
 <section class="card col" style="gap:10px">
   <h2>購入する</h2>
-  <div class="buylinks">${buyLinksHtml(p, rk)}</div>
+  <div class="buylinks">${buyLinksHtml(p, shops)}</div>
   <p class="adnote">※リンクには広告を含みます</p>
 </section>
 
@@ -74,9 +74,9 @@ ${has ? `<section class="card col" style="gap:10px">
 </section>` : ""}
 
 ${sameActive.length ? `<section class="col" style="gap:12px"><h2>同じ有効成分の化粧水</h2>
-  <div class="plist">${sameActive.map(x => productCard(x, rakuten[x.id], catOf)).join("")}</div></section>` : ""}
+  <div class="plist">${sameActive.map(x => productCard(x, shops, catOf)).join("")}</div></section>` : ""}
 ${sameBrand.length ? `<section class="col" style="gap:12px"><h2>${esc(p.brand)}の他の化粧水</h2>
-  <div class="plist">${sameBrand.map(x => productCard(x, rakuten[x.id], catOf)).join("")}</div></section>` : ""}
+  <div class="plist">${sameBrand.map(x => productCard(x, shops, catOf)).join("")}</div></section>` : ""}
 
 <p class="note">出典：${p.sourceUrl ? `<a href="${esc(p.sourceUrl)}" target="_blank" rel="noopener nofollow">メーカー等の商品ページ ${ICONS.ext}</a>` : "確認中"}　確認日：${esc(p.checkedAt || "")}${p.note ? `<br>${esc(p.note)}` : ""}
 <br>全成分はメーカー公式などの表示を転記したものです。成分の解説は一般的な配合目的の説明で、この商品の効果・効能を示すものではありません。</p>`;
@@ -100,8 +100,8 @@ ${sameBrand.length ? `<section class="col" style="gap:12px"><h2>${esc(p.brand)}�
     url: abs(`products/${p.id}/`),
     ...(p.size ? { size: p.size } : {}),
     ...(has ? { additionalProperty: [{ "@type": "PropertyValue", name: "全成分", value: p.ingredients.join("、") }] } : {}),
-    ...(rk && rk.price && rk.affiliateUrl ? {
-      offers: { "@type": "Offer", price: rk.price, priceCurrency: "JPY", url: rk.affiliateUrl, availability: "https://schema.org/InStock", seller: { "@type": "Organization", name: "楽天市場" } }
+    ...(src && src.price != null && src.url ? {
+      offers: { "@type": "Offer", price: src.price, priceCurrency: "JPY", url: src.url, availability: "https://schema.org/InStock", seller: { "@type": "Organization", name: src.label } }
     } : {})
   };
 

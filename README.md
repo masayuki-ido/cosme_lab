@@ -12,13 +12,17 @@
 ```
 data/products/<id>.json   商品1件（全成分・有効成分・価格・出典など。手で直す）
 data/dictionary.json      成分の解説と配合目的（正規化した成分名がキー）
-data/rakuten.json         楽天APIで取った画像・価格・アフィリエイトリンク（Actionsが毎日書き換える）
+data/rakuten.json         楽天APIで取った画像・価格・リンク（Actionsが毎日書き換える）
+data/yahoo.json           Yahoo!ショッピングAPIで取った同上
 src/lib/                  正規化・NG判定・配合目的のアイコン・レイアウト
 src/pages/                ページごとのHTML組み立て
 src/assets/site.css       デザイン（legacy/index.html から移植）
 src/assets/app.js         閲覧者ごとに変わるところ（NG設定・検索・比較）
 scripts/build.mjs         ビルド
-scripts/rakuten-sync.mjs  楽天APIから画像・価格・リンクを取得
+src/lib/match.mjs         商品データと通販サイトの検索結果の突き合わせ（採点はここだけ）
+src/lib/shops.mjs         画像・価格・購入リンクの組み立て（楽天／Yahoo!共通）
+scripts/rakuten-sync.mjs  楽天APIから取得
+scripts/yahoo-sync.mjs    Yahoo!ショッピングAPIから取得
 scripts/serve.mjs         確認用のローカルサーバー
 legacy/index.html         移行前の1ファイル版（デザインの原本）
 ```
@@ -43,23 +47,41 @@ npm run build     # dist/ に書き出す
 npm run dev       # ビルドして http://localhost:4321/cosme_lab/ で確認
 ```
 
-## 楽天の画像・価格・アフィリエイトリンク
+## 商品画像・価格・購入リンク
 
-画像はダウンロードせず、楽天の画像URLをそのまま表示して楽天の商品ページへリンクする（規約順守）。
+楽天市場とYahoo!ショッピングの商品検索APIから取る。画像はダウンロードせず、
+各サイトの画像URLをそのまま表示して、そのサイトの商品ページへリンクする。
+両方で商品が確定している場合は楽天を優先する。
 
 ```sh
-export RAKUTEN_APP_ID=...        # https://webservice.rakuten.co.jp/ のアプリID
-export RAKUTEN_AFFILIATE_ID=...  # https://affiliate.rakuten.co.jp/ のアフィリエイトID
+# 楽天（アプリIDは https://webservice.rakuten.co.jp/ ／ アフィリエイトIDは楽天アフィリエイト）
+export RAKUTEN_APP_ID=... RAKUTEN_AFFILIATE_ID=...
+npm run rakuten:match    # 商品名＋容量で検索し、確度が高いものだけ rakutenItemCode を商品JSONに保存
+npm run rakuten:update   # 価格・画像・リンクを取り直して data/rakuten.json に保存
 
-npm run rakuten:match   # 商品名＋容量で検索し、確度が高いものだけ itemCode を data/products/<id>.json に保存
-npm run rakuten:update  # itemCode のある商品の価格・画像・リンクを取り直して data/rakuten.json に保存
+# Yahoo!ショッピング（Client IDは https://e.developer.yahoo.co.jp/register ／ アフィリエイトはバリューコマース）
+export YAHOO_APP_ID=... VALUECOMMERCE_SID=...
+npm run yahoo:match      # 確度が高いものだけ yahooItemCode / yahooSellerId を商品JSONに保存
+npm run yahoo:update     # 価格・画像・リンクを取り直して data/yahoo.json に保存
 ```
 
-`match` で確度が足りなかったものは `data/rakuten-candidates.json` に候補が残るので、
-正しい `itemCode` を選んで商品JSONの `rakutenItemCode` に手で入れる。
+照合の規則は `src/lib/match.mjs` に1つだけ置いて、両サイトで共通にしている。
+商品名の語が8割そろわないと自動確定しないので、Ⅰ/Ⅱ/Ⅲ や詰め替え・セット品には当たらない。
+確度が足りなかったものは `data/<サイト>-candidates.json` に候補が残るので、
+正しいコードを選んで商品JSONに手で入れる。
 
-GitHub Actions `楽天の画像・価格を更新` が毎日6時(JST)に `update` を実行し、
-差分があればコミットしてサイトを公開し直す。
+GitHub Actions `通販サイトの画像・価格を更新` が毎日6時(JST)に `update` を実行し、
+差分があればコミットしてサイトを公開し直す。アプリIDが未設定のサイトはスキップされる。
+
+### 守ること
+
+- Yahoo!のAPIを使っている間は、全ページのフッターに
+  「Webサービス by Yahoo! JAPAN」のクレジット表示を出す（規約で必須、`src/lib/shops.mjs`）。
+  HTMLは指定されたものをそのまま使い、色やサイズを変えない。
+- Yahoo!デベロッパーネットワークは原則として非商用利用。アフィリエイト（バリューコマース経由）
+  によるマネタイズはショッピングAPIで公式に提供されているので、Yahoo!を使うなら
+  バリューコマース経由のアフィリエイトとセットで使う。
+- 画像は自分のサーバーに保存せず、必ず取得元の画像URLをそのまま表示する。
 
 ### リポジトリに入れる値
 
@@ -67,10 +89,11 @@ Settings → Secrets and variables → Actions
 
 | 種類 | 名前 | 用途 |
 |---|---|---|
-| Secret | `RAKUTEN_APP_ID` | 楽天APIの呼び出し（必須） |
-| Secret | `RAKUTEN_AFFILIATE_ID` | アフィリエイトリンクの発行 |
+| Secret | `RAKUTEN_APP_ID` | 楽天APIの呼び出し |
+| Secret | `RAKUTEN_AFFILIATE_ID` | 楽天のアフィリエイトリンク |
+| Secret | `YAHOO_APP_ID` | Yahoo!ショッピングAPIの呼び出し |
+| Secret | `VALUECOMMERCE_SID` | Yahoo!のアフィリエイトリンク |
 | Secret | `AMAZON_TAG` | Amazonアソシエイト承認後 |
-| Secret | `YAHOO_VC_SID` / `YAHOO_VC_PID` | バリューコマース利用時 |
 | Variable | `SITE_ORIGIN` / `SITE_BASE` | 独自ドメインに移すとき（例 `https://example.com` と `/`） |
 
 ## 決めごと

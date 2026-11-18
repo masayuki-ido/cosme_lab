@@ -12,12 +12,22 @@ export function loadDictionary() {
   return { entries: d.entries || {}, updatedAt: d.updatedAt || null };
 }
 
-// data/rakuten.json：楽天APIで取得した画像・価格・アフィリエイトリンク（毎日の Actions が書き換える）
-export function loadRakuten() {
-  const f = join(DATA, "rakuten.json");
+// data/rakuten.json・data/yahoo.json：各APIで取得した画像・価格・購入リンク
+// （毎日の Actions が書き換える）
+function loadShopFile(name) {
+  const f = join(DATA, `${name}.json`);
   if (!existsSync(f)) return { updatedAt: null, items: {} };
   const d = JSON.parse(readFileSync(f, "utf8"));
   return { updatedAt: d.updatedAt || null, items: d.items || {} };
+}
+
+export function loadShops() {
+  const rakuten = loadShopFile("rakuten");
+  const yahoo = loadShopFile("yahoo");
+  return {
+    rakuten: rakuten.items, yahoo: yahoo.items,
+    updatedAt: [rakuten.updatedAt, yahoo.updatedAt].filter(Boolean).sort().pop() || null
+  };
 }
 
 export function loadProducts() {

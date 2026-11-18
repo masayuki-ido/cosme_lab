@@ -2,7 +2,7 @@ import { SITE, esc, page, searchHeader, url, abs, fullName } from "../lib/site.m
 import { condBanner, productCard } from "../lib/components.mjs";
 
 export function indexPage(ctx) {
-  const { products, rakuten, catOf, ingCount } = ctx;
+  const { products, shops, catOf, ingCount } = ctx;
   const chips = [["all", "すべて"], ["ok", "NG成分なし"], ["cos", "化粧品"], ["quasi", "医薬部外品"]]
     .map(([k, l]) => `<button type="button" class="chip" data-filter="${k}" aria-pressed="${k === "all"}">${l}</button>`).join("");
 
@@ -11,7 +11,7 @@ export function indexPage(ctx) {
 <p class="meta" style="margin:0">${products.length}品の化粧水の全成分を、メーカー公式などの表示どおりに掲載しています。エタノール・香料・パラベンなど、避けたい成分を設定すると、入っているかどうかを一覧で判定します。</p>
 <div class="chips">${chips}</div>
 <div class="meta" id="listcount">化粧水 ${products.length}件</div>
-<div class="plist" id="plist">${products.map(p => productCard(p, rakuten[p.id], catOf)).join("")}</div>
+<div class="plist" id="plist">${products.map(p => productCard(p, shops, catOf)).join("")}</div>
 <div class="card empty" id="listempty" hidden>条件に合う化粧水はありません</div>
 <section class="card col" style="gap:8px">
   <h2>成分から調べる</h2>

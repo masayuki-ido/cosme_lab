@@ -2,10 +2,11 @@
 // dist/ に静的サイトを書き出す。依存パッケージなし。`node scripts/build.mjs`
 import { mkdirSync, writeFileSync, rmSync, readFileSync, cpSync } from "node:fs";
 import { dirname, join } from "node:path";
-import { SITE, abs } from "../src/lib/site.mjs";
+import { SITE, abs, setFooterExtra } from "../src/lib/site.mjs";
 import { NG_GROUPS, SKIN_TYPES } from "../src/lib/ng.mjs";
 import { norm } from "../src/lib/norm.mjs";
-import { ROOT, loadProducts, loadDictionary, loadRakuten, makeCatOf, buildIngredientIndex, catCounts, cautionCount, cautionGroups, perMl } from "../src/lib/data.mjs";
+import { ROOT, loadProducts, loadDictionary, loadShops, makeCatOf, buildIngredientIndex, catCounts, cautionCount, cautionGroups, perMl } from "../src/lib/data.mjs";
+import { sourceOf, usesYahoo, YAHOO_ATTRIBUTION } from "../src/lib/shops.mjs";
 import { indexPage } from "../src/pages/index.mjs";
 import { rankingPage } from "../src/pages/ranking.mjs";
 import { productPage } from "../src/pages/product.mjs";
@@ -26,11 +27,13 @@ mkdirSync(DIST, { recursive: true });
 
 const products = loadProducts();
 const { entries: dict, updatedAt: dictAt } = loadDictionary();
-const { items: rakuten, updatedAt: rkAt } = loadRakuten();
+const shops = loadShops();
+// Yahoo!のAPIを使っているページには、規約で決まったクレジット表示を出す
+setFooterExtra(usesYahoo(shops) ? YAHOO_ATTRIBUTION : "");
 const catOf = makeCatOf(dict);
 const index = buildIngredientIndex(products, dict);
 const slugOf = n => (index.get(norm(n)) || {}).slug || n;
-const ctx = { products, dict, rakuten, catOf, slugOf, index, ingCount: index.size };
+const ctx = { products, dict, shops, catOf, slugOf, index, ingCount: index.size };
 
 // ---- ページ ----
 out("index.html", indexPage(ctx));
@@ -60,8 +63,8 @@ out("products.json", JSON.stringify({
   updatedAt: new Date().toISOString(),
   slugs,
   products: products.map(p => {
-    const rk = rakuten[p.id];
-    const price = (rk && rk.price) || p.price || null;
+    const src = sourceOf(p, shops);
+    const price = (src && src.price != null) ? src.price : (p.price ?? null);
     return {
       id: p.id, brand: p.brand, name: p.name, kind: p.kind, size: p.size || null, price,
       perMl: perMl({ ...p, price }),
@@ -90,9 +93,10 @@ ${urls.map(u => `<url><loc>${u.loc}</loc><lastmod>${u.lastmod || today}</lastmod
 </urlset>`);
 out("robots.txt", `User-agent: *\nAllow: /\nDisallow: ${SITE.base}compare/\nDisallow: ${SITE.base}mypage/\n\nSitemap: ${abs("sitemap.xml")}\n`);
 
-const withImg = products.filter(p => rakuten[p.id] && rakuten[p.id].imageUrl).length;
-const withAff = products.filter(p => rakuten[p.id] && rakuten[p.id].affiliateUrl).length;
+const withImg = products.filter(p => sourceOf(p, shops)).length;
+const bySite = { rakuten: 0, yahoo: 0 };
+for (const p of products) { const s = sourceOf(p, shops); if (s) bySite[s.site]++; }
 console.log(`build: ${written} files -> dist/`);
 console.log(`  商品 ${products.length} / 成分 ${index.size} / URL ${urls.length}`);
-console.log(`  楽天データ: 画像 ${withImg}件・アフィリエイトリンク ${withAff}件${rkAt ? `（取得 ${rkAt}）` : "（未取得）"}`);
+console.log(`  商品画像 ${withImg}/${products.length}件（楽天 ${bySite.rakuten} / Yahoo! ${bySite.yahoo}）${shops.updatedAt ? `　取得 ${shops.updatedAt}` : "　未取得"}`);
 console.log(`  公開先: ${abs("")}`);

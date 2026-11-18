@@ -9,7 +9,9 @@
     "dev": "node scripts/build.mjs && node scripts/serve.mjs",
     "serve": "node scripts/serve.mjs",
     "rakuten:match": "node scripts/rakuten-sync.mjs match",
-    "rakuten:update": "node scripts/rakuten-sync.mjs update"
+    "rakuten:update": "node scripts/rakuten-sync.mjs update",
+    "yahoo:match": "node scripts/yahoo-sync.mjs match",
+    "yahoo:update": "node scripts/yahoo-sync.mjs update"
   },
   "engines": { "node": ">=20" }
 }

@@ -30,7 +30,7 @@ export function ingredientIndexPage(ctx) {
 
 // 成分1件のページ
 export function ingredientPage(e, ctx) {
-  const { products, rakuten, catOf, dict } = ctx;
+  const { products, shops, catOf, dict } = ctx;
   const d = dict[e.name] || {};
   const cat = catOf(e.name);
   const groups = NG_GROUPS.filter(g => g.re.test(e.name));
@@ -48,9 +48,9 @@ export function ingredientPage(e, ctx) {
   ${groups.length ? `<p class="meta" style="margin:0;font-size:13px">「${esc(groups.map(g => g.label).join("・"))}」は、肌に合わないと感じる人が避けることのある成分です。マイページでNG成分に設定すると、含む商品に印が付きます。</p>` : ""}
 </section>
 ${asActive.length ? `<section class="col" style="gap:12px"><h2>${esc(e.name)}を有効成分として配合（${asActive.length}）</h2>
-  <div class="plist">${asActive.map(p => productCard(p, rakuten[p.id], catOf)).join("")}</div></section>` : ""}
+  <div class="plist">${asActive.map(p => productCard(p, shops, catOf)).join("")}</div></section>` : ""}
 <section class="col" style="gap:12px"><h2>${esc(e.name)}を含む化粧水（${inP.length}）</h2>
-  <div class="plist">${inP.map(p => productCard(p, rakuten[p.id], catOf)).join("")}</div></section>
+  <div class="plist">${inP.map(p => productCard(p, shops, catOf)).join("")}</div></section>
 <p class="note">成分の解説は一般的な配合目的をまとめたもので、効果・効能を保証するものではありません。医薬部外品の有効成分についての記述は、承認された目的を示すもので、効果を保証するものではありません。</p>`;
 
   const desc = `${e.name}は${cat ? `化粧水で主に${cat}の目的で配合される成分です。` : "化粧水に配合される成分です。"}${d.desc ? d.desc : ""}掲載中の化粧水${e.count}品に入っています。`;

@@ -58,8 +58,8 @@ export function aboutPage(ctx) {
 <p>当サイトは、楽天アフィリエイトなどのアフィリエイトプログラムに参加しています。商品ページの「購入する」にあるリンクから商品が購入された場合、運営者に<strong>紹介料が支払われることがあります</strong>。該当するリンクの下には「※リンクには広告を含みます」と表示し、リンク自体にも <code>rel="sponsored"</code> を付けています。</p>
 <p>掲載している商品は運営者が自分で選んでおり、メーカーや販売店から商品の提供・金銭の支払い・掲載の依頼を受けたものはありません。そうした提供や依頼を受けた商品を掲載することになった場合は、その商品に「PR」と明示します。</p>
 <p>紹介料の有無によって、掲載する商品や成分の説明を変えることはしません。掲載順はメーカーや販売店からの依頼ではなく、通販サイトの人気順を参考にしています。</p>
-<p>商品画像および商品価格は、楽天ウェブサービス（楽天商品検索API）から取得して表示しています。価格・在庫は取得時点のもので、最新の情報はリンク先でご確認ください。</p>
-<p class="meta">Supported by <a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener nofollow">Rakuten Developers</a></p>
+<p>商品画像および商品価格は、楽天ウェブサービス（楽天商品検索API）およびYahoo!ショッピング商品検索API（Yahoo!デベロッパーネットワーク）から取得して表示しています。画像は当サイトに保存せず、取得元の画像をそのまま表示し、その商品ページへリンクしています。価格・在庫は取得時点のもので、最新の情報はリンク先でご確認ください。</p>
+<p class="meta">Supported by <a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener nofollow">Rakuten Developers</a> ／ <a href="https://developer.yahoo.co.jp/" target="_blank" rel="noopener nofollow">Yahoo!デベロッパーネットワーク</a></p>
 
 <h2>価格について</h2>
 <p>価格は確認日または楽天市場からの取得時点の参考価格です。実際の販売価格は販売店によって異なります。購入前にリンク先の表示をご確認ください。</p>

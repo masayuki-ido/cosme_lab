@@ -3,7 +3,10 @@ import { CAT_META, CAT_ORDER, FUNC_ORDER, ICON_OK, ICON_WARN, catVars, ci, metaO
 import { norm } from "./norm.mjs";
 import { NG_GROUPS } from "./ng.mjs";
 import { catCounts, cautionCount, cautionGroups, perMl } from "./data.mjs";
-import { productImage } from "./rakuten.mjs";
+import { productImage, sourceOf } from "./shops.mjs";
+
+// 通販サイトから取れた価格があればそれを、無ければ掲載時の参考価格を使う
+export const priceOf = (p, shops) => { const s = sourceOf(p, shops); return (s && s.price != null) ? s.price : (p.price ?? null); };
 
 const TINTS = [["#E6F4F1","#7FB8AF"],["#EAF0F9","#8DA9D0"],["#FBEFF3","#D79AB4"],["#F1ECFA","#A796D3"],["#FBF4E6","#D3B675"],["#EDF5E9","#9CC08C"]];
 export function tintOf(p) { let h = 0; for (const ch of p.id) h = (h * 31 + ch.charCodeAt(0)) >>> 0; return TINTS[h % TINTS.length]; }
@@ -12,8 +15,8 @@ export const ingHref = (slugOf, name) => url(`ingredients/${encodeURIComponent(s
 export const productHref = id => url(`products/${id}/`);
 
 // 商品のサムネイル。楽天の画像があればそれを出し、無ければ legacy と同じ色面のプレースホルダ。
-export function thumb(p, rk, { big = false, link = true } = {}) {
-  const img = productImage(p, rk, big ? 600 : 300);
+export function thumb(p, shops, { big = false, link = true } = {}) {
+  const img = productImage(p, shops, big ? 600 : 300);
   const [bg, fg] = tintOf(p);
   const inner = img
     ? `<img src="${esc(img.src)}" alt="${esc(img.alt)}" width="${big ? 600 : 300}" height="${big ? 600 : 300}" loading="${big ? "eager" : "lazy"}" decoding="async" referrerpolicy="no-referrer-when-downgrade">`
@@ -48,16 +51,16 @@ export function featureTag(p, catOf) {
 export const cmpBtn = p => `<button type="button" class="pillbtn" data-cmp="${esc(p.id)}" aria-pressed="false">＋ 比較</button>`;
 
 // 商品カード。data-* は app.js がNG判定と検索に使う。
-export function productCard(p, rk, catOf) {
+export function productCard(p, shops, catOf) {
   const cg = cautionGroups(p).map(g => g.key).join(" ");
   const hay = [p.brand, p.maker, p.name, ...p.ingredients, ...p.activeIngredients].join(" ").toLowerCase();
   return `<article class="card pcard" data-pid="${esc(p.id)}" data-caution="${esc(cg)}" data-kind="${esc(p.kind)}" data-has="${p.ingredients.length ? 1 : 0}" data-hay="${esc(hay)}">
-  ${thumb(p, rk)}
+  ${thumb(p, shops)}
   <div class="pbody">
     <div class="row">${kindTag(p)}<span class="meta" style="font-size:12px">${esc(p.brand)}</span></div>
     <a class="pname" href="${productHref(p.id)}">${esc(p.name)}</a>
     <div class="row" data-ngslot>${cautionTag(p)}${featureTag(p, catOf)}</div>
-    <div class="between"><span class="meta">${rk && rk.price ? yen(rk.price) : yen(p.price)}／${esc(p.size || "")}</span>${cmpBtn(p)}</div>
+    <div class="between"><span class="meta">${yen(priceOf(p, shops))}／${esc(p.size || "")}</span>${cmpBtn(p)}</div>
   </div></article>`;
 }
 
