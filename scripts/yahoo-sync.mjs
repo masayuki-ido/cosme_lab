@@ -9,7 +9,9 @@
  * 必要な環境変数
  *   YAHOO_APP_ID       Yahoo!デベロッパーネットワークの Client ID（必須）
  *                      https://e.developer.yahoo.co.jp/register
- *   VALUECOMMERCE_SID  バリューコマースのサイトID（あればアフィリエイトリンクが返る）
+ *   VALUECOMMERCE_SID  バリューコマースのサイトID（sid）
+ *   VALUECOMMERCE_PID  バリューコマースのプログラムID（pid）
+ *                      両方そろうと、APIが返す商品URLがアフィリエイトURLになる
  *
  * 画像はダウンロードせず、Yahoo!の画像URLをそのまま data/yahoo.json に保存して表示する。
  * APIの利用にあたっては「Webサービス by Yahoo! JAPAN」のクレジット表示が必須
@@ -22,6 +24,12 @@ import { pickBest, isConfident, searchQueries, describe, duplicateAssignments } 
 
 const APP_ID = process.env.YAHOO_APP_ID || "";
 const VC_SID = process.env.VALUECOMMERCE_SID || "";
+const VC_PID = process.env.VALUECOMMERCE_PID || "";
+// affiliate_id には単なるIDではなく、バリューコマースのリンクURL（末尾が &vc_url=）を渡す仕様。
+// URLSearchParams が1回だけURLエンコードするので、ここでは素のURLのまま組み立てる。
+const VC_REFERRAL = (VC_SID && VC_PID)
+  ? `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${VC_SID}&pid=${VC_PID}&vc_url=`
+  : "";
 const API = "https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch";
 const WAIT = Number(process.env.YAHOO_WAIT_MS || 1100);  // 1クエリ/秒まで
 const IMAGE_SIZE = 600;                                   // 指定できるのは 76/106/132/146/300/600
@@ -41,7 +49,7 @@ const saveJson = (f, o) => writeFileSync(f, JSON.stringify(o, null, 2) + "\n");
 
 async function callApi(params) {
   const q = new URLSearchParams({ appid: APP_ID, image_size: String(IMAGE_SIZE), ...params });
-  if (VC_SID) { q.set("affiliate_type", "vc"); q.set("affiliate_id", VC_SID); }
+  if (VC_REFERRAL) { q.set("affiliate_type", "vc"); q.set("affiliate_id", VC_REFERRAL); }
   for (let attempt = 1; attempt <= 5; attempt++) {
     const res = await fetch(`${API}?${q}`, { headers: { "user-agent": "cosme_lab/1.0 (+https://github.com/masayuki-ido/cosme_lab)" } });
     if (res.status === 429 || res.status >= 500) { await sleep(WAIT * 2 ** attempt); continue; }
@@ -78,7 +86,7 @@ const toRecord = it => ({
   imageHeight: it.imageHeight,
   // affiliate_id を付けて呼ぶと url がアフィリエイトURLに置き換わる
   url: it.url,
-  affiliate: !!VC_SID,
+  affiliate: !!VC_REFERRAL,
   fetchedAt: new Date().toISOString()
 });
 
@@ -196,7 +204,7 @@ async function cmdUpdate(products) {
   store.updatedAt = new Date().toISOString();
   saveJson(STORE_JSON, store);
   console.log(`update: 成功 ${ok}件 / 失敗 ${miss}件 → data/yahoo.json`);
-  if (!VC_SID) console.log("※ VALUECOMMERCE_SID が未設定のため、アフィリエイトリンクではなく通常の商品URLが入ります。");
+  if (!VC_REFERRAL) console.log("※ VALUECOMMERCE_SID / VALUECOMMERCE_PID が未設定のため、アフィリエイトリンクではなく通常の商品URLが入ります。");
 }
 
 const mode = process.argv[2] || "all";

@@ -57,6 +57,7 @@ jobs:
         env:
           YAHOO_APP_ID: ${{ secrets.YAHOO_APP_ID }}
           VALUECOMMERCE_SID: ${{ secrets.VALUECOMMERCE_SID }}
+          VALUECOMMERCE_PID: ${{ secrets.VALUECOMMERCE_PID }}
 
       - name: 変更があればコミット
         id: commit

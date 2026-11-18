@@ -10,6 +10,7 @@ import { esc, fullName } from "./site.mjs";
 export const AFF = {
   rakutenId: process.env.RAKUTEN_AFFILIATE_ID || "",
   valuecommerceSid: process.env.VALUECOMMERCE_SID || "",
+  valuecommercePid: process.env.VALUECOMMERCE_PID || "",
   amazonTag: process.env.AMAZON_TAG || ""
 };
 
@@ -24,10 +25,10 @@ const aflRakuten = pcUrl => AFF.rakutenId
   ? `https://hb.afl.rakuten.co.jp/ichiba/${AFF.rakutenId}/?pc=${encodeURIComponent(pcUrl)}&m=${encodeURIComponent(pcUrl)}&link_type=text`
   : pcUrl;
 
-// バリューコマース経由のYahoo!ショッピングリンク。APIが返す url はすでにアフィリエイトURLなので、
-// ここで包むのは検索結果へのリンクだけ。
-const aflYahoo = url => AFF.valuecommerceSid
-  ? `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${AFF.valuecommerceSid}&pid=&vc_url=${encodeURIComponent(url)}`
+// バリューコマース経由のYahoo!ショッピングリンク。sid と pid の両方が要る。
+// APIが返す商品URLはすでにアフィリエイトURLなので、ここで包むのは検索結果へのリンクだけ。
+const aflYahoo = url => (AFF.valuecommerceSid && AFF.valuecommercePid)
+  ? `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${AFF.valuecommerceSid}&pid=${AFF.valuecommercePid}&vc_url=${encodeURIComponent(url)}`
   : url;
 
 export const searchQuery = p => [fullName(p), p.size].filter(Boolean).join(" ");
@@ -77,7 +78,7 @@ export function buyLinks(p, shops) {
   }
   if (!src || src.site !== "rakuten") links.push({ label: "楽天市場", url: rkSearch, sponsored: !!AFF.rakutenId });
   links.push({ label: "Amazon", url: amazon, sponsored: !!AFF.amazonTag });
-  if (!src || src.site !== "yahoo") links.push({ label: "Yahoo!ショッピング", url: yhSearch, sponsored: !!AFF.valuecommerceSid });
+  if (!src || src.site !== "yahoo") links.push({ label: "Yahoo!ショッピング", url: yhSearch, sponsored: !!(AFF.valuecommerceSid && AFF.valuecommercePid) });
   return links;
 }
 

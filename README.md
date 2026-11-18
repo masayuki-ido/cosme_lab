@@ -60,7 +60,7 @@ npm run rakuten:match    # 商品名＋容量で検索し、確度が高いも�
 npm run rakuten:update   # 価格・画像・リンクを取り直して data/rakuten.json に保存
 
 # Yahoo!ショッピング（Client IDは https://e.developer.yahoo.co.jp/register ／ アフィリエイトはバリューコマース）
-export YAHOO_APP_ID=... VALUECOMMERCE_SID=...
+export YAHOO_APP_ID=... VALUECOMMERCE_SID=... VALUECOMMERCE_PID=...
 npm run yahoo:match      # 確度が高いものだけ yahooItemCode / yahooSellerId を商品JSONに保存
 npm run yahoo:update     # 価格・画像・リンクを取り直して data/yahoo.json に保存
 ```
@@ -92,7 +92,7 @@ Settings → Secrets and variables → Actions
 | Secret | `RAKUTEN_APP_ID` | 楽天APIの呼び出し |
 | Secret | `RAKUTEN_AFFILIATE_ID` | 楽天のアフィリエイトリンク |
 | Secret | `YAHOO_APP_ID` | Yahoo!ショッピングAPIの呼び出し |
-| Secret | `VALUECOMMERCE_SID` | Yahoo!のアフィリエイトリンク |
+| Secret | `VALUECOMMERCE_SID` / `VALUECOMMERCE_PID` | Yahoo!のアフィリエイトリンク（両方必要） |
 | Secret | `AMAZON_TAG` | Amazonアソシエイト承認後 |
 | Variable | `SITE_ORIGIN` / `SITE_BASE` | 独自ドメインに移すとき（例 `https://example.com` と `/`） |
 
