@@ -18,7 +18,7 @@
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { ROOT, loadProducts } from "../src/lib/data.mjs";
-import { pickBest, isConfident, searchQueries, describe } from "../src/lib/match.mjs";
+import { pickBest, isConfident, searchQueries, describe, duplicateAssignments } from "../src/lib/match.mjs";
 
 const APP_ID = process.env.YAHOO_APP_ID || "";
 const VC_SID = process.env.VALUECOMMERCE_SID || "";
@@ -28,6 +28,7 @@ const IMAGE_SIZE = 600;                                   // 指定できるの�
 
 const STORE_JSON = join(ROOT, "data/yahoo.json");
 const CAND_JSON = join(ROOT, "data/yahoo-candidates.json");
+const candFileName = "data/yahoo-candidates.json";
 
 if (!APP_ID) {
   console.error("YAHOO_APP_ID がありません。https://e.developer.yahoo.co.jp/register で Client ID を取って、環境変数に入れてください。");
@@ -41,9 +42,9 @@ const saveJson = (f, o) => writeFileSync(f, JSON.stringify(o, null, 2) + "\n");
 async function callApi(params) {
   const q = new URLSearchParams({ appid: APP_ID, image_size: String(IMAGE_SIZE), ...params });
   if (VC_SID) { q.set("affiliate_type", "vc"); q.set("affiliate_id", VC_SID); }
-  for (let attempt = 1; attempt <= 3; attempt++) {
+  for (let attempt = 1; attempt <= 5; attempt++) {
     const res = await fetch(`${API}?${q}`, { headers: { "user-agent": "cosme_lab/1.0 (+https://github.com/masayuki-ido/cosme_lab)" } });
-    if (res.status === 429 || res.status >= 500) { await sleep(WAIT * attempt * 2); continue; }
+    if (res.status === 429 || res.status >= 500) { await sleep(WAIT * 2 ** attempt); continue; }
     const body = await res.json().catch(() => null);
     if (!res.ok) throw new Error(`Yahoo!API ${res.status} ${(body && body.Error && body.Error.Message) || ""}`);
     return body;
@@ -98,6 +99,7 @@ async function searchFor(p) {
 // ---------- match ----------
 async function cmdMatch(products) {
   const cands = loadJson(CAND_JSON, { updatedAt: null, items: {} });
+  const store = loadJson(STORE_JSON, { updatedAt: null, items: {} });
   const targets = products.filter(p => !p.yahooItemCode);
   console.log(`match: ${targets.length}品を検索します（${products.length - targets.length}品は商品コード済み）`);
   let applied = 0, review = 0;
@@ -119,6 +121,8 @@ async function cmdMatch(products) {
       raw.yahooItemCode = top.item.code;
       raw.yahooSellerId = top.item.sellerId;
       saveJson(f, raw);
+      // 検索で得た情報をそのまま保存しておく（update はこれを起点に引き直す）
+      store.items[p.id] = toRecord(top.item);
       applied++;
       console.log(`  ✓ ${p.id} (${top.score}) ${String(top.item.name).slice(0, 40)}`);
     } else {
@@ -128,6 +132,24 @@ async function cmdMatch(products) {
   }
   cands.updatedAt = new Date().toISOString();
   saveJson(CAND_JSON, cands);
+
+  // 同じ商品コードが複数の商品に当たっていたら、どれも外す（別バリエーションの取り違え）
+  const assigned = {};
+  for (const p of loadProducts()) if (p.yahooItemCode) assigned[p.id] = p.yahooItemCode;
+  const drop = duplicateAssignments(assigned);
+  for (const id of drop) {
+    const f = join(ROOT, "data/products", `${id}.json`);
+    const raw = JSON.parse(readFileSync(f, "utf8"));
+    delete raw.yahooItemCode;
+    delete raw.yahooSellerId;
+    saveJson(f, raw);
+    delete store.items[id];
+    applied--; review++;
+    console.log(`  ! ${id} → 同じ商品コードが別の商品にも当たったので外しました（${candFileName} を確認してください）`);
+  }
+
+  store.updatedAt = new Date().toISOString();
+  saveJson(STORE_JSON, store);
   console.log(`match: 自動確定 ${applied}件 / 要確認 ${review}件`);
 }
 
@@ -139,12 +161,27 @@ async function cmdUpdate(products) {
   let ok = 0, miss = 0;
   for (const p of targets) {
     try {
-      // 商品コードだけで引く手段がないので、ストアID＋商品コードで検索して突き合わせる
-      const body = await callApi({ query: p.yahooItemCode, seller_id: p.yahooSellerId || "", results: "20" });
-      await sleep(WAIT);
-      const items = (body.hits || []).map(toItem);
-      const exact = items.find(it => it.code === p.yahooItemCode);
-      if (!exact) { miss++; console.log(`  - ${p.id}: 見つかりません（商品コードが変わったか、販売終了かもしれません）`); continue; }
+      // 商品コードを直接引くパラメータが無いので、JANコード、または
+      // 前回保存した商品名＋ストアIDで検索して、同じ商品コードのものを拾う。
+      const prev = store.items[p.id] || {};
+      const jan = /(?:^|_)(\d{13})$/.exec(p.yahooItemCode);
+      const attempts = [];
+      if (jan) attempts.push({ jan_code: jan[1], results: "20" });
+      if (prev.name) attempts.push({ query: prev.name.slice(0, 60), seller_id: p.yahooSellerId || "", results: "30" });
+      attempts.push({ query: [p.brand, p.name, p.size].filter(Boolean).join(" "), seller_id: p.yahooSellerId || "", results: "30" });
+
+      let exact = null;
+      for (const params of attempts) {
+        const body = await callApi(params);
+        await sleep(WAIT);
+        exact = (body.hits || []).map(toItem).find(it => it.code === p.yahooItemCode);
+        if (exact) break;
+      }
+      if (!exact) {
+        miss++;
+        console.log(`  - ${p.id}: 見つかりません（商品コードが変わったか、販売終了かもしれません）`);
+        continue;
+      }
       store.items[p.id] = toRecord(exact);
       ok++;
     } catch (e) {

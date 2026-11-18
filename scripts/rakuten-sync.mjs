@@ -15,7 +15,7 @@
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { ROOT, loadProducts } from "../src/lib/data.mjs";
-import { pickBest, isConfident, searchQueries, describe } from "../src/lib/match.mjs";
+import { pickBest, isConfident, searchQueries, describe, duplicateAssignments } from "../src/lib/match.mjs";
 
 const APP_ID = process.env.RAKUTEN_APP_ID || "";
 const AFF_ID = process.env.RAKUTEN_AFFILIATE_ID || "";
@@ -24,6 +24,7 @@ const WAIT = Number(process.env.RAKUTEN_WAIT_MS || 1200); // 楽天APIは概ね1
 
 const RAKUTEN_JSON = join(ROOT, "data/rakuten.json");
 const CAND_JSON = join(ROOT, "data/rakuten-candidates.json");
+const candFileName = "data/rakuten-candidates.json";
 
 if (!APP_ID) {
   console.error("RAKUTEN_APP_ID がありません。https://webservice.rakuten.co.jp/ でアプリIDを取って、環境変数に入れてください。");
@@ -36,9 +37,9 @@ const norm = s => String(s || "").normalize("NFKC").toLowerCase().replace(/\s+/g
 async function callApi(params) {
   const q = new URLSearchParams({ applicationId: APP_ID, format: "json", formatVersion: "2", ...params });
   if (AFF_ID) q.set("affiliateId", AFF_ID);
-  for (let attempt = 1; attempt <= 3; attempt++) {
+  for (let attempt = 1; attempt <= 5; attempt++) {
     const res = await fetch(`${API}?${q}`, { headers: { "user-agent": "cosme_lab/1.0 (+https://github.com/masayuki-ido/cosme_lab)" } });
-    if (res.status === 429 || res.status >= 500) { await sleep(WAIT * attempt * 2); continue; }
+    if (res.status === 429 || res.status >= 500) { await sleep(WAIT * 2 ** attempt); continue; }
     const body = await res.json().catch(() => null);
     if (!res.ok) {
       // 404 は「該当商品なし」なので候補ゼロとして返す
@@ -134,6 +135,20 @@ async function cmdMatch(products) {
   }
   cands.updatedAt = new Date().toISOString();
   saveJson(CAND_JSON, cands);
+
+  // 同じ商品コードが複数の商品に当たっていたら、どれも外す（別バリエーションの取り違え）
+  const assigned = {};
+  for (const p of loadProducts()) if (p.rakutenItemCode) assigned[p.id] = p.rakutenItemCode;
+  const drop = duplicateAssignments(assigned);
+  for (const id of drop) {
+    const f = join(ROOT, "data/products", `${id}.json`);
+    const raw = JSON.parse(readFileSync(f, "utf8"));
+    delete raw.rakutenItemCode;
+    saveJson(f, raw);
+    applied--; review++;
+    console.log(`  ! ${id} → 同じ商品コードが別の商品にも当たったので外しました（${candFileName} を確認してください）`);
+  }
+
   console.log(`match: 自動確定 ${applied}件 / 要確認 ${review}件`);
 }
 
