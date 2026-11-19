@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T07:24:38.161Z",
+  "updatedAt": "2026-11-19T00:11:33.643Z",
   "items": {
     "hadalabo-gokujyun-hyaluron": {
       "query": "肌ラボ 肌ラボ 極潤ヒアルロン液 170mL",
@@ -225,7 +225,7 @@
       "query": "無印良品 敏感肌用化粧水 高保湿 300mL",
       "candidates": [
         {
-          "score": 115,
+          "score": 90,
           "nameMatch": "100%",
           "missing": [],
           "code": "rd-lohaco_ek81443",
@@ -235,16 +235,6 @@
           "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/ek81443/"
         },
         {
-          "score": 65,
-          "nameMatch": "100%",
-          "missing": [],
-          "code": "rd-lohaco_ek82493",
-          "name": "無印良品 敏感肌用化粧水 高保湿 300mL 1セット（2個） 良品計画（イチオシ）",
-          "price": 1980,
-          "sellerName": "LOHACO by アスクル",
-          "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/ek82493/"
-        },
-        {
           "score": 63,
           "nameMatch": "50%",
           "missing": [
@@ -252,9 +242,19 @@
           ],
           "code": "otogizakka_no636d755346",
           "name": "MUJI 無印良品 化粧水 敏感肌用 高保湿 300mL 83434991",
-          "price": 1456,
+          "price": 1457,
           "sellerName": "雑貨屋MelloMellow",
-          "url": "https://store.shopping.yahoo.co.jp/otogizakka/no636d755346.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fotogizakka%2Fno636d755346.html"
+        },
+        {
+          "score": 40,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "rd-lohaco_ek82493",
+          "name": "無印良品 敏感肌用化粧水 高保湿 300mL 1セット（2個） 良品計画（イチオシ）",
+          "price": 1980,
+          "sellerName": "LOHACO by アスクル",
+          "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/ek82493/"
         },
         {
           "score": -7,
@@ -266,7 +266,7 @@
           "name": "ふるさと納税 美容 化粧水 岩手県 釜石市 無印良品 敏感肌化粧水「高保湿」化粧水 1本［fc-69-049］ 1本",
           "price": 8500,
           "sellerName": "ふるさとチョイス",
-          "url": "https://store.shopping.yahoo.co.jp/furusatochoice/7243503.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ffurusatochoice%2F7243503.html"
         },
         {
           "score": -7,
@@ -278,7 +278,7 @@
           "name": "ふるさと納税 無印良品 敏感肌化粧水「高保湿」化粧水 1本 ［fn-69-049］ 岩手県釜石市",
           "price": 8500,
           "sellerName": "ふるなび(ふるさと納税)",
-          "url": "https://store.shopping.yahoo.co.jp/furunavi/2083725.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ffurunavi%2F2083725.html"
         }
       ]
     },
@@ -286,7 +286,7 @@
       "query": "メラノCC メラノCC 薬用しみ対策美白化粧水 170mL",
       "candidates": [
         {
-          "score": 120,
+          "score": 95,
           "nameMatch": "100%",
           "missing": [],
           "code": "rd-lohaco_ajj6807",
@@ -303,17 +303,7 @@
           "name": "2980円以上で注文可能  メラノCC Men 薬用しみ対策美白化粧水 170mL (1個)",
           "price": 946,
           "sellerName": "みんなのお薬MAX(みんなのお薬)",
-          "url": "https://store.shopping.yahoo.co.jp/minoku-max/1758980398-1-b.html"
-        },
-        {
-          "score": 75,
-          "nameMatch": "100%",
-          "missing": [],
-          "code": "rd-lohaco_ajj6805",
-          "name": "メラノＣＣ薬用しみ対策美白化粧水しっとりタイプ 170ml ロート製薬",
-          "price": 990,
-          "sellerName": "LOHACO by アスクル",
-          "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/ajj6805/"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fminoku-max%2F1758980398-1-b.html"
         },
         {
           "score": 75,
@@ -323,10 +313,20 @@
           "name": "メラノCC Men 薬用 しみ対策 美白 化粧水 170mL ロート製薬",
           "price": 1066,
           "sellerName": "アットツリーヤフー店",
-          "url": "https://store.shopping.yahoo.co.jp/at-tree/101-r001-4987241202980.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fat-tree%2F101-r001-4987241202980.html"
         },
         {
-          "score": 75,
+          "score": 50,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "rd-lohaco_ajj6805",
+          "name": "メラノＣＣ薬用しみ対策美白化粧水しっとりタイプ 170ml ロート製薬",
+          "price": 990,
+          "sellerName": "LOHACO by アスクル",
+          "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/ajj6805/"
+        },
+        {
+          "score": 50,
           "nameMatch": "100%",
           "missing": [],
           "code": "rd-lohaco_apk0210",
@@ -401,21 +401,11 @@
           "score": 120,
           "nameMatch": "100%",
           "missing": [],
-          "code": "rd-lohaco_wpw7197",
-          "name": "IHADA（イハダ） 薬用うるおいローション  とてもしっとり 180ml 資生堂",
-          "price": 1650,
-          "sellerName": "LOHACO by アスクル",
-          "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/wpw7197/"
-        },
-        {
-          "score": 120,
-          "nameMatch": "100%",
-          "missing": [],
           "code": "kusuri-hagakure_1758980045-1-a",
           "name": "IHADA イハダ 薬用うるおいローション(とてもしっとり) 化粧水 本体ボトル 180mL (1個)",
           "price": 1459,
           "sellerName": "くらしのカタログ",
-          "url": "https://store.shopping.yahoo.co.jp/kusuri-hagakure/1758980045-1-a.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fkusuri-hagakure%2F1758980045-1-a.html"
         },
         {
           "score": 120,
@@ -425,7 +415,7 @@
           "name": "2980円以上で注文可能  IHADA イハダ 薬用うるおいローション(とてもしっとり) 化粧水 本体ボトル 180mL (1個)",
           "price": 1492,
           "sellerName": "みんなのお薬MAX(みんなのお薬)",
-          "url": "https://store.shopping.yahoo.co.jp/minoku-max/1758980045-1-b.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fminoku-max%2F1758980045-1-b.html"
         },
         {
           "score": 120,
@@ -435,7 +425,7 @@
           "name": "「資生堂」イハダ　薬用うるおいローション　（とてもしっとり）　180mL",
           "price": 1258,
           "sellerName": "くすりのエビス",
-          "url": "https://store.shopping.yahoo.co.jp/fines-f/4909978261269.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ffines-f%2F4909978261269.html"
         },
         {
           "score": 120,
@@ -445,7 +435,17 @@
           "name": "資生堂　IHADA(イハダ)薬用うるおいローション (とてもしっとり)(180ml)(医薬部外品)［化粧水］　",
           "price": 1650,
           "sellerName": "コジマYahoo!店",
-          "url": "https://store.shopping.yahoo.co.jp/y-kojima/4909978261269.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fy-kojima%2F4909978261269.html"
+        },
+        {
+          "score": 120,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "sundrugec_4909978261269",
+          "name": "【医薬部外品】資生堂 イハダ 薬用うるおいローション とてもしっとり 180mL",
+          "price": 1650,
+          "sellerName": "サンドラッグe-shop",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4909978261269.html"
         }
       ]
     },
@@ -511,31 +511,11 @@
           "score": 115,
           "nameMatch": "100%",
           "missing": [],
-          "code": "rd-lohaco_na45254",
-          "name": "ちふれ化粧品 保湿化粧水 とてもしっとりタイプ 180mL",
-          "price": 770,
-          "sellerName": "LOHACO by アスクル",
-          "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/na45254/"
-        },
-        {
-          "score": 115,
-          "nameMatch": "100%",
-          "missing": [],
           "code": "y-kojima_4974972287119",
           "name": "ちふれ化粧品　保湿化粧水 とてもしっとりタイプ 180mL　",
           "price": 770,
           "sellerName": "コジマYahoo!店",
-          "url": "https://store.shopping.yahoo.co.jp/y-kojima/4974972287119.html"
-        },
-        {
-          "score": 115,
-          "nameMatch": "100%",
-          "missing": [],
-          "code": "joshin_4974972287119-73-30001440",
-          "name": "保湿化粧水 とてもしっとりタイプ 180ml ちふれ 返品種別A",
-          "price": 770,
-          "sellerName": "Joshin web",
-          "url": "https://store.shopping.yahoo.co.jp/joshin/4974972287119-73-30001440.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fy-kojima%2F4974972287119.html"
         },
         {
           "score": 115,
@@ -545,7 +525,17 @@
           "name": "ちふれ　保湿化粧水　とてもしっとりタイプ　【180mL】(ちふれ)",
           "price": 770,
           "sellerName": "コクミンドラッグ",
-          "url": "https://store.shopping.yahoo.co.jp/kokumin/4974972287119.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fkokumin%2F4974972287119.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "joshin_4974972287119-73-30001440",
+          "name": "保湿化粧水 とてもしっとりタイプ 180ml ちふれ 返品種別A",
+          "price": 770,
+          "sellerName": "Joshin web",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjoshin%2F4974972287119-73-30001440.html"
         },
         {
           "score": 115,
@@ -555,7 +545,17 @@
           "name": "ちふれ 保湿化粧水 とてもしっとりタイプ(本体/とてもしっとり/無香料) 180ml",
           "price": 770,
           "sellerName": "アットコスメショッピング Yahoo!店",
-          "url": "https://store.shopping.yahoo.co.jp/cosmecom/1000156202.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosmecom%2F1000156202.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "fujiyaku_4974972287119",
+          "name": "ちふれ　保湿化粧水とてもしっとりタイプ 180mL",
+          "price": 770,
+          "sellerName": "セイムスオンラインYahoo!店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ffujiyaku%2F4974972287119.html"
         }
       ]
     },
@@ -570,7 +570,7 @@
           "name": "【国内正規品 2026年4月以降製造】SK-II sk2 フェイシャルトリートメントエッセンス 230ml　新パッケージ",
           "price": 21788,
           "sellerName": "GT SHOP",
-          "url": "https://store.shopping.yahoo.co.jp/isesaicosme/4979006070064.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fisesaicosme%2F4979006070064.html"
         },
         {
           "score": 70,
@@ -580,7 +580,7 @@
           "name": "【国内正規品】SK-II フェイシャル トリートメント エッセンス 230ml 化粧水 保湿 うるおい",
           "price": 21880,
           "sellerName": "Minari Cosme",
-          "url": "https://store.shopping.yahoo.co.jp/minaricosme/4979006070064.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fminaricosme%2F4979006070064.html"
         },
         {
           "score": 70,
@@ -590,7 +590,7 @@
           "name": "SK-II フェイシャルトリートメントエッセンス 230ml  sk2　2024年製造",
           "price": 16750,
           "sellerName": "ヘアケアfestaヤフーショップ",
-          "url": "https://store.shopping.yahoo.co.jp/haircarefesta/sk2tre24.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fhaircarefesta%2Fsk2tre24.html"
         },
         {
           "score": 70,
@@ -600,7 +600,7 @@
           "name": "SK-II エスケーツー フェイシャル トリートメント エッセンス 230ml 一般肌用 化粧水 導入美容液 ピテラ うるおい SKII SK2 SK-2[ギフトラッピング対応]",
           "price": 21798,
           "sellerName": "ダイキヤフー店",
-          "url": "https://store.shopping.yahoo.co.jp/ohgiri-store/sk2-0064.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fohgiri-store%2Fsk2-0064.html"
         },
         {
           "score": 70,
@@ -610,7 +610,7 @@
           "name": "【並行輸入品】エスケーツー　SK-II　フェイシャルトリートメントエッセンス　330mL【SK-2限定商品】",
           "price": 26390,
           "sellerName": "コスメティックロイヤル",
-          "url": "https://store.shopping.yahoo.co.jp/cosmeticroyal/4979006052404.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosmeticroyal%2F4979006052404.html"
         }
       ]
     },
@@ -1003,7 +1003,17 @@
       "query": "トゥヴェール バランシングGAローション 100mL",
       "candidates": [
         {
-          "score": 115,
+          "score": 105,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "mars-mall_b0fm3zjj3q",
+          "name": "【NEW】トゥヴェール バランシングGAローション モイスト 100mL バランシングGAローション 100mL 各1本 プレ 化粧水 グリシルグリシン 6％ アゼライ",
+          "price": 5070,
+          "sellerName": "マルスモール",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fmars-mall%2Fb0fm3zjj3q.html"
+        },
+        {
+          "score": 90,
           "nameMatch": "100%",
           "missing": [],
           "code": "rd-lohaco_wxh1061",
@@ -1013,7 +1023,7 @@
           "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/wxh1061/"
         },
         {
-          "score": 105,
+          "score": 80,
           "nameMatch": "100%",
           "missing": [],
           "code": "rd-lohaco_wra1806",
@@ -1023,16 +1033,6 @@
           "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/wra1806/"
         },
         {
-          "score": 105,
-          "nameMatch": "100%",
-          "missing": [],
-          "code": "mars-mall_b0fm3zjj3q",
-          "name": "【NEW】トゥヴェール バランシングGAローション モイスト 100mL バランシングGAローション 100mL 各1本 プレ 化粧水 グリシルグリシン 6％ アゼライ",
-          "price": 5070,
-          "sellerName": "マルスモール",
-          "url": "https://store.shopping.yahoo.co.jp/mars-mall/b0fm3zjj3q.html"
-        },
-        {
           "score": 80,
           "nameMatch": "100%",
           "missing": [],
@@ -1040,7 +1040,7 @@
           "name": "ふるさと納税 箕面市 トゥヴェール　バランシングGAローション (プレ化粧水)　100mL",
           "price": 7000,
           "sellerName": "Yahoo!ふるさと納税",
-          "url": "https://store.shopping.yahoo.co.jp/y-furusato/1717904.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fy-furusato%2F1717904.html"
         },
         {
           "score": 80,
@@ -1050,7 +1050,7 @@
           "name": "ふるさと納税 箕面市 トゥヴェール　バランシングGAローション (プレ化粧水)　100mL",
           "price": 7000,
           "sellerName": "さとふる",
-          "url": "https://store.shopping.yahoo.co.jp/y-sf/1717904.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fy-sf%2F1717904.html"
         }
       ]
     },
@@ -1223,7 +1223,7 @@
       "query": "肌ラボ 肌ラボ 白潤プレミアム 薬用浸透美白化粧水 170mL",
       "candidates": [
         {
-          "score": 120,
+          "score": 95,
           "nameMatch": "100%",
           "missing": [],
           "code": "rd-lohaco_u861622",
@@ -1233,17 +1233,27 @@
           "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/u861622/"
         },
         {
-          "score": 120,
+          "score": 75,
           "nameMatch": "100%",
           "missing": [],
-          "code": "minoku-max_1758917538-1-b",
-          "name": "2980円以上で注文可能  肌ラボ 白潤プレミアム  薬用浸透美白化粧水  170mL (ボトル) (1個)",
+          "code": "minoku-max_1758933931-1-b",
+          "name": "2980円以上で注文可能  肌ラボ 白潤プレミアム  薬用浸透美白化粧水 しっとりタイプ 170mL (ボトル) (1個)",
           "price": 1250,
           "sellerName": "みんなのお薬MAX(みんなのお薬)",
-          "url": "https://store.shopping.yahoo.co.jp/minoku-max/1758917538-1-b.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fminoku-max%2F1758933931-1-b.html"
         },
         {
           "score": 75,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "cosme-village_4987241168460-c",
+          "name": "ロート製薬 肌ラボ 白潤プレミアム 薬用浸透美白化粧水 つめかえ用 170ml",
+          "price": 1067,
+          "sellerName": "コスメビレッジ",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosme-village%2F4987241168460-c.html"
+        },
+        {
+          "score": 50,
           "nameMatch": "100%",
           "missing": [],
           "code": "rd-lohaco_u861621",
@@ -1253,7 +1263,7 @@
           "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/u861621/"
         },
         {
-          "score": 75,
+          "score": 50,
           "nameMatch": "100%",
           "missing": [],
           "code": "rd-lohaco_u861620",
@@ -1261,16 +1271,6 @@
           "price": 1100,
           "sellerName": "LOHACO by アスクル",
           "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/u861620/"
-        },
-        {
-          "score": 75,
-          "nameMatch": "100%",
-          "missing": [],
-          "code": "minoku-max_1758933931-1-b",
-          "name": "2980円以上で注文可能  肌ラボ 白潤プレミアム  薬用浸透美白化粧水 しっとりタイプ 170mL (ボトル) (1個)",
-          "price": 1250,
-          "sellerName": "みんなのお薬MAX(みんなのお薬)",
-          "url": "https://store.shopping.yahoo.co.jp/minoku-max/1758933931-1-b.html"
         }
       ]
     },
@@ -1560,7 +1560,7 @@
           "name": "化粧水 医薬部外品 / 薬用雪肌精 ブライトニング エッセンス ローション（200mL）",
           "price": 4180,
           "sellerName": "ZOZOTOWN Yahoo!店",
-          "url": "https://store.shopping.yahoo.co.jp/zozo/91048487.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fzozo%2F91048487.html"
         },
         {
           "score": 120,
@@ -1570,7 +1570,7 @@
           "name": "薬用雪肌精 ブライトニング エッセンス ローション 200mL【国内正規品・宅配便送料無料】",
           "price": 3845,
           "sellerName": "jeune",
-          "url": "https://store.shopping.yahoo.co.jp/jeune101/4971710573855-111.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjeune101%2F4971710573855-111.html"
         },
         {
           "score": 120,
@@ -1590,7 +1590,7 @@
           "name": "雪肌精 薬用雪肌精 ブライトニング エッセンス ローション キット 2(限定品/ナチュラルフローラル) 200mL+10g",
           "price": 4180,
           "sellerName": "アットコスメショッピング Yahoo!店",
-          "url": "https://store.shopping.yahoo.co.jp/cosmecom/1000198457.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosmecom%2F1000198457.html"
         },
         {
           "score": 120,
@@ -1600,7 +1600,7 @@
           "name": "【医薬部外品】コーセー 薬用雪肌精 ブライトニング エッセンス ローション 200ml",
           "price": 4180,
           "sellerName": "サンドラッグe-shop",
-          "url": "https://store.shopping.yahoo.co.jp/sundrugec/4971710573855.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4971710573855.html"
         }
       ]
     },
@@ -2000,7 +2000,7 @@
           "name": "資生堂　ベネフィーク　リセットクリアN　200ml　..送料無料",
           "price": 3967,
           "sellerName": "コスメ アべニュー",
-          "url": "https://store.shopping.yahoo.co.jp/cosme-avenue/4909978110888-free.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosme-avenue%2F4909978110888-free.html"
         },
         {
           "score": 75,
@@ -2010,7 +2010,7 @@
           "name": "資生堂 ベネフィーク リセットクリアN 200ml　本体 メーカー:資生堂",
           "price": 3960,
           "sellerName": "エムフィールド m-field",
-          "url": "https://store.shopping.yahoo.co.jp/mfield-y/b-11088.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fmfield-y%2Fb-11088.html"
         },
         {
           "score": 75,
@@ -2020,7 +2020,7 @@
           "name": "資生堂　ベネフィーク　リセットクリア　Ｎ　200mL",
           "price": 3599,
           "sellerName": "サマーコスメ",
-          "url": "https://store.shopping.yahoo.co.jp/summer/202100318001.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsummer%2F202100318001.html"
         },
         {
           "score": 75,
@@ -2030,7 +2030,7 @@
           "name": "資生堂　ベネフィーク　リセットクリアN　200ml",
           "price": 3384,
           "sellerName": "コスメ アべニュー",
-          "url": "https://store.shopping.yahoo.co.jp/cosme-avenue/4909978110888.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosme-avenue%2F4909978110888.html"
         },
         {
           "score": 75,
@@ -2040,7 +2040,7 @@
           "name": "資生堂　ベネフィーク　BENEFIQUE　リセットクリアN　200mL",
           "price": 3652,
           "sellerName": "コスメティックロイヤル",
-          "url": "https://store.shopping.yahoo.co.jp/cosmeticroyal/4909978110888.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosmeticroyal%2F4909978110888.html"
         }
       ]
     },
@@ -2436,21 +2436,11 @@
           "score": 115,
           "nameMatch": "100%",
           "missing": [],
-          "code": "rd-lohaco_1374711",
-          "name": "CEZANNE（セザンヌ） スキンコンディショナー高保湿 ＜保湿化粧水＞ 500ml セザンヌ化粧品",
-          "price": 715,
-          "sellerName": "LOHACO by アスクル",
-          "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/1374711/"
-        },
-        {
-          "score": 115,
-          "nameMatch": "100%",
-          "missing": [],
           "code": "cosmecom_1000031700",
           "name": "セザンヌ スキンコンディショナー高保湿 500ml",
           "price": 715,
           "sellerName": "アットコスメショッピング Yahoo!店",
-          "url": "https://store.shopping.yahoo.co.jp/cosmecom/1000031700.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosmecom%2F1000031700.html"
         },
         {
           "score": 115,
@@ -2460,7 +2450,7 @@
           "name": "セザンヌ スキンコンディショナー 高保湿 ( 500ml )/ セザンヌ(CEZANNE) ( プチプラ セラミド化粧水 大容量 セラミド 化粧水 )",
           "price": 715,
           "sellerName": "爽快ドラッグ",
-          "url": "https://store.shopping.yahoo.co.jp/soukai/4939553040019.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsoukai%2F4939553040019.html"
         },
         {
           "score": 115,
@@ -2470,7 +2460,7 @@
           "name": "セザンヌ スキンコンディショナー高保湿 500ml セラミド 大容量",
           "price": 898,
           "sellerName": "NACIO LIFE",
-          "url": "https://store.shopping.yahoo.co.jp/nacio-life/no-a5bc0e61c7.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fnacio-life%2Fno-a5bc0e61c7.html"
         },
         {
           "score": 105,
@@ -2478,9 +2468,19 @@
           "missing": [],
           "code": "otogizakka_nobdbabfb75a",
           "name": "セザンヌ スキンコンディショナー高保湿 500ml セラミド 大容量",
-          "price": 1149,
+          "price": 1150,
           "sellerName": "雑貨屋MelloMellow",
-          "url": "https://store.shopping.yahoo.co.jp/otogizakka/nobdbabfb75a.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fotogizakka%2Fnobdbabfb75a.html"
+        },
+        {
+          "score": 90,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "rd-lohaco_1374711",
+          "name": "CEZANNE（セザンヌ） スキンコンディショナー高保湿 ＜保湿化粧水＞ 500ml セザンヌ化粧品",
+          "price": 715,
+          "sellerName": "LOHACO by アスクル",
+          "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/1374711/"
         }
       ]
     },
@@ -2546,21 +2546,11 @@
           "score": 115,
           "nameMatch": "100%",
           "missing": [],
-          "code": "rd-lohaco_pn07482",
-          "name": "クオリティファースト ダーマレーザー スーパーVC100ローション（さっぱり） 240mL",
-          "price": 1650,
-          "sellerName": "LOHACO by アスクル",
-          "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/pn07482/"
-        },
-        {
-          "score": 115,
-          "nameMatch": "100%",
-          "missing": [],
           "code": "y-kojima_4560401461467",
           "name": "クオリティファースト　ダーマレーザー スーパーVC100ローション(さっぱり)240mL　",
           "price": 1650,
           "sellerName": "コジマYahoo!店",
-          "url": "https://store.shopping.yahoo.co.jp/y-kojima/4560401461467.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fy-kojima%2F4560401461467.html"
         },
         {
           "score": 115,
@@ -2570,7 +2560,7 @@
           "name": "ダーマレーザー スーパーVC100ローション(さっぱり) 240ml クオリティファースト 返品種別A",
           "price": 1650,
           "sellerName": "Joshin web",
-          "url": "https://store.shopping.yahoo.co.jp/joshin/4560401461467-73-30001440.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjoshin%2F4560401461467-73-30001440.html"
         },
         {
           "score": 115,
@@ -2580,7 +2570,7 @@
           "name": "クオリティファースト ダーマレーザー スーパーVC100ローション さっぱり ( 240ml )/ クオリティファースト",
           "price": 1650,
           "sellerName": "爽快ドラッグ",
-          "url": "https://store.shopping.yahoo.co.jp/soukai/4560401461467.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsoukai%2F4560401461467.html"
         },
         {
           "score": 115,
@@ -2590,7 +2580,17 @@
           "name": "クオリティファースト ダーマレーザー スーパーVC100ローション さっぱり 240ml",
           "price": 1650,
           "sellerName": "サンドラッグe-shop",
-          "url": "https://store.shopping.yahoo.co.jp/sundrugec/4560401461467.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4560401461467.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "cosmecom_1000152091",
+          "name": "クオリティファースト ダーマレーザー スーパーVC100ローション(さっぱり)(本体) 240ml",
+          "price": 1650,
+          "sellerName": "アットコスメショッピング Yahoo!店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosmecom%2F1000152091.html"
         }
       ]
     },
@@ -2653,6 +2653,16 @@
       "query": "SOFINA iP ソフィーナ　ｉＰ　角層トリートメント　基礎化粧液 160mL",
       "candidates": [
         {
+          "score": 105,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "sian_422941sof",
+          "name": "花王認定ショップ|ソフィーナ ｉＰ　角層トリートメント　基礎化粧液　本体 (160ml)　SOFINA iP|ブラックフライデー",
+          "price": 2640,
+          "sellerName": "シャンコスメディアヤフー店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsian%2F422941sof.html"
+        },
+        {
           "score": 85,
           "nameMatch": "100%",
           "missing": [],
@@ -2670,7 +2680,7 @@
           "name": "花王 ソフィーナ iP 角層トリートメント 基礎化粧液 (160mL) 化粧水",
           "price": 2420,
           "sellerName": "ツルハドラッグ ヤフー店",
-          "url": "https://store.shopping.yahoo.co.jp/tsuruha/10163773.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ftsuruha%2F10163773.html"
         },
         {
           "score": 85,
@@ -2680,7 +2690,7 @@
           "name": "【ポイント15倍】ソフィーナ iP 角層トリートメント 基礎化粧液 160ml",
           "price": 2640,
           "sellerName": "サンドラッグe-shop",
-          "url": "https://store.shopping.yahoo.co.jp/sundrugec/4901301422941.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4901301422941.html"
         },
         {
           "score": 85,
@@ -2690,17 +2700,7 @@
           "name": "花王 ソフィーナ iP 角層トリートメント 基礎化粧液 (160mL) 化粧水",
           "price": 2420,
           "sellerName": "くすりの福太郎",
-          "url": "https://store.shopping.yahoo.co.jp/kusurinofukutaro/10163773.html"
-        },
-        {
-          "score": 85,
-          "nameMatch": "100%",
-          "missing": [],
-          "code": "cosme-avenue_4901301422941-free",
-          "name": "ソフィーナ　iP　角層トリートメント　基礎化粧液　160ml  送料無料",
-          "price": 2518,
-          "sellerName": "コスメ アべニュー",
-          "url": "https://store.shopping.yahoo.co.jp/cosme-avenue/4901301422941-free.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fkusurinofukutaro%2F10163773.html"
         }
       ]
     },
@@ -2770,27 +2770,27 @@
           "name": "【定形外郵便発送・国内正規品】タカミスキンピール 角質美容水 30mL スキンピール 角質 ケア スキンケア 美容液 TAKAMI ＴＡＫＡＭＩ 新パッケージ",
           "price": 6080,
           "sellerName": "トップセンスのイチオシ",
-          "url": "https://store.shopping.yahoo.co.jp/topusennsu/takara0124.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ftopusennsu%2Ftakara0124.html"
         },
         {
           "score": 115,
           "nameMatch": "100%",
           "missing": [],
           "code": "okinawangirls_takami-peel",
-          "name": "【ポイント+4％！】11/18(水)限定！TAKAMI タカミスキンピール 30mL 角質 毛穴 敏感肌 透明感",
+          "name": "TAKAMI タカミスキンピール 30mL 角質 毛穴 敏感肌 透明感",
           "price": 5209,
           "sellerName": "ダイエットラボ",
-          "url": "https://store.shopping.yahoo.co.jp/okinawangirls/takami-peel.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fokinawangirls%2Ftakami-peel.html"
         },
         {
           "score": 115,
           "nameMatch": "100%",
           "missing": [],
           "code": "mega-health_takami-peel",
-          "name": "【ポイント+4％！】11/18(水)限定！TAKAMI タカミスキンピール 30mL 角質 毛穴 敏感肌 透明感",
+          "name": "TAKAMI タカミスキンピール 30mL 角質 毛穴 敏感肌 透明感",
           "price": 5209,
           "sellerName": "メガヘルス",
-          "url": "https://store.shopping.yahoo.co.jp/mega-health/takami-peel.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fmega-health%2Ftakami-peel.html"
         },
         {
           "score": 115,
@@ -2800,7 +2800,7 @@
           "name": "TAKAMI タカミスキンピール 30mL",
           "price": 5500,
           "sellerName": "daisei2016",
-          "url": "https://store.shopping.yahoo.co.jp/daisei2016/4571205850623.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fdaisei2016%2F4571205850623.html"
         },
         {
           "score": 80,
@@ -2810,7 +2810,7 @@
           "name": "ふるさと納税 化粧水・乳液 美容液・クリーム 大阪府 柏原市 タカミスキンピール 角質美容水 美容皮膚発想 スキンケア 30mL | スキンピール 美容 スキンケア …",
           "price": 23000,
           "sellerName": "ふるさとチョイス",
-          "url": "https://store.shopping.yahoo.co.jp/furusatochoice/7064778.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ffurusatochoice%2F7064778.html"
         }
       ]
     },
@@ -2952,7 +2952,7 @@
           "name": "ANUA(アヌア)ドクダミ 77スージングトナー 250ml+ドクダミ80モイスチャースージングアンプル30ml+ドクダミ70インテンスカーミングク",
           "price": 8651,
           "sellerName": "ハッピーチルドレン",
-          "url": "https://store.shopping.yahoo.co.jp/happyworldshop2/hapi4uo3-jd7-j8l.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fhappyworldshop2%2Fhapi4uo3-jd7-j8l.html"
         },
         {
           "score": 13,
@@ -2964,7 +2964,7 @@
           "name": "ANUA(アヌア)ドクダミ 77スージングトナー 250ml+ドクダミ80モイスチャースージングアンプル30ml 2STEPセット(化粧水＋美容液)",
           "price": 6366,
           "sellerName": "ハッピーチルドレン",
-          "url": "https://store.shopping.yahoo.co.jp/happyworldshop2/hapi7xz4-yk0-j8k.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fhappyworldshop2%2Fhapi7xz4-yk0-j8k.html"
         },
         {
           "score": -7,
@@ -2976,7 +2976,7 @@
           "name": "anua アヌア ドクダミ77スージングトナー + ドクダミ70デイリーローションセット 化粧水乳液セット スキンケア 韓国コスメ 正規品",
           "price": 4980,
           "sellerName": "KSCO",
-          "url": "https://store.shopping.yahoo.co.jp/kscojp/1184935132.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fkscojp%2F1184935132.html"
         }
       ]
     },
@@ -3489,7 +3489,7 @@
           "name": "(企画品)ONE BY KOSE ザ リンクレス S レギュラー キット ( 1セット )/ ONE BY KOSE(ワンバイコーセー)",
           "price": 6380,
           "sellerName": "爽快ドラッグ",
-          "url": "https://store.shopping.yahoo.co.jp/soukai/4971710546095.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsoukai%2F4971710546095.html"
         }
       ]
     },
@@ -3765,21 +3765,11 @@
           "score": 105,
           "nameMatch": "100%",
           "missing": [],
-          "code": "rd-lohaco_x857964",
-          "name": "肌ラボ 極潤プレミアム ヒアルロン液 170mL 化粧水 美容液 うるおい 保湿 無着色 無香料 弱酸性 ロート製薬",
-          "price": 1100,
-          "sellerName": "LOHACO by アスクル",
-          "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/x857964/"
-        },
-        {
-          "score": 105,
-          "nameMatch": "100%",
-          "missing": [],
           "code": "y-kojima_4987241167012",
           "name": "ロート製薬　肌ラボ極潤プレミアムヒアルロン液170mL　",
           "price": 1110,
           "sellerName": "コジマYahoo!店",
-          "url": "https://store.shopping.yahoo.co.jp/y-kojima/4987241167012.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fy-kojima%2F4987241167012.html"
         },
         {
           "score": 105,
@@ -3789,7 +3779,7 @@
           "name": "肌ラボ 極潤プレミアム ヒアルロン液 170ml",
           "price": 1100,
           "sellerName": "サンドラッグe-shop",
-          "url": "https://store.shopping.yahoo.co.jp/sundrugec/4987241167012.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4987241167012.html"
         },
         {
           "score": 105,
@@ -3799,7 +3789,7 @@
           "name": "2980円以上で注文可能  肌ラボ 極潤プレミアム ヒアルロン液 170mL (本体ボトル) (1個)",
           "price": 1250,
           "sellerName": "みんなのお薬MAX(みんなのお薬)",
-          "url": "https://store.shopping.yahoo.co.jp/minoku-max/1758937852-1-b.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fminoku-max%2F1758937852-1-b.html"
         },
         {
           "score": 105,
@@ -3809,7 +3799,17 @@
           "name": "肌ラボ　極潤プレミアム　ヒアルロン液　170mL",
           "price": 1100,
           "sellerName": "くすりのレデイハートショップ",
-          "url": "https://store.shopping.yahoo.co.jp/ladydrugheartshop/4987241167012.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fladydrugheartshop%2F4987241167012.html"
+        },
+        {
+          "score": 105,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "kenko-depart_428019",
+          "name": "肌ラボ 極潤プレミアム ヒアルロン液 美容液 170ml",
+          "price": 998,
+          "sellerName": "健康デパート.com",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fkenko-depart%2F428019.html"
         }
       ]
     },
@@ -3991,7 +3991,7 @@
           "name": "W/M AAA ウィズメソッド トリプルA モイストインテンシブブーストセラム 60ml 導入美容液 保湿 ナイアシンアミド",
           "price": 2399,
           "sellerName": "ABCドラッグヤフーショップ",
-          "url": "https://store.shopping.yahoo.co.jp/abcdrug2021/4571242817214-1-mk.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fabcdrug2021%2F4571242817214-1-mk.html"
         }
       ]
     },
@@ -4102,21 +4102,11 @@
           "score": 110,
           "nameMatch": "100%",
           "missing": [],
-          "code": "rd-lohaco_rj15794",
-          "name": "無印良品 薬用クリアケア化粧水 300mL 良品計画",
-          "price": 1690,
-          "sellerName": "LOHACO by アスクル",
-          "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/rj15794/"
-        },
-        {
-          "score": 110,
-          "nameMatch": "100%",
-          "missing": [],
           "code": "otogizakka_no7a6525abe1",
           "name": "MUJI 無印良品 薬用クリアケア化粧水 300mL OAQ16A4S 83924430",
-          "price": 2318,
+          "price": 2319,
           "sellerName": "雑貨屋MelloMellow",
-          "url": "https://store.shopping.yahoo.co.jp/otogizakka/no7a6525abe1.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fotogizakka%2Fno7a6525abe1.html"
         },
         {
           "score": 90,
@@ -4126,7 +4116,17 @@
           "name": "化粧水 薬用クリアケア化粧水　３００ｍＬ",
           "price": 1691,
           "sellerName": "ZOZOTOWN Yahoo!店",
-          "url": "https://store.shopping.yahoo.co.jp/zozo/83110699.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fzozo%2F83110699.html"
+        },
+        {
+          "score": 85,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "rd-lohaco_rj15794",
+          "name": "無印良品 薬用クリアケア化粧水 300mL 良品計画",
+          "price": 1690,
+          "sellerName": "LOHACO by アスクル",
+          "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/rj15794/"
         },
         {
           "score": -47,
@@ -4138,7 +4138,7 @@
           "name": "ふるさと納税 無印良品 「薬用クリアケアシリーズ」Bセット ［fn-69-020］ 岩手県釜石市",
           "price": 21500,
           "sellerName": "ふるなび(ふるさと納税)",
-          "url": "https://store.shopping.yahoo.co.jp/furunavi/1845041.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ffurunavi%2F1845041.html"
         },
         {
           "score": -47,
@@ -4150,7 +4150,7 @@
           "name": "ふるさと納税 無印良品 「薬用クリアケアシリーズ」Aセット ［fn-69-019］ 岩手県釜石市",
           "price": 21500,
           "sellerName": "ふるなび(ふるさと納税)",
-          "url": "https://store.shopping.yahoo.co.jp/furunavi/1844999.html"
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3788875&pid=892752224&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ffurunavi%2F1844999.html"
         }
       ]
     }

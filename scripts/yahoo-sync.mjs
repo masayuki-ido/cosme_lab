@@ -71,6 +71,8 @@ const toItem = h => ({
   imageWidth: (h.exImage && h.exImage.width) || null,
   imageHeight: (h.exImage && h.exImage.height) || null,
   url: h.url || null,
+  // アフィリエイト設定ありで呼んだときだけ、変換されたかどうかを持たせる（照合の減点に使う）
+  affiliate: VC_REFERRAL ? !!(h.url && h.url.includes("valuecommerce.com")) : undefined,
   janCode: h.janCode || null,
   inStock: h.inStock !== false
 });
@@ -84,9 +86,11 @@ const toRecord = it => ({
   imageUrl: it.imageUrl,
   imageWidth: it.imageWidth,
   imageHeight: it.imageHeight,
-  // affiliate_id を付けて呼ぶと url がアフィリエイトURLに置き換わる
+  // affiliate_id を付けて呼ぶと url がアフィリエイトURLに置き換わる。
+  // ただしLOHACO商品は変換されない（バリューコマース上は別プログラム）ので、
+  // 実際のURLを見て判定する。rel="sponsored" を付けるかの判断に使う。
   url: it.url,
-  affiliate: !!VC_REFERRAL,
+  affiliate: !!(it.url && it.url.includes("valuecommerce.com")),
   fetchedAt: new Date().toISOString()
 });
 
