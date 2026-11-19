@@ -45,6 +45,10 @@ function tabbar(active) {
 let FOOTER_EXTRA = "";
 export const setFooterExtra = html => { FOOTER_EXTRA = html || ""; };
 
+// Amazonアソシエイトは規約で決まった文言の掲載が必須。参加しているときだけ出す。
+export const AMAZON_DISCLOSURE = `Amazonのアソシエイトとして、${SITE.name}は適格販売により収入を得ています。`;
+const AMAZON_NOTICE = process.env.AMAZON_TAG ? AMAZON_DISCLOSURE : "";
+
 function footer() {
   return `<footer class="site"><div>
     <nav aria-label="フッター">
@@ -54,7 +58,7 @@ function footer() {
       <a href="${url("mypage/")}">マイページ</a>
       <a href="${url("about/")}">このサイトについて・広告表記</a>
     </nav>
-    <p>当サイトはアフィリエイトプログラムに参加しており、商品リンクから購入された場合に運営者が紹介料を受け取ることがあります。<a href="${url("about/")}">詳しくはこちら</a>。</p>
+    <p>当サイトはアフィリエイトプログラムに参加しており、商品リンクから購入された場合に運営者が紹介料を受け取ることがあります。<a href="${url("about/")}">詳しくはこちら</a>。${AMAZON_NOTICE}</p>
     <p>掲載している全成分はメーカー公式サイトなどの表示を転記したものです。成分の解説は一般的な配合目的の説明で、商品の効果・効能を示すものではありません。価格は確認日時点の参考値です。購入前に商品パッケージおよび販売店の表示をご確認ください。</p>
     ${FOOTER_EXTRA}
     <p>© ${new Date().getFullYear()} ${SITE.name}</p>
