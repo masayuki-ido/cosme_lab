@@ -5,7 +5,7 @@
  * 楽天とYahoo!の両方に対応する。商品が確定しているほう（itemCode / 商品コードが入っているほう）を
  * 画像と主リンクに使い、確定していないサイトは検索結果へのリンクにする。
  */
-import { esc, fullName } from "./site.mjs";
+import { esc, yen, fullName } from "./site.mjs";
 
 export const AFF = {
   rakutenId: process.env.RAKUTEN_AFFILIATE_ID || "",
@@ -74,7 +74,12 @@ export function buyLinks(p, shops) {
 
   const links = [];
   if (src) {
-    links.push({ label: `${src.label}で見る`, url: src.url, sponsored: src.sponsored, main: true, shop: src.sellerName });
+    // 価格を出せるのは、APIで商品が確定していて価格を取得できた通販サイトだけ。
+    // 検索結果へのリンクには価格を出さない（どの商品の価格か保証できないため）。
+    links.push({
+      label: `${src.label}で見る`, url: src.url, sponsored: src.sponsored, main: true,
+      shop: src.sellerName, price: src.price, fetchedAt: src.fetchedAt
+    });
   }
   if (!src || src.site !== "rakuten") links.push({ label: "楽天市場", url: rkSearch, sponsored: !!AFF.rakutenId });
   links.push({ label: "Amazon", url: amazon, sponsored: !!AFF.amazonTag });
@@ -83,10 +88,12 @@ export function buyLinks(p, shops) {
 }
 
 export function buyLinksHtml(p, shops) {
-  return buyLinks(p, shops).map(l =>
-    `<a class="buybtn${l.main ? " main" : ""}" href="${esc(l.url)}" target="_blank" rel="${l.sponsored ? "nofollow sponsored noopener" : "nofollow noopener"}">${esc(l.label)}${
-      l.shop ? `<span class="meta" style="font-size:11px;display:block;font-weight:400">${esc(l.shop)}</span>` : ""}</a>`
-  ).join("");
+  return buyLinks(p, shops).map(l => {
+    const sub = l.price != null
+      ? `<span class="bprice">${yen(l.price)}</span>${l.shop ? `<span class="bshop">${esc(l.shop)}</span>` : ""}`
+      : `<span class="bshop">価格を見る</span>`;
+    return `<a class="buybtn${l.main ? " main" : ""}" href="${esc(l.url)}" target="_blank" rel="${l.sponsored ? "nofollow sponsored noopener" : "nofollow noopener"}"><span class="blabel">${esc(l.label)}</span>${sub}</a>`;
+  }).join("");
 }
 
 // 商品画像。無ければ null を返して、呼び出し側が代替の色面を出す。
