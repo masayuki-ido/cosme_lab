@@ -8,7 +8,7 @@ export function indexPage(ctx) {
 
   const body = `${condBanner()}
 <h1 class="title" style="font-size:18px">化粧水の全成分から、自分に合うものをさがす</h1>
-<p class="meta" style="margin:0">${products.length}品の化粧水の全成分を、メーカー公式などの表示どおりに掲載しています。エタノール・香料・パラベンなど、避けたい成分を設定すると、入っているかどうかを一覧で判定します。</p>
+<p class="lede">気にする成分を選べば、あとは全部が判定ずみ。</p>
 <div class="chips">${chips}</div>
 <div class="meta" id="listcount">化粧水 ${products.length}件</div>
 <div class="plist" id="plist">${products.map(p => productCard(p, shops, catOf)).join("")}</div>
