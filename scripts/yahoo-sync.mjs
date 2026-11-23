@@ -80,6 +80,7 @@ const toItem = h => ({
 const toRecord = it => ({
   code: it.code,
   sellerId: it.sellerId,
+  janCode: it.janCode || null,
   name: it.name,
   sellerName: it.sellerName,
   price: it.price,

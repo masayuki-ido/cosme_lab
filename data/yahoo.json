@@ -1,9 +1,10 @@
 {
-  "updatedAt": "2026-11-23T01:26:17.746Z",
+  "updatedAt": "2026-11-23T23:48:51.984Z",
   "items": {
     "hadalabo-gokujyun-hyaluron": {
       "code": "sundrugec_4987241155712",
       "sellerId": "sundrugec",
+      "janCode": "4987241155712",
       "name": "ロート製薬 肌ラボ 極潤ヒアルロン液 170mL",
       "sellerName": "サンドラッグe-shop",
       "price": 902,
@@ -12,11 +13,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4987241155712.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:10.951Z"
+      "fetchedAt": "2026-11-23T23:43:17.382Z"
     },
     "naturie-skin-conditioner": {
       "code": "sundrugec_4903335693601",
       "sellerId": "sundrugec",
+      "janCode": "4903335693601",
       "name": "イミュ ナチュリエスキンコンディショナーR ハトムギ化粧水 500ml",
       "sellerName": "サンドラッグe-shop",
       "price": 696,
@@ -25,11 +27,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4903335693601.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:12.299Z"
+      "fetchedAt": "2026-11-23T23:43:19.085Z"
     },
     "curel-junshin-hoshitsu-lotion-3": {
       "code": "ladydrugheartshop_4901301236180",
       "sellerId": "ladydrugheartshop",
+      "janCode": "4901301236180",
       "name": "【医薬部外品】キュレル　潤浸保湿　化粧水　III　とてもしっとり　150ml",
       "sellerName": "くすりのレデイハートショップ",
       "price": 1477,
@@ -38,11 +41,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fladydrugheartshop%2F4901301236180.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:13.641Z"
+      "fetchedAt": "2026-11-23T23:43:20.822Z"
     },
     "minon-aminomoist-moist-charge-lotion-2": {
       "code": "ohgiri-store_minon0397",
       "sellerId": "ohgiri-store",
+      "janCode": "4987107670397",
       "name": "MINON ミノン アミノモイスト モイストチャージ ローションII もっとしっとりタイプ 本体 150mL 無香料 化粧水[ギフトラッピング対応]",
       "sellerName": "ダイキヤフー店",
       "price": 1804,
@@ -51,24 +55,26 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fohgiri-store%2Fminon0397.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:16.330Z"
+      "fetchedAt": "2026-11-23T23:43:24.268Z"
     },
     "hadalabo-shirojyun-medicated-whitening-lotion": {
       "code": "goodsania_4987241157549",
       "sellerId": "goodsania",
+      "janCode": "4987241157549",
       "name": "肌ラボ 白潤 薬用美白化粧水 170ml",
       "sellerName": "Goodsaniaマック土居店",
-      "price": 791,
+      "price": 787,
       "imageUrl": "https://item-shopping.c.yimg.jp/i/l/goodsania_4987241157549",
       "imageWidth": 600,
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fgoodsania%2F4987241157549.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:20.416Z"
+      "fetchedAt": "2026-11-23T23:43:29.414Z"
     },
     "sekkisei-medicated-lotion": {
       "code": "pinnacosme_sekkisei-skin200",
       "sellerId": "pinnacosme",
+      "janCode": "4971710107630",
       "name": "【 送料無料 】KOSE コーセー SEKKISEI 薬用 雪肌精  200ml 雪肌精 化粧水",
       "sellerName": "ピンナコスメ",
       "price": 3950,
@@ -77,11 +83,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fpinnacosme%2Fsekkisei-skin200.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:23.143Z"
+      "fetchedAt": "2026-11-23T23:43:32.965Z"
     },
     "kikumasamune-sake-lotion-high-moist": {
       "code": "at-tree_101-r001-4971650800578",
       "sellerId": "at-tree",
+      "janCode": "4971650800578",
       "name": "菊正宗 日本酒の化粧水 高保湿 500mL",
       "sellerName": "アットツリーヤフー店",
       "price": 930,
@@ -90,11 +97,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fat-tree%2F101-r001-4971650800578.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:25.855Z"
+      "fetchedAt": "2026-11-23T23:43:36.481Z"
     },
     "elixir-lift-moist-lotion-shittori-ba": {
       "code": "sundrugec_4909978227142",
       "sellerId": "sundrugec",
+      "janCode": "4909978227142",
       "name": "【ポイント15倍】【医薬部外品】資生堂 エリクシール シュペリエル リフトモイスト ローション しっとりタイプ ba 170ml",
       "sellerName": "サンドラッグe-shop",
       "price": 3410,
@@ -103,11 +111,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4909978227142.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:27.204Z"
+      "fetchedAt": "2026-11-23T23:43:38.185Z"
     },
     "orbis-u-dot-essence-lotion": {
       "code": "zozo_75781412",
       "sellerId": "zozo",
+      "janCode": "4908064090110",
       "name": "化粧水 オルビス ORBIS オルビスユー　ドット　エッセンスローション　ボトル入り　180mL「医薬部外品」",
       "sellerName": "ZOZOTOWN Yahoo!店",
       "price": 3630,
@@ -116,11 +125,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fzozo%2F75781412.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:28.555Z"
+      "fetchedAt": "2026-11-23T23:43:39.959Z"
     },
     "d-program-moist-care-lotion-ex": {
       "code": "sundrugec_4514254231470",
       "sellerId": "sundrugec",
+      "janCode": "4514254231470",
       "name": "【ポイント15倍】【医薬部外品】資生堂 d プログラム モイストケア ローション EX 125ml",
       "sellerName": "サンドラッグe-shop",
       "price": 3301,
@@ -129,11 +139,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4514254231470.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:29.908Z"
+      "fetchedAt": "2026-11-23T23:43:41.703Z"
     },
     "avene-skin-balance-lotion-ss-n": {
       "code": "wlb_av056",
       "sellerId": "wlb",
+      "janCode": "4964259095926",
       "name": "アベンヌ スキンバランスローション　SS　n　200ml 化粧水（敏感肌用）",
       "sellerName": "化粧品通販 WLBストア ヤフー店",
       "price": 2145,
@@ -142,11 +153,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fwlb%2Fav056.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:31.276Z"
+      "fetchedAt": "2026-11-23T23:43:43.443Z"
     },
     "carte-hd-moisture-lotion": {
       "code": "sundrugec_4971710560046",
       "sellerId": "sundrugec",
+      "janCode": "4971710560046",
       "name": "【医薬部外品】コーセー カルテHD モイスチュア ローションN 150ml",
       "sellerName": "サンドラッグe-shop",
       "price": 2090,
@@ -155,11 +167,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4971710560046.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:32.609Z"
+      "fetchedAt": "2026-11-23T23:43:45.118Z"
     },
     "ipsa-the-time-r-aqua-e": {
       "code": "pureco2nd_prc-s-8750028283",
       "sellerId": "pureco2nd",
+      "janCode": "4931449438283",
       "name": "IPSA (イプサ) ザ・タイムR アクア e (薬用化粧水) 200ml 【医薬部外品】",
       "sellerName": "CosmeShop プレコハウス",
       "price": 4793,
@@ -168,11 +181,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fpureco2nd%2Fprc-s-8750028283.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:33.949Z"
+      "fetchedAt": "2026-11-23T23:43:46.944Z"
     },
     "elixir-brightening-lotion-mizumizushii-ca": {
       "code": "jetdrug_4909978229511-01",
       "sellerId": "jetdrug",
+      "janCode": "4909978229511",
       "name": "≪ブラックフライデー!≫【医薬部外品】エリクシール ブライトニングローション [みずみずしいタイプ] ca 170mL ×1個〔美白＆エイジングケア〕",
       "sellerName": "ジェットドラッグ",
       "price": 3362,
@@ -181,11 +195,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjetdrug%2F4909978229511-01.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:36.660Z"
+      "fetchedAt": "2026-11-23T23:43:50.342Z"
     },
     "sofina-basic-plus-uruoi-turbo-lotion": {
       "code": "ehac_4901301466648",
       "sellerId": "ehac",
+      "janCode": "4901301466648",
       "name": "ソフィーナＢＡＳＩＣ＋　うるおいターボ化粧水　１６０ｍｌ",
       "sellerName": "ウエルシア",
       "price": 1430,
@@ -194,11 +209,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fehac%2F4901301466648.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:38.047Z"
+      "fetchedAt": "2026-11-23T23:43:52.039Z"
     },
     "chifure-whitening-lotion-ta": {
       "code": "sundrugec_4974972298412",
       "sellerId": "sundrugec",
+      "janCode": "4974972298412",
       "name": "【医薬部外品】ちふれ 美白化粧水 TA 180ml",
       "sellerName": "サンドラッグe-shop",
       "price": 1100,
@@ -207,11 +223,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4974972298412.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:39.391Z"
+      "fetchedAt": "2026-11-23T23:43:53.761Z"
     },
     "orbis-clearful-lotion-l": {
       "code": "ohgiri-store_orbis1330",
       "sellerId": "ohgiri-store",
+      "janCode": "4908064081330",
       "name": "ORBIS CLEARFUL オルビス クリアフル ローションL さっぱりタイプ 本体 180mL 無香料 化粧水 医薬部外品[ギフトラッピング対応]",
       "sellerName": "ダイキヤフー店",
       "price": 1955,
@@ -220,11 +237,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fohgiri-store%2Forbis1330.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:42.142Z"
+      "fetchedAt": "2026-11-23T23:43:57.175Z"
     },
     "elixir-brightening-lotion-shittori-ca": {
       "code": "sundrugec_4909978229566",
       "sellerId": "sundrugec",
+      "janCode": "4909978229566",
       "name": "【ポイント15倍】【医薬部外品】資生堂 エリクシール ホワイト ブライトニング ローション しっとりタイプ ca 170mL",
       "sellerName": "サンドラッグe-shop",
       "price": 3740,
@@ -233,11 +251,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4909978229566.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:43.493Z"
+      "fetchedAt": "2026-11-23T23:43:58.889Z"
     },
     "albion-medicated-skin-conditioner-essential-n": {
       "code": "ltcosme-shop_albion-11824",
       "sellerId": "ltcosme-shop",
+      "janCode": "4969527198729",
       "name": "国内正規品　アルビオン 薬用スキンコンディショナー エッセンシャル N　165ml",
       "sellerName": "LT COSME SHOP",
       "price": 5850,
@@ -246,11 +265,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fltcosme-shop%2Falbion-11824.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:44.879Z"
+      "fetchedAt": "2026-11-23T23:44:00.645Z"
     },
     "kanebo-skin-harmonizer": {
       "code": "mimori_4973167534847",
       "sellerId": "mimori",
+      "janCode": "4973167534847",
       "name": "並行輸入品 KANEBO カネボウ スキン ハーモナイザー 180ml【宅配便送料無料】",
       "sellerName": "Mimori cosme",
       "price": 4272,
@@ -259,11 +279,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fmimori%2F4973167534847.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:46.226Z"
+      "fetchedAt": "2026-11-23T23:44:02.401Z"
     },
     "decorte-youth-power-essence-lotion": {
       "code": "isesaicosme_4971710611366",
       "sellerId": "isesaicosme",
+      "janCode": "4971710611366",
       "name": "【国内正規品】コスメデコルテ ユース パワー エッセンス ローション 150ml 美容液 化粧水 ローション",
       "sellerName": "GT SHOP",
       "price": 13400,
@@ -272,11 +293,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fisesaicosme%2F4971710611366.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:47.583Z"
+      "fetchedAt": "2026-11-23T23:44:04.138Z"
     },
     "shiseido-eudermine-essence-lotion": {
       "code": "sian_13360",
       "sellerId": "sian",
+      "janCode": "4514254133606",
       "name": "資生堂認定ショップ|SHISEIDO　オイデルミン　エッセンスローション　145mL　資生堂|ブラックフライデー",
       "sellerName": "シャンコスメディアヤフー店",
       "price": 9900,
@@ -285,7 +307,7 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsian%2F13360.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:50.343Z"
+      "fetchedAt": "2026-11-23T23:44:07.578Z"
     },
     "curel-deep-moisture-spray": {
       "code": "himawaridg_4901301379924",
@@ -303,6 +325,7 @@
     "ci-labo-vc100-essence-lotion-ex": {
       "code": "ci-labo-official_00111953-00",
       "sellerId": "ci-labo-official",
+      "janCode": null,
       "name": "ドクターシーラボ VC100 エッセンスローション EX V 150mL ビタミンC 化粧水 保湿 毛穴 透明感 紫外線 美容液  敏感 ナイアシンアミド",
       "sellerName": "ドクターシーラボ公式ショップ",
       "price": 4851,
@@ -311,24 +334,26 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fci-labo-official%2F00111953-00.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:02.638Z"
+      "fetchedAt": "2026-11-23T23:45:48.944Z"
     },
     "curel-junshin-hoshitsu-lotion-2": {
       "code": "ladydrugheartshop_4901301236197",
       "sellerId": "ladydrugheartshop",
+      "janCode": "4901301236197",
       "name": "【医薬部外品】キュレル　潤浸保湿　化粧水　II　しっとり　150ml",
       "sellerName": "くすりのレデイハートショップ",
-      "price": 1570,
+      "price": 1568,
       "imageUrl": "https://item-shopping.c.yimg.jp/i/l/ladydrugheartshop_4901301236197",
       "imageWidth": 600,
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fladydrugheartshop%2F4901301236197.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:04.180Z"
+      "fetchedAt": "2026-11-23T23:45:50.685Z"
     },
     "one-by-kose-the-wrinkless-lotion": {
       "code": "ohgiri-store_kose3978",
       "sellerId": "ohgiri-store",
+      "janCode": "4971710643978",
       "name": "ONE BY KOSE ザ リンクレス ローション 180mL 化粧水 グリーンフローラル コーセー[医薬部外品][ギフトラッピング対応]",
       "sellerName": "ダイキヤフー店",
       "price": 3598,
@@ -337,11 +362,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fohgiri-store%2Fkose3978.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:06.848Z"
+      "fetchedAt": "2026-11-23T23:45:54.139Z"
     },
     "orbis-clearful-lotion-m": {
       "code": "ohgiri-store_orbis1354",
       "sellerId": "ohgiri-store",
+      "janCode": "4908064081354",
       "name": "ORBIS CLEARFUL オルビス クリアフル ローションM しっとりタイプ 本体 180ml 無香料 化粧水 医薬部外品[ギフトラッピング対応]",
       "sellerName": "ダイキヤフー店",
       "price": 1955,
@@ -350,11 +376,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fohgiri-store%2Forbis1354.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:08.219Z"
+      "fetchedAt": "2026-11-23T23:45:55.947Z"
     },
     "hadabisei-medicated-whitening-lotion": {
       "code": "benkyoudou_at-teikei-4901417621580",
       "sellerId": "benkyoudou",
+      "janCode": "4901417621580",
       "name": "肌美精 薬用美白化粧水 170mL 医薬部外品 メール便送料無料",
       "sellerName": "くすりの勉強堂",
       "price": 1499,
@@ -363,11 +390,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fbenkyoudou%2Fat-teikei-4901417621580.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:09.559Z"
+      "fetchedAt": "2026-11-23T23:45:57.651Z"
     },
     "estee-lauder-anr-treatment-essence-lotion": {
       "code": "zozo_108960734",
       "sellerId": "zozo",
+      "janCode": null,
       "name": "化粧水 エスティ ローダー estee lauder アドバンス ナイト リペア トリートメント エッセンス ローション 200mL",
       "sellerName": "ZOZOTOWN Yahoo!店",
       "price": 16500,
@@ -376,11 +404,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fzozo%2F108960734.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:10.932Z"
+      "fetchedAt": "2026-11-23T23:45:59.355Z"
     },
     "elixir-lift-moist-lotion-mask-ca": {
       "code": "fjdrug_4909978281892fujidrug",
       "sellerId": "fjdrug",
+      "janCode": "4909978281892",
       "name": "資生堂 エリクシール シュペリエル リフトモイスト ローション マスク級高保湿 ca (医薬部外品) 170mL",
       "sellerName": "フジドラッグ",
       "price": 3630,
@@ -389,11 +418,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ffjdrug%2F4909978281892fujidrug.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:12.276Z"
+      "fetchedAt": "2026-11-23T23:46:01.161Z"
     },
     "eau-de-muge-medicated-lotion": {
       "code": "ehac_4987072034040",
       "sellerId": "ehac",
+      "janCode": "4987072034040",
       "name": "オードムーゲ 薬用ローション 160ml",
       "sellerName": "ウエルシア",
       "price": 1144,
@@ -402,24 +432,26 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fehac%2F4987072034040.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:13.628Z"
+      "fetchedAt": "2026-11-23T23:46:02.847Z"
     },
     "curel-sebum-trouble-care-lotion": {
       "code": "ladydrugheartshop_4901301264343",
       "sellerId": "ladydrugheartshop",
+      "janCode": "4901301264343",
       "name": "【医薬部外品】キュレル　皮脂トラブルケア　化粧水　150ml",
       "sellerName": "くすりのレデイハートショップ",
-      "price": 1679,
+      "price": 1649,
       "imageUrl": "https://item-shopping.c.yimg.jp/i/l/ladydrugheartshop_4901301264343",
       "imageWidth": 600,
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fladydrugheartshop%2F4901301264343.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:15.001Z"
+      "fetchedAt": "2026-11-23T23:46:04.548Z"
     },
     "curel-junshin-hoshitsu-lotion-1": {
       "code": "ladydrugheartshop_4901301236043",
       "sellerId": "ladydrugheartshop",
+      "janCode": "4901301236043",
       "name": "【医薬部外品】キュレル　潤浸保湿　化粧水　I　ややしっとり　150ml",
       "sellerName": "くすりのレデイハートショップ",
       "price": 1477,
@@ -428,11 +460,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fladydrugheartshop%2F4901301236043.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:16.365Z"
+      "fetchedAt": "2026-11-23T23:46:06.240Z"
     },
     "one-by-kose-serum-veil-lotion": {
       "code": "cosme-avenue_4971710599923-f",
       "sellerId": "cosme-avenue",
+      "janCode": "4971710599923",
       "name": "コーセー ONE BY KOSE セラムヴェール ローション 180ml ..送料無料",
       "sellerName": "コスメ アべニュー",
       "price": 2989,
@@ -441,7 +474,7 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosme-avenue%2F4971710599923-f.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:17.708Z"
+      "fetchedAt": "2026-11-23T23:46:07.975Z"
     },
     "cezanne-natural-lotion": {
       "code": "sakura3rdstore_yahoo20240401-b0b9lp6nf7",
@@ -454,11 +487,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsakura3rdstore%2Fyahoo20240401-b0b9lp6nf7.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-22T00:55:05.229Z"
+      "fetchedAt": "2026-11-20T02:42:06.384Z"
     },
     "orbis-u-essence-lotion": {
       "code": "ohgiri-store_orbis1544",
       "sellerId": "ohgiri-store",
+      "janCode": "4908064091544",
       "name": "ORBIS U オルビスユー エッセンスローション 180mL  化粧水[医薬部外品][ギフトラッピング対応]",
       "sellerName": "ダイキヤフー店",
       "price": 2732,
@@ -467,11 +501,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fohgiri-store%2Forbis1544.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:23.114Z"
+      "fetchedAt": "2026-11-23T23:46:14.792Z"
     },
     "decorte-hydraclarity-medicated-brightening-essence-water": {
       "code": "ohgiri-store_decorte5127",
       "sellerId": "ohgiri-store",
+      "janCode": "4971710625127",
       "name": "COSME DECORTE コスメデコルテ イドラクラリティ 薬用 ブライトニング エッセンス ウォーター 200mL 化粧水 ローション[医薬部外品][ギフトラッピング対応]",
       "sellerName": "ダイキヤフー店",
       "price": 5829,
@@ -480,11 +515,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fohgiri-store%2Fdecorte5127.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:27.159Z"
+      "fetchedAt": "2026-11-23T23:46:20.034Z"
     },
     "cle-de-peau-lotion-essentielle-a": {
       "code": "ltcosme-shop_cpb-21355",
       "sellerId": "ltcosme-shop",
+      "janCode": "4514254213551",
       "name": "リニューアル発売　国内正規品　クレ・ド・ポー ボーテ  ローションエサンシエルＡ本体 170ml 化粧水（モイスト）",
       "sellerName": "LT COSME SHOP",
       "price": 12870,
@@ -493,11 +529,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fltcosme-shop%2Fcpb-21355.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:28.517Z"
+      "fetchedAt": "2026-11-23T23:46:21.852Z"
     },
     "curel-aging-care-lotion": {
       "code": "eckyorindo2525_4901301334510",
       "sellerId": "eckyorindo2525",
+      "janCode": "4901301334510",
       "name": "【医薬部外品】 花王 キュレル エイジングケアシリーズ 化粧水 140mL ◆ ★",
       "sellerName": "杏林堂ヤフー店",
       "price": 1617,
@@ -506,11 +543,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Feckyorindo2525%2F4901301334510.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:29.869Z"
+      "fetchedAt": "2026-11-23T23:46:25.290Z"
     },
     "acseine-moist-balance-lotion": {
       "code": "fdc_4951819049888",
       "sellerId": "fdc",
+      "janCode": "4951819049888",
       "name": "【送料込み】アクセーヌ モイストバランスローション 360ｍｌ",
       "sellerName": "ミルキー薬局",
       "price": 5450,
@@ -519,11 +557,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ffdc%2F4951819049888.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:31.236Z"
+      "fetchedAt": "2026-11-23T23:46:26.978Z"
     },
     "kikumasamune-sake-lotion-haritsuya": {
       "code": "sundrugec_4971650801483",
       "sellerId": "sundrugec",
+      "janCode": "4971650801483",
       "name": "菊正宗 日本酒の化粧水 ハリつや保湿 500ml",
       "sellerName": "サンドラッグe-shop",
       "price": 1013,
@@ -532,11 +571,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4971650801483.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:35.313Z"
+      "fetchedAt": "2026-11-23T23:46:32.224Z"
     },
     "sekkisei-blue-deep-hydrating-essence-liquid-2": {
       "code": "cosmecosmecosme_4971710585735",
       "sellerId": "cosmecosmecosme",
+      "janCode": "4971710585735",
       "name": "雪肌精 BLUE ディープ ハイドレイティング エッセンス リキッド II 120ml(4971710585735)",
       "sellerName": "コスメコスメ",
       "price": 7480,
@@ -545,11 +585,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosmecosmecosme%2F4971710585735.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:39.367Z"
+      "fetchedAt": "2026-11-23T23:46:37.725Z"
     },
     "m-mark-amino-acid-shintousui": {
       "code": "santelabo_m0030022",
       "sellerId": "santelabo",
+      "janCode": "4954540164066",
       "name": "松山油脂 アミノ酸浸透水 200ml 化粧水 保湿 スキンケア 乾燥肌 敏感肌 保湿化粧水 低刺激 ハリ Mマーク",
       "sellerName": "サンテラボ(年中無休で発送)",
       "price": 1320,
@@ -558,24 +599,25 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsantelabo%2Fm0030022.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:40.755Z"
+      "fetchedAt": "2026-11-23T23:46:39.442Z"
     },
     "kanebo-radiant-skin-refiner": {
       "code": "cosmeparfaite_4973167090411",
       "sellerId": "cosmeparfaite",
       "name": "ふき取り化粧水 KANEBO カネボウ ラディアント スキン リファイナー 200ml 宅配便 再入荷10",
       "sellerName": "コスメパルフェ",
-      "price": 4270,
+      "price": 3950,
       "imageUrl": "https://item-shopping.c.yimg.jp/i/l/cosmeparfaite_4973167090411",
       "imageWidth": 600,
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosmeparfaite%2F4973167090411.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:42.119Z"
+      "fetchedAt": "2026-11-20T02:42:47.571Z"
     },
     "dew-bright-aura-lotion": {
       "code": "sundrugec_4973167553046",
       "sellerId": "sundrugec",
+      "janCode": "4973167553046",
       "name": "【ポイント15倍】【医薬部外品】カネボウ DEW デュウ ブライトオーラローション 170ml",
       "sellerName": "サンドラッグe-shop",
       "price": 4950,
@@ -584,11 +626,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4973167553046.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-22T00:56:38.406Z"
+      "fetchedAt": "2026-11-23T23:48:20.735Z"
     },
     "anua-pdrn-hyaluronic-acid-hydrating-mist": {
       "code": "kscojp_1198964264",
       "sellerId": "kscojp",
+      "janCode": "8800307373331",
       "name": "anua アヌア pdrnヒアルロン酸ハイドレイティングミスト 100ml 保湿ミスト 保湿カプセル 美容液 スキンケア 単品 韓国コスメ 正規品",
       "sellerName": "KSCO",
       "price": 2980,
@@ -597,11 +640,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fkscojp%2F1198964264.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:25:54.419Z"
+      "fetchedAt": "2026-11-23T23:48:22.442Z"
     },
     "nivea-men-active-age-lotion": {
       "code": "sundrugec_4901301379337",
       "sellerId": "sundrugec",
+      "janCode": "4901301379337",
       "name": "【医薬部外品】花王 ニベアメン アクティブエイジローション 110ml",
       "sellerName": "サンドラッグe-shop",
       "price": 1399,
@@ -610,11 +654,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4901301379337.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:25:56.113Z"
+      "fetchedAt": "2026-11-23T23:48:24.154Z"
     },
     "aqualabel-treatment-lotion-oil-in-very-moist": {
       "code": "cosme-link_y4909978198992",
       "sellerId": "cosme-link",
+      "janCode": "4909978198992",
       "name": "資生堂 アクアレーベル トリートメントローション （オイルイン） とてもしっとり 170ml (198992)",
       "sellerName": "コスメリンク Yahoo!店",
       "price": 1620,
@@ -623,11 +668,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosme-link%2Fy4909978198992.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:25:57.457Z"
+      "fetchedAt": "2026-11-23T23:48:25.863Z"
     },
     "decorte-hydraclarity-medicated-treatment-essence-water": {
       "code": "arcom-shop_c37616",
       "sellerId": "arcom-shop",
+      "janCode": "4971710376166",
       "name": "コスメデコルテ イドラクラリティ 薬用 トリートメント エッセンス ウォーター (化粧水) 200mL",
       "sellerName": "アーコムコスメ Yahoo!店",
       "price": 5610,
@@ -636,11 +682,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Farcom-shop%2Fc37616.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:25:58.809Z"
+      "fetchedAt": "2026-11-23T23:48:27.701Z"
     },
     "sofina-beaute-high-moisture-lotion-very-moist": {
       "code": "y-kojima_4901301325099",
       "sellerId": "y-kojima",
+      "janCode": "4901301325099",
       "name": "花王　ソフィーナ ボーテ 高保湿化粧水 とてもしっとり 140ml　",
       "sellerName": "コジマYahoo!店",
       "price": 3300,
@@ -649,11 +696,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fy-kojima%2F4901301325099.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:26:00.181Z"
+      "fetchedAt": "2026-11-23T23:48:29.403Z"
     },
     "torriden-dive-in-toner": {
       "code": "yeppo_torri3237-1",
       "sellerId": "yeppo",
+      "janCode": "8809504743237",
       "name": "【Torriden】トリデン ダイブイン ヒアルロン酸 トナー 300ml 韓国コスメ 保湿 アンプル 化粧水",
       "sellerName": "Yeppo",
       "price": 2190,
@@ -662,11 +710,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fyeppo%2Ftorri3237-1.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:26:01.532Z"
+      "fetchedAt": "2026-11-23T23:48:31.184Z"
     },
     "sofina-ip-medicated-kakuso-treatment-shinso-keshoeki": {
       "code": "kirindo_4901301472762",
       "sellerId": "kirindo",
+      "janCode": "4901301472762",
       "name": "花王 ソフィーナIP 薬用 角層トリートメント 深層化粧液 本体 160ml×1個 sofina iP",
       "sellerName": "キリン堂通販SHOPヤフー店",
       "price": 3520,
@@ -675,11 +724,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fkirindo%2F4901301472762.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:26:02.883Z"
+      "fetchedAt": "2026-11-23T23:48:32.902Z"
     },
     "nature-conc-medicated-clear-lotion": {
       "code": "sundrugec_4955814147327",
       "sellerId": "sundrugec",
+      "janCode": "4955814147327",
       "name": "ネイチャーコンク薬用クリアローション本体 200ML",
       "sellerName": "サンドラッグe-shop",
       "price": 980,
@@ -688,11 +738,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsundrugec%2F4955814147327.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:26:04.248Z"
+      "fetchedAt": "2026-11-23T23:48:34.598Z"
     },
     "hadabisei-choi-medicated-lotion-acne-care": {
       "code": "minoku-max_1758973490-1-b",
       "sellerId": "minoku-max",
+      "janCode": "4901417629449",
       "name": "2980円以上で注文可能  肌美精CHOI(チョイ) 薬用化粧水ニキビケア 320mL (1個)",
       "sellerName": "みんなのお薬MAX(みんなのお薬)",
       "price": 764,
@@ -701,11 +752,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fminoku-max%2F1758973490-1-b.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:26:05.596Z"
+      "fetchedAt": "2026-11-23T23:48:36.368Z"
     },
     "pdc-dermaaid-triple-active-lotion": {
       "code": "pdc-shop_da-01",
       "sellerId": "pdc-shop",
+      "janCode": "4961989304144",
       "name": "pdc ダーマエイド トリプルアクティブローション N 150mL 化粧水 ダーマエイド化粧水 薬用 美白 医薬部外品 ローション シワ改善 シミ予防 肌荒れ防止",
       "sellerName": "pdc公式 Yahoo!店",
       "price": 2200,
@@ -714,11 +766,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fpdc-shop%2Fda-01.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:26:06.961Z"
+      "fetchedAt": "2026-11-23T23:48:38.148Z"
     },
     "dalba-vita-toning-serum-toner": {
       "code": "kscojp_1203725696",
       "sellerId": "kscojp",
+      "janCode": "8809463994404",
       "name": "dAlba ダルバ ビタトーニングセラムトナー 180ml 化粧水トナー トナーセラム 美容液 スキンケア 単品 韓国コスメ 正規品",
       "sellerName": "KSCO",
       "price": 2980,
@@ -727,11 +780,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fkscojp%2F1203725696.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:26:09.652Z"
+      "fetchedAt": "2026-11-23T23:48:41.593Z"
     },
     "pola-white-shot-clear-skin-lotion": {
       "code": "ohgiri-store_pola1561",
       "sellerId": "ohgiri-store",
+      "janCode": "4953923311561",
       "name": "POLA ポーラ ホワイトショット クリアスキンローション 150mL 化粧水 無香料[医薬部外品][ギフトラッピング対応]",
       "sellerName": "ダイキヤフー店",
       "price": 7276,
@@ -740,11 +794,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fohgiri-store%2Fpola1561.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:26:12.357Z"
+      "fetchedAt": "2026-11-23T23:48:45.112Z"
     },
     "derma-laser-super-black-vc100-lotion": {
       "code": "himawaridg_4560401462112",
       "sellerId": "himawaridg",
+      "janCode": "4560401462112",
       "name": "「クオリティファースト」　ダーマレーザー　スーパーブラックVC100　ローション　240ml",
       "sellerName": "ひまわりの薬屋",
       "price": 2358,
@@ -753,11 +808,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fhimawaridg%2F4560401462112.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:26:13.690Z"
+      "fetchedAt": "2026-11-23T23:48:46.836Z"
     },
     "attenir-dress-lift-lotion": {
       "code": "ohgiri-store_attenir6683",
       "sellerId": "ohgiri-store",
+      "janCode": "4533899286683",
       "name": "Attenir アテニア ドレスリフト ローション 150ml 本体 化粧水[医薬部外品][ギフトラッピング対応]",
       "sellerName": "ダイキヤフー店",
       "price": 3149,
@@ -766,11 +822,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fohgiri-store%2Fattenir6683.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:26:15.026Z"
+      "fetchedAt": "2026-11-23T23:48:48.536Z"
     },
     "matsuyama-hada-wo-uruosu-hoshitsu-shintousui-balancing": {
       "code": "santelabo_m0030007",
       "sellerId": "santelabo",
+      "janCode": "4954540158683",
       "name": "松山油脂 肌をうるおす保湿浸透水 バランシング 120ml 保湿化粧水 化粧水 保湿ローション 乾燥肌 敏感肌 無着色 無香料 Mマーク",
       "sellerName": "サンテラボ(年中無休で発送)",
       "price": 1694,
@@ -779,11 +836,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsantelabo%2Fm0030007.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:26:16.374Z"
+      "fetchedAt": "2026-11-23T23:48:50.253Z"
     },
     "sekkisei-brightening-essence-lotion": {
       "code": "zozo_91048487",
       "sellerId": "zozo",
+      "janCode": "4971710573855",
       "name": "化粧水 医薬部外品 / 薬用雪肌精 ブライトニング エッセンス ローション（200mL）",
       "sellerName": "ZOZOTOWN Yahoo!店",
       "price": 4180,
@@ -792,11 +850,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fzozo%2F91048487.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:48.939Z"
+      "fetchedAt": "2026-11-23T23:44:05.867Z"
     },
     "sofina-ip-kakuso-treatment-kiso-keshoeki": {
       "code": "sian_422941sof",
       "sellerId": "sian",
+      "janCode": "4901301422941",
       "name": "花王認定ショップ|ソフィーナ ｉＰ　角層トリートメント　基礎化粧液　本体 (160ml)　SOFINA iP|ブラックフライデー",
       "sellerName": "シャンコスメディアヤフー店",
       "price": 2640,
@@ -805,11 +864,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsian%2F422941sof.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:33.944Z"
+      "fetchedAt": "2026-11-23T23:46:30.519Z"
     },
     "takami-skin-peel": {
       "code": "topusennsu_takara0124",
       "sellerId": "topusennsu",
+      "janCode": "4571205850623",
       "name": "【定形外郵便発送・国内正規品】タカミスキンピール 角質美容水 30mL スキンピール 角質 ケア スキンケア 美容液 TAKAMI ＴＡＫＡＭＩ 新パッケージ",
       "sellerName": "トップセンスのイチオシ",
       "price": 6080,
@@ -818,11 +878,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ftopusennsu%2Ftakara0124.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:38.024Z"
+      "fetchedAt": "2026-11-23T23:46:35.985Z"
     },
     "muji-sensitive-skin-lotion-high-moisture": {
       "code": "rd-lohaco_ek81443",
       "sellerId": "rd-lohaco",
+      "janCode": "4550583434991",
       "name": "無印良品 敏感肌用化粧水 高保湿 300mL 良品計画（イチオシ）",
       "sellerName": "LOHACO by アスクル",
       "price": 990,
@@ -831,11 +892,12 @@
       "imageHeight": 600,
       "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/ek81443/",
       "affiliate": false,
-      "fetchedAt": "2026-11-23T01:22:17.682Z"
+      "fetchedAt": "2026-11-23T23:43:25.973Z"
     },
     "melano-cc-medicated-whitening-lotion": {
       "code": "rd-lohaco_ajj6807",
       "sellerId": "rd-lohaco",
+      "janCode": "4987241198900",
       "name": "メラノＣＣ薬用しみ対策美白化粧水 170ml ロート製薬",
       "sellerName": "LOHACO by アスクル",
       "price": 990,
@@ -844,11 +906,12 @@
       "imageHeight": 600,
       "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/ajj6807/",
       "affiliate": false,
-      "fetchedAt": "2026-11-23T01:22:19.051Z"
+      "fetchedAt": "2026-11-23T23:43:27.708Z"
     },
     "ihada-medicated-lotion-very-moist": {
       "code": "kusuri-hagakure_1758980045-1-a",
       "sellerId": "kusuri-hagakure",
+      "janCode": "4909978261269",
       "name": "IHADA イハダ 薬用うるおいローション(とてもしっとり) 化粧水 本体ボトル 180mL (1個)",
       "sellerName": "くらしのカタログ",
       "price": 1459,
@@ -857,11 +920,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fkusuri-hagakure%2F1758980045-1-a.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:21.768Z"
+      "fetchedAt": "2026-11-23T23:43:31.256Z"
     },
     "chifure-moist-lotion-very-moist": {
       "code": "y-kojima_4974972287119",
       "sellerId": "y-kojima",
+      "janCode": "4974972287119",
       "name": "ちふれ化粧品　保湿化粧水 とてもしっとりタイプ 180mL　",
       "sellerName": "コジマYahoo!店",
       "price": 770,
@@ -870,11 +934,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fy-kojima%2F4974972287119.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:24.517Z"
+      "fetchedAt": "2026-11-23T23:43:34.744Z"
     },
     "toutvert-balancing-ga-lotion": {
       "code": "mars-mall_b0fm3zjj3q",
       "sellerId": "mars-mall",
+      "janCode": "4582389242807",
       "name": "【NEW】トゥヴェール バランシングGAローション モイスト 100mL バランシングGAローション 100mL 各1本 プレ 化粧水 グリシルグリシン 6％ アゼライ",
       "sellerName": "マルスモール",
       "price": 5070,
@@ -883,11 +948,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fmars-mall%2Fb0fm3zjj3q.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:22:35.281Z"
+      "fetchedAt": "2026-11-23T23:43:48.643Z"
     },
     "hadalabo-shirojyun-premium-medicated-lotion": {
       "code": "rd-lohaco_u861622",
       "sellerId": "rd-lohaco",
+      "janCode": "4987241168446",
       "name": "肌ラボ 白潤プレミアム 薬用浸透美白化粧水 170mL ロート製薬",
       "sellerName": "LOHACO by アスクル",
       "price": 1100,
@@ -896,11 +962,12 @@
       "imageHeight": 600,
       "url": "https://lohaco.yahoo.co.jp/store/h-lohaco/item/u861622/",
       "affiliate": false,
-      "fetchedAt": "2026-11-23T01:22:40.757Z"
+      "fetchedAt": "2026-11-23T23:43:55.472Z"
     },
     "cezanne-skin-conditioner-high-moist": {
       "code": "cosmecom_1000031700",
       "sellerId": "cosmecom",
+      "janCode": "4939553040019",
       "name": "「ポイント5%バック 11月22日〜26日」 セザンヌ スキンコンディショナー高保湿 500ml",
       "sellerName": "アットコスメショッピング Yahoo!店",
       "price": 715,
@@ -909,11 +976,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosmecom%2F1000031700.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:21.744Z"
+      "fetchedAt": "2026-11-23T23:46:13.027Z"
     },
     "quality1st-derma-laser-super-vc100-lotion-sappari": {
       "code": "y-kojima_4560401461467",
       "sellerId": "y-kojima",
+      "janCode": "4560401461467",
       "name": "クオリティファースト　ダーマレーザー スーパーVC100ローション(さっぱり)240mL　",
       "sellerName": "コジマYahoo!店",
       "price": 1650,
@@ -922,11 +990,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fy-kojima%2F4560401461467.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:24.480Z"
+      "fetchedAt": "2026-11-23T23:46:16.531Z"
     },
     "hadalabo-gokujyun-premium-hyaluron": {
       "code": "y-kojima_4987241167012",
       "sellerId": "y-kojima",
+      "janCode": "4987241167012",
       "name": "ロート製薬　肌ラボ極潤プレミアムヒアルロン液170mL　",
       "sellerName": "コジマYahoo!店",
       "price": 1110,
@@ -935,11 +1004,12 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fy-kojima%2F4987241167012.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:24:25.829Z"
+      "fetchedAt": "2026-11-23T23:46:18.270Z"
     },
     "muji-medicated-clear-care-lotion": {
       "code": "otogizakka_no7a6525abe1",
       "sellerId": "otogizakka",
+      "janCode": "4550583924430",
       "name": "MUJI 無印良品 薬用クリアケア化粧水 300mL OAQ16A4S 83924430",
       "sellerName": "雑貨屋MelloMellow",
       "price": 2320,
@@ -948,7 +1018,7 @@
       "imageHeight": 600,
       "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fotogizakka%2Fno7a6525abe1.html",
       "affiliate": true,
-      "fetchedAt": "2026-11-23T01:26:17.745Z"
+      "fetchedAt": "2026-11-23T23:48:51.984Z"
     }
   }
 }

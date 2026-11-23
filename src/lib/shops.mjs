@@ -31,6 +31,23 @@ const aflYahoo = url => (AFF.valuecommerceSid && AFF.valuecommercePid)
   ? `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${AFF.valuecommerceSid}&pid=${AFF.valuecommercePid}&vc_url=${encodeURIComponent(url)}`
   : url;
 
+// JANコード（＝GTIN-13）。APIが返した値か、商品コードの末尾13桁から取る。
+// 商品コードの13桁はJANでない数字のこともあるので、チェックディジットが
+// 合うものだけを採用する（誤ったGTINを構造化データに出すと有害なため）。
+function isValidGtin13(v) {
+  if (!/^\d{13}$/.test(v)) return false;
+  const d = [...v].map(Number);
+  const sum = d.slice(0, 12).reduce((a, n, i) => a + n * (i % 2 ? 3 : 1), 0);
+  return (10 - (sum % 10)) % 10 === d[12];
+}
+
+function gtin13Of(rec) {
+  for (const cand of [rec.janCode, (/(?:^|[_-])(\d{13})$/.exec(rec.code || rec.itemCode || "") || [])[1]]) {
+    if (cand && isValidGtin13(String(cand))) return String(cand);
+  }
+  return null;
+}
+
 export const searchQuery = p => [fullName(p), p.size].filter(Boolean).join(" ");
 
 /**
@@ -46,7 +63,7 @@ export function sourceOf(p, shops) {
       image: rkImage(rk.imageUrl, 600), imageW: 600, imageH: 600,
       price: rk.price ?? null, sellerName: rk.shopName || null,
       url: rk.affiliateUrl || rk.itemUrl, sponsored: !!AFF.rakutenId,
-      fetchedAt: rk.fetchedAt || null
+      gtin13: gtin13Of(rk), fetchedAt: rk.fetchedAt || null
     };
   }
   if (yh && yh.imageUrl) {
@@ -55,7 +72,7 @@ export function sourceOf(p, shops) {
       image: yh.imageUrl, imageW: yh.imageWidth || 600, imageH: yh.imageHeight || 600,
       price: yh.price ?? null, sellerName: yh.sellerName || null,
       url: yh.url, sponsored: !!yh.affiliate,
-      fetchedAt: yh.fetchedAt || null
+      gtin13: gtin13Of(yh), fetchedAt: yh.fetchedAt || null
     };
   }
   return null;

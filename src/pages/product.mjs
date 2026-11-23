@@ -100,8 +100,20 @@ ${sameBrand.length ? `<section class="col" style="gap:12px"><h2>${esc(p.brand)}�
     url: abs(`products/${p.id}/`),
     ...(p.size ? { size: p.size } : {}),
     ...(has ? { additionalProperty: [{ "@type": "PropertyValue", name: "全成分", value: p.ingredients.join("、") }] } : {}),
+    // JANコードは商品を一意に特定できる値。取れているときだけ出す。
+    ...(src && src.gtin13 ? { gtin13: src.gtin13 } : {}),
     ...(src && src.price != null && src.url ? {
-      offers: { "@type": "Offer", price: src.price, priceCurrency: "JPY", url: src.url, availability: "https://schema.org/InStock", seller: { "@type": "Organization", name: src.label } }
+      offers: {
+        "@type": "Offer",
+        price: src.price,
+        priceCurrency: "JPY",
+        url: src.url,
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        // 価格は毎日取り直している。取得日から1週間を有効期限として示す。
+        ...(src.fetchedAt ? { priceValidUntil: new Date(new Date(src.fetchedAt).getTime() + 7 * 864e5).toISOString().slice(0, 10) } : {}),
+        seller: { "@type": "Organization", name: src.label }
+      }
     } : {})
   };
 
