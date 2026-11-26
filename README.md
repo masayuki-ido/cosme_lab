@@ -70,8 +70,9 @@ npm run yahoo:update     # 価格・画像・リンクを取り直して data/ya
 確度が足りなかったものは `data/<サイト>-candidates.json` に候補が残るので、
 正しいコードを選んで商品JSONに手で入れる。
 
-GitHub Actions `通販サイトの画像・価格を更新` が毎日6時(JST)に `update` を実行し、
-差分があればコミットしてサイトを公開し直す。アプリIDが未設定のサイトはスキップされる。
+GitHub Actions `通販サイトの画像・価格を更新` が毎日6時(JST)に `all`（未マッチの商品だけ
+商品コードを探し、そのあと価格と画像を取り直す）を実行し、差分があればコミットして
+サイトを公開し直す。アプリIDが未設定のサイトはスキップされる。
 
 ### 守ること
 
@@ -95,6 +96,17 @@ Settings → Secrets and variables → Actions
 | Secret | `VALUECOMMERCE_SID` / `VALUECOMMERCE_PID` | Yahoo!のアフィリエイトリンク（両方必要） |
 | Secret | `AMAZON_TAG` | Amazonアソシエイト承認後 |
 | Variable | `SITE_ORIGIN` / `SITE_BASE` | 独自ドメインに移すとき（例 `https://example.com` と `/`） |
+
+## 毎日の商品追加
+
+claude.ai の定期実行「コスメ研究所 商品追加（リポジトリ）」が毎朝6:47(JST)に動き、
+人気の化粧水を6品ずつ `data/products/` に足して main に push する。
+push でサイトが公開し直され、その日の `通販サイトの画像・価格を更新` が
+新しい商品の商品コードを探して画像と価格を入れる。
+
+2026-11-26 までは書き込み先が旧Artifact（非公開）のデータベースのままだったため、
+11-13〜11-26 ぶんの83品がサイトに出ていなかった。取り込み済み。
+旧Artifactの定期実行は止めてある。
 
 ## 決めごと
 

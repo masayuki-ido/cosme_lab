@@ -9,7 +9,7 @@ on:
         description: 'match=商品コードを探す / update=価格と画像を取り直す / all=両方'
         type: choice
         options: [update, match, all]
-        default: update
+        default: all
       site:
         description: '対象の通販サイト'
         type: choice
@@ -25,7 +25,7 @@ jobs:
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
     env:
-      MODE: ${{ github.event.inputs.mode || 'update' }}
+      MODE: ${{ github.event.inputs.mode || 'all' }}
       SITE: ${{ github.event.inputs.site || 'both' }}
     steps:
       - uses: actions/checkout@v4
