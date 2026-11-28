@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T03:29:33.841Z",
+  "updatedAt": "2026-11-28T03:04:42.970Z",
   "items": {
     "hadalabo-gokujyun-hyaluron": {
       "query": "肌ラボ 肌ラボ 極潤ヒアルロン液 170mL",
@@ -576,16 +576,6 @@
           "score": 70,
           "nameMatch": "100%",
           "missing": [],
-          "code": "minaricosme_4979006070064",
-          "name": "【国内正規品】SK-II フェイシャル トリートメント エッセンス 230ml 化粧水 保湿 うるおい",
-          "price": 21880,
-          "sellerName": "Minari Cosme",
-          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fminaricosme%2F4979006070064.html"
-        },
-        {
-          "score": 70,
-          "nameMatch": "100%",
-          "missing": [],
           "code": "ohgiri-store_sk2-0064",
           "name": "SK-II エスケーツー フェイシャル トリートメント エッセンス 230ml 一般肌用 化粧水 導入美容液 ピテラ うるおい SKII SK2 SK-2[ギフトラッピング対応]",
           "price": 21798,
@@ -606,11 +596,21 @@
           "score": 70,
           "nameMatch": "100%",
           "missing": [],
-          "code": "cosmedenet_sk00648",
-          "name": "並行輸入品 送料無料 SK2 SK-II SKII Bigサイズ！フェイシャル トリートメント エッセンス 230ml",
-          "price": 17577,
-          "sellerName": "コスメデネット Yahoo!店",
-          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosmedenet%2Fsk00648.html"
+          "code": "minaricosme_4979006070064",
+          "name": "【国内正規品】SK-II フェイシャル トリートメント エッセンス 230ml 化粧水 保湿 うるおい",
+          "price": 21880,
+          "sellerName": "Minari Cosme",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fminaricosme%2F4979006070064.html"
+        },
+        {
+          "score": 70,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "haircarefesta_sk2tre24",
+          "name": "【2025年製造】SK-II フェイシャルトリートメントエッセンス 230ml  sk2",
+          "price": 16750,
+          "sellerName": "ヘアケアfestaヤフーショップ",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fhaircarefesta%2Fsk2tre24.html"
         }
       ]
     },
@@ -5873,6 +5873,26 @@
       "query": "Anua 桃77 ナイアシン エッセンストナー 250mL",
       "candidates": [
         {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "pureco_prc-s-8721854359",
+          "name": "Anua (アヌア) 桃 77 ナイアシン エッセンス トナー 250ml",
+          "price": 2321,
+          "sellerName": "PURECO HOUSE forBusiness",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fpureco%2Fprc-s-8721854359.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "pureco2nd_prc-s-8721854359",
+          "name": "Anua (アヌア) 桃 77 ナイアシン エッセンス トナー 250ml",
+          "price": 2414,
+          "sellerName": "CosmeShop プレコハウス",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fpureco2nd%2Fprc-s-8721854359.html"
+        },
+        {
           "score": 65,
           "nameMatch": "100%",
           "missing": [],
@@ -8471,6 +8491,16 @@
           "score": 65,
           "nameMatch": "100%",
           "missing": [],
+          "code": "refresh-beaute_4524734127681",
+          "name": "ドクターシーラボ 薬用ローション スーパーセンシティブEX 150mL 医薬部外品 化粧水 敏感肌 乾燥肌 肌あれ 保湿 セラミド トナー",
+          "price": 2980,
+          "sellerName": "リフレッシュボーテ",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Frefresh-beaute%2F4524734127681.html"
+        },
+        {
+          "score": 65,
+          "nameMatch": "100%",
+          "missing": [],
           "code": "pureco_prc-s-8658187681",
           "name": "ドクターシーラボ 薬用ローションスーパーセンシティブEX 150ml 【医薬部外品】",
           "price": 3045,
@@ -8768,6 +8798,296 @@
           "price": 1493,
           "sellerName": "une fleur",
           "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fune%2F10001477.html"
+        }
+      ]
+    },
+    "platinum-label-hatomugi-lotion": {
+      "query": "プラチナレーベル ハトムギ化粧水 1000mL",
+      "candidates": [
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "nicedrug_4549549298302-free",
+          "name": "プラチナレーベル ハトムギ化粧水 1000mL ドウシシャ",
+          "price": 1430,
+          "sellerName": "ナイスドラッグ Yahoo!店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fnicedrug%2F4549549298302-free.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "life-navi_a0170781",
+          "name": "【プラチナレーベル ハトムギ化粧水 1000ml】",
+          "price": 1078,
+          "sellerName": "ライフナビ",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Flife-navi%2Fa0170781.html"
+        },
+        {
+          "score": 105,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "benkyoudou_bs-4549549298302",
+          "name": "プラチナレーベル ハトムギ化粧水　1000mL",
+          "price": 888,
+          "sellerName": "くすりの勉強堂",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fbenkyoudou%2Fbs-4549549298302.html"
+        },
+        {
+          "score": 105,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "benkyoannexx_bs-4549549298302",
+          "name": "プラチナレーベル ハトムギ化粧水　1000mL",
+          "price": 888,
+          "sellerName": "くすりの勉強堂 アネックス",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fbenkyoannexx%2Fbs-4549549298302.html"
+        },
+        {
+          "score": 105,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "nicedrug_4549549298302",
+          "name": "プラチナレーベル ハトムギ化粧水 1000mL ドウシシャ",
+          "price": 748,
+          "sellerName": "ナイスドラッグ Yahoo!店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fnicedrug%2F4549549298302.html"
+        }
+      ]
+    },
+    "laneige-cream-skin-lotion": {
+      "query": "LANEIGE(ラネージュ) クリームスキン ローション 170mL",
+      "candidates": [
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "cosmecom_1000181703",
+          "name": "「ポイント10%バック 11月27日〜30日1:59」  LANEIGE(ラネージュ) クリームスキン ローション(本体) 170mL",
+          "price": 3630,
+          "sellerName": "アットコスメショッピング Yahoo!店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosmecom%2F1000181703.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "cosmecom_1000212543",
+          "name": "「ポイント10%バック 11月27日〜30日1:59」  LANEIGE(ラネージュ) ジェルクリームスキンローション(本体) 170mL",
+          "price": 3630,
+          "sellerName": "アットコスメショッピング Yahoo!店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosmecom%2F1000212543.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "shoplist_100336315",
+          "name": "LANEIGE(ラネージュ) クリームスキン ローション 170ml",
+          "price": 3080,
+          "sellerName": "Shoplist Yahoo!店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fshoplist%2F100336315.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "shoplist_100284288",
+          "name": "LANEIGE(ラネージュ) ジェル クリーム スキン ローション 170ml",
+          "price": 2994,
+          "sellerName": "Shoplist Yahoo!店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fshoplist%2F100284288.html"
+        },
+        {
+          "score": 105,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "pureco_prc-s-8696342227",
+          "name": "LANEIGE(ラネージュ) ジェル クリーム スキン ローション 170ml",
+          "price": 2326,
+          "sellerName": "PURECO HOUSE forBusiness",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fpureco%2Fprc-s-8696342227.html"
+        }
+      ]
+    },
+    "chifure-moist-lotion-moist": {
+      "query": "ちふれ 保湿化粧水 しっとりタイプ 180mL",
+      "candidates": [
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "y-kojima_4974972287317",
+          "name": "ちふれ化粧品　保湿化粧水 しっとりタイプ 180mL　",
+          "price": 770,
+          "sellerName": "コジマYahoo!店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fy-kojima%2F4974972287317.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "joshin_4974972287317-73-30001440",
+          "name": "保湿化粧水 しっとりタイプ 180ml ちふれ 返品種別A",
+          "price": 770,
+          "sellerName": "Joshin web",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjoshin%2F4974972287317-73-30001440.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "goodsania_4974972287317",
+          "name": "ちふれ 保湿化粧水 しっとりタイプ 180ml",
+          "price": 770,
+          "sellerName": "Goodsaniaマック土居店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fgoodsania%2F4974972287317.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "cosmecom_1000156204",
+          "name": "「ポイント15%バック 11月27日〜30日1:59」  ちふれ 保湿化粧水 しっとりタイプ(本体/しっとり/無香料) 180ml _26Nov",
+          "price": 770,
+          "sellerName": "アットコスメショッピング Yahoo!店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosmecom%2F1000156204.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "soukai_4974972287317",
+          "name": "ちふれ 保湿化粧水 しっとりタイプ ( 180ml )/ ちふれ ( 無香料 無着色 ノンアルコール )",
+          "price": 770,
+          "sellerName": "爽快ドラッグ",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsoukai%2F4974972287317.html"
+        }
+      ]
+    },
+    "chifure-moist-lotion-sappari": {
+      "query": "ちふれ 保湿化粧水 さっぱりタイプ 180mL",
+      "candidates": [
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "y-kojima_4974972287515",
+          "name": "ちふれ化粧品　保湿化粧水 さっぱりタイプ180mL　",
+          "price": 660,
+          "sellerName": "コジマYahoo!店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fy-kojima%2F4974972287515.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "joshin_4974972287515-73-30001440",
+          "name": "保湿化粧水 さっぱりタイプ 180ml ちふれ 返品種別A",
+          "price": 660,
+          "sellerName": "Joshin web",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjoshin%2F4974972287515-73-30001440.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "soukai_4974972287515",
+          "name": "ちふれ 保湿化粧水 さっぱりタイプ ( 180ml )/ ちふれ",
+          "price": 660,
+          "sellerName": "爽快ドラッグ",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsoukai%2F4974972287515.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "fujiyaku_4974972287515",
+          "name": "ちふれ　保湿化粧水さっぱりタイプ 180mL",
+          "price": 660,
+          "sellerName": "セイムスオンラインYahoo!店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ffujiyaku%2F4974972287515.html"
+        },
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "cosmecom_1000156206",
+          "name": "「ポイント15%バック 11月27日〜30日1:59」  ちふれ 保湿化粧水 さっぱりタイプ(本体/さっぱり/無香料) 180ml _26Nov",
+          "price": 660,
+          "sellerName": "アットコスメショッピング Yahoo!店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosmecom%2F1000156206.html"
+        }
+      ]
+    },
+    "tunemakers-genneki-hoshitsusui": {
+      "query": "TUNEMAKERS（チューンメーカーズ） 原液保湿水 120mL",
+      "candidates": [
+        {
+          "score": 115,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "cosmecom_1000108109",
+          "name": "「ポイント10%バック 11月27日〜30日1:59」  TUNEMAKERS（チューンメーカーズ） 原液保湿水(本体) 120ml",
+          "price": 2420,
+          "sellerName": "アットコスメショッピング Yahoo!店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosmecom%2F1000108109.html"
+        },
+        {
+          "score": 95,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "mcosme-style_tmslot0007",
+          "name": "チューンメーカーズ TUNEMAKERS 原液保湿水 120ml セラミド ヒアルロン酸 原液 美容液 原液化粧品",
+          "price": 2420,
+          "sellerName": "エムコスメスタイル Yahoo!店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fmcosme-style%2Ftmslot0007.html"
+        },
+        {
+          "score": 95,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "cosme-nana_1099728120",
+          "name": "チューンメーカーズ 原液保湿水 120ml 化粧水[0433] 送料無料",
+          "price": 2420,
+          "sellerName": "コスメティックナナ",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fcosme-nana%2F1099728120.html"
+        },
+        {
+          "score": 95,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "bestone_1099728120",
+          "name": "チューンメーカーズ 原液保湿水 120ml 化粧水[0433] 送料無料",
+          "price": 2420,
+          "sellerName": "ベストワンヤフーショップ",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fbestone%2F1099728120.html"
+        },
+        {
+          "score": 95,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "utikire_10008677",
+          "name": "チューンメーカーズ 原液保湿水 120ml TUNEMAKERS",
+          "price": 2420,
+          "sellerName": "ココチノ",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Futikire%2F10008677.html"
+        }
+      ]
+    },
+    "platinum-label-sensitive-skin-hatomugi-lotion": {
+      "query": "敏感肌用ハトムギ化粧水",
+      "candidates": [
+        {
+          "score": 40,
+          "nameMatch": "100%",
+          "missing": [],
+          "code": "hanaxhanadrug-ds_4573342843438",
+          "name": "NaMo 敏感肌用 ハトムギ化粧水 500ml(4573342843438)",
+          "price": 1230,
+          "sellerName": "花x花ドラッグDS店",
+          "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3789033&pid=892753210&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fhanaxhanadrug-ds%2F4573342843438.html"
         }
       ]
     }
